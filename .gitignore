@@ -1,0 +1,8 @@
+.env
+lunch.db
+lunch.db.bak-*
+*.bak-*
+__pycache__/
+*.pyc
+.venv/
+.streamlit/secrets.toml
