@@ -69,23 +69,25 @@ def init_db():
 
 
 def _seed_if_empty():
-    """On a fresh database (e.g. an ephemeral cloud filesystem), populate the
-    canonical restaurant list so the app has data to show on first load, and
-    backfill baked photos/coords onto any seed rows that are missing them
-    (covers a DB that was seeded by an older build without images)."""
+    """Keep the canonical restaurant list populated on an ephemeral cloud
+    filesystem. (Re)seed whenever any seed restaurant is missing — covers both a
+    fresh DB and a DB seeded by an older build before a restaurant was added —
+    then make the baked photos/coords authoritative on the seed rows."""
     try:
         import seed
     except Exception:
         return
     with _conn() as conn:
-        row = conn.execute(
-            "SELECT 1 FROM restaurants_cache WHERE id LIKE 'seed-%' LIMIT 1"
-        ).fetchone()
-        if row is None:
-            seed.seed()
-        # Make baked enrichment authoritative for seed photos/coords. image_url
-        # is set outright (so a dead/removed URL recorded by an earlier build is
-        # cleared); lat/lng only fill when missing so real coords aren't clobbered.
+        seeded = conn.execute(
+            "SELECT COUNT(*) FROM restaurants_cache WHERE id LIKE 'seed-%'"
+        ).fetchone()[0]
+    # seed() is idempotent (INSERT OR REPLACE); only run it when rows are missing.
+    if seeded < len(seed.RESTAURANTS):
+        seed.seed()
+    # Make baked enrichment authoritative for seed photos/coords. image_url is set
+    # outright (so a dead/removed URL recorded by an earlier build is cleared);
+    # lat/lng only fill when missing so real coords aren't clobbered.
+    with _conn() as conn:
         for sid, e in seed._ENRICHMENT.items():
             conn.execute(
                 """UPDATE restaurants_cache
