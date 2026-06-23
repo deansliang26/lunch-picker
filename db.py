@@ -70,17 +70,29 @@ def init_db():
 
 def _seed_if_empty():
     """On a fresh database (e.g. an ephemeral cloud filesystem), populate the
-    canonical restaurant list so the app has data to show on first load."""
+    canonical restaurant list so the app has data to show on first load, and
+    backfill baked photos/coords onto any seed rows that are missing them
+    (covers a DB that was seeded by an older build without images)."""
+    try:
+        import seed
+    except Exception:
+        return
     with _conn() as conn:
         row = conn.execute(
             "SELECT 1 FROM restaurants_cache WHERE id LIKE 'seed-%' LIMIT 1"
         ).fetchone()
-    if row is None:
-        try:
-            import seed
+        if row is None:
             seed.seed()
-        except Exception:
-            pass
+        # Backfill photos/coords on existing seed rows missing them.
+        for sid, e in seed._ENRICHMENT.items():
+            conn.execute(
+                """UPDATE restaurants_cache
+                   SET image_url = COALESCE(NULLIF(image_url, ''), ?),
+                       lat = COALESCE(lat, ?),
+                       lng = COALESCE(lng, ?)
+                   WHERE id = ?""",
+                (e.get("image_url", ""), e.get("lat"), e.get("lng"), sid),
+            )
 
 
 def _migrate():
