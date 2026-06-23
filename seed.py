@@ -58,6 +58,41 @@ def slug(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
+# Baked Yelp enrichment (photo + coords) so the hosted/ephemeral DB shows
+# photos and drive-times instantly without a runtime Yelp call.
+# Regenerate by running enrich.py locally then re-exporting.
+_ENRICHMENT = {
+    "seed-amber-india": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/J8EuksrqpbzGbTN5DeDpcw/o.jpg", "lat": 37.39711803787208, "lng": -122.10773457274875},
+    "seed-asian-box": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/c0TbggU10jOvQiCtZKvJIQ/o.jpg", "lat": 37.4387251, "lng": -122.1598525},
+    "seed-baja-fresh": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Q3H3RTMY8INtTnOkqJv-Mw/o.jpg", "lat": 37.41561, "lng": -122.12883},
+    "seed-cafe-borrone": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/jj-kcvEYUxHcNnXyEekglg/o.jpg", "lat": 37.453665, "lng": -122.18202},
+    "seed-cascal": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/EN8Vc0KckfWjyB5vtqffpQ/o.jpg", "lat": 37.39112501038679, "lng": -122.08105817116392},
+    "seed-chaat-bhavan": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/pu6rK3o3d58BkwNRtZvY9A/o.jpg", "lat": 37.37850104833282, "lng": -122.07105866990588},
+    "seed-chipotle-mexican-grill": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/456Ae4jR4HB2BrizOZGNnA/o.jpg", "lat": 37.423881, "lng": -122.143060014095},
+    "seed-coupa-cafe": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/TvMPNQWPLSJPTBxVAuTOww/o.jpg", "lat": 37.444682, "lng": -122.161533},
+    "seed-doppio-zero-pizza": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/VDEbFKbD9pRZIqv9P7NU1Q/o.jpg", "lat": 37.3943853, "lng": -122.0787964},
+    "seed-five-guys": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/OZ_1zK9OVJUsR1AMyY3vMQ/o.jpg", "lat": 37.396018966518525, "lng": -122.10150728282072},
+    "seed-fuki-sushi": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/XSWqCSbjJHp4Wr2KhjFHwA/o.jpg", "lat": 37.4138844, "lng": -122.125805},
+    "seed-ike-s-love-sandwiches": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/nnJPn9qSIa-3xiyaa68JXQ/o.jpg", "lat": 37.419941, "lng": -122.096053},
+    "seed-in-n-out-burger": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/5GYYf24CSqRuhYdSdMjwmQ/o.jpg", "lat": 37.4209471, "lng": -122.093343},
+    "seed-jersey-mike-s-subs": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xk5qT9dVWeygRHBZObQLtg/o.jpg", "lat": 37.37357, "lng": -122.0541651},
+    "seed-la-bodeguita-del-medio": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/a2WwuexMytQzCWVlDF3TRg/o.jpg", "lat": 37.4254329, "lng": -122.1451937073576},
+    "seed-la-viga-seafood": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/yS15Wvs6OdF9wIOHReTXgg/o.jpg", "lat": 37.486981969862065, "lng": -122.222848},
+    "seed-lee-s-sandwiches": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/itDOGtOKLtbpMIpySqZQdw/o.jpg", "lat": 37.323542551526, "lng": -122.02986670876},
+    "seed-mendocino-farms": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/29AnZLokOYFCRxbLQPEyaA/o.jpg", "lat": 37.44366249, "lng": -122.16207180325536},
+    "seed-mod-pizza": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/6WFgUwni6Ro4xnQ_2AJkvw/o.jpg", "lat": 37.38246925256315, "lng": -121.8970118205723},
+    "seed-oren-s-hummus-shop": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JJ2p55Nw3lvwqfDlAe6Vjg/o.jpg", "lat": 37.445717, "lng": -122.162173},
+    "seed-panda-express": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/B4G44YfXqPSfMyQ8q9h7LA/o.jpg", "lat": 37.4252908, "lng": -122.1468323},
+    "seed-pizza-my-heart": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rRp4AGHSqwfiQFLFWMrxlA/o.jpg", "lat": 37.44485, "lng": -122.16227},
+    "seed-poke-house": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/NykOCjL6s7qiD4aZYKpbNQ/o.jpg", "lat": 37.438605, "lng": -122.160441},
+    "seed-rangoon-ruby": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/DfkufSmD1QyodmAum3-3DA/o.jpg", "lat": 37.44514, "lng": -122.16305},
+    "seed-roost-roast": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rSuF4OjrD184J7a6YmNkUA/o.jpg", "lat": 37.43944437943251, "lng": -122.1583573900819},
+    "seed-sajj-mediterranean": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xykBzIv-uLQQ6GXwzhFhRA/o.jpg", "lat": 37.40099309253801, "lng": -122.11226246645442},
+    "seed-sweetgreen": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/lRzjLP6o1YCfoaslkQ_QNA/o.jpg", "lat": 37.44473396475442, "lng": -122.16109207054912},
+    "seed-zareen-s": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/T7t7eyLiLIntkiH61HhI3Q/o.jpg", "lat": 37.426757, "lng": -122.144093},
+}
+
+
 def seed():
     """Populate restaurants_cache with the canonical seed list. Idempotent
     (INSERT OR REPLACE), safe to call on startup when the DB is empty."""
@@ -68,11 +103,14 @@ def seed():
 
     today = date.today().isoformat()
     for r in RESTAURANTS:
+        sid = f"seed-{slug(r['name'])}"
+        e = _ENRICHMENT.get(sid, {})
         conn.execute(
             """INSERT OR REPLACE INTO restaurants_cache
                (id, name, address, cuisine, rating, price, lat, lng, yelp_url, image_url, fetched_on)
-               VALUES (?, ?, ?, ?, ?, ?, NULL, NULL, ?, '', ?)""",
-            (f"seed-{slug(r['name'])}", r["name"], r["address"], r["cuisine"], r["rating"], r["price"], r.get("ordering_url", ""), today),
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (sid, r["name"], r["address"], r["cuisine"], r["rating"], r["price"],
+             e.get("lat"), e.get("lng"), r.get("ordering_url", ""), e.get("image_url", ""), today),
         )
     conn.commit()
     conn.close()
