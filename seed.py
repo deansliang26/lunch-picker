@@ -52,6 +52,10 @@ RESTAURANTS = [
     {"name": "Asian Box",               "cuisine": "Vietnamese",     "address": "855 El Camino Real, Palo Alto",            "price": "$$",  "rating": 4.2, "ordering_url": "https://order.spoton.com/asian-box-962/palo-alto-ca/65b13a4621728ea769f7f0b2/welcome"},
     {"name": "Poke House",              "cuisine": "Poke",           "address": "855 El Camino Real #9, Palo Alto",         "price": "$$",  "rating": 4.2, "ordering_url": "https://www.doordash.com/store/poke-house-palo-alto-458519/"},
     {"name": "Zareen's",                "cuisine": "Pakistani",      "address": "365 California Ave, Palo Alto",            "price": "$$",  "rating": 4.4, "ordering_url": "https://orderingatzareens.square.site/"},
+
+    # Have full scraped menus + auto-fill support and are pinned; need a row to appear.
+    {"name": "MJ Sushi",                "cuisine": "Japanese",       "address": "2305 El Camino Real, Palo Alto",           "price": "$$",  "rating": 4.1, "ordering_url": "https://www.mjsushipaloalto.com/"},
+    {"name": "Starbird",                "cuisine": "Chicken",        "address": "1241 W El Camino Real, Sunnyvale",         "price": "$$",  "rating": 3.8, "ordering_url": "https://order.starbirdchicken.com/venue/?id=3223&order-type=6"},
 ]
 
 def slug(name):
@@ -90,6 +94,8 @@ _ENRICHMENT = {
     "seed-sajj-mediterranean": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xykBzIv-uLQQ6GXwzhFhRA/o.jpg", "lat": 37.40099309253801, "lng": -122.11226246645442},
     "seed-sweetgreen": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/lRzjLP6o1YCfoaslkQ_QNA/o.jpg", "lat": 37.44473396475442, "lng": -122.16109207054912},
     "seed-zareen-s": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/T7t7eyLiLIntkiH61HhI3Q/o.jpg", "lat": 37.426757, "lng": -122.144093},
+    "seed-mj-sushi": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/dPBu4lv73PDA8R3opf4FoA/o.jpg", "lat": 37.425727, "lng": -122.146453},
+    "seed-starbird": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/b0pexR0TIQchr0FZF6gMiA/o.jpg", "lat": 37.374678, "lng": -122.057094},
 }
 
 
