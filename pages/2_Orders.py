@@ -233,88 +233,101 @@ with menu_col:
                 )
                 selected_fmt_obj = next((f for f in b["formats"] if f["name"] == fmt), {})
                 n = selected_fmt_obj.get("num_entrees", b.get("num_proteins", 1))
-                with st.form("build_form", clear_on_submit=True):
-                    prot_names = [p["name"] for p in b["proteins"]]
-                    entree_label = b.get("entree_label", "Protein")
-                    has_protein_images = any(p.get("image_url") for p in b["proteins"])
+                # No st.form here: the builder is fully reactive so the live
+                # price reflects entrée upcharges as you check them (and the
+                # format's base price / entrée count), not just on submit.
+                rid = winner_row["winner_place_id"]
+                prot_names = [p["name"] for p in b["proteins"]]
+                entree_label = b.get("entree_label", "Protein")
+                has_protein_images = any(p.get("image_url") for p in b["proteins"])
 
-                    if has_protein_images:
-                        st.markdown(
-                            f"<div style='font-size:14px;font-weight:600;margin-bottom:8px;'>"
-                            f"{entree_label} — pick {'1' if n == 1 else f'up to {n}'}</div>",
-                            unsafe_allow_html=True,
-                        )
-                        chosen = []
-                        COLS = 4
-                        for row_start in range(0, len(b["proteins"]), COLS):
-                            row_prots = b["proteins"][row_start : row_start + COLS]
-                            img_cols = st.columns(COLS)
-                            for ci, prot in enumerate(row_prots):
-                                with img_cols[ci]:
-                                    if prot.get("image_url"):
-                                        st.markdown(
-                                            f'<img src="{prot["image_url"]}" onerror="this.style.display=\'none\'" '
-                                            f'style="width:100%;'
-                                            f'border-radius:8px;aspect-ratio:1/1;object-fit:cover;'
-                                            f'margin-bottom:4px;">',
-                                            unsafe_allow_html=True,
-                                        )
-                                    upcharge = f" +${prot['upcharge']:.2f}" if prot.get("upcharge") else ""
-                                    if st.checkbox(
-                                        f"{prot['name']}{upcharge}",
-                                        key=f"build_prot_{row_start + ci}",
-                                    ):
-                                        chosen.append(prot["name"])
-                        if len(chosen) > n:
-                            st.warning(
-                                f"⚠️ {fmt} comes with {n} entrée{'s' if n > 1 else ''} — "
-                                f"please uncheck {len(chosen) - n}."
-                            )
-                    else:
-                        if n == 1:
-                            chosen = [st.selectbox(entree_label, prot_names)]
-                        else:
-                            chosen = st.multiselect(
-                                f"{entree_label} (pick up to {n})", prot_names, max_selections=n
-                            )
-
-                    opt_pick = {}
-                    for label, choices in (b.get("options") or {}).items():
-                        if not choices:
-                            continue
-                        if any(k in label.lower() for k in ("toppings", "add-ons", "extras", "mix-ins")):
-                            opt_pick[label] = st.multiselect(label, choices, placeholder="Optional…")
-                        else:
-                            opt_pick[label] = [st.selectbox(label, choices)]
-                    bq1, bq2 = st.columns([1, 3])
-                    with bq1:
-                        bqty = st.number_input("Qty", min_value=1, max_value=10, value=1)
-                    fmt_base = next((f["base"] for f in b["formats"] if f["name"] == fmt), 0.0)
-                    up = sum(
-                        next((p.get("upcharge", 0.0) for p in b["proteins"] if p["name"] == pn), 0.0)
-                        for pn in chosen
+                if has_protein_images:
+                    st.markdown(
+                        f"<div style='font-size:14px;font-weight:600;margin-bottom:8px;'>"
+                        f"{entree_label} — pick {'1' if n == 1 else f'up to {n}'}</div>",
+                        unsafe_allow_html=True,
                     )
-                    bprice = round(fmt_base + up, 2)
-                    with bq2:
-                        st.markdown(
-                            f"<div style='padding-top:26px;font-weight:800;color:#141413;font-size:18px;'>"
-                            f"Price: ${bprice:.2f}</div>",
-                            unsafe_allow_html=True,
+                    chosen = []
+                    COLS = 4
+                    for row_start in range(0, len(b["proteins"]), COLS):
+                        row_prots = b["proteins"][row_start : row_start + COLS]
+                        img_cols = st.columns(COLS)
+                        for ci, prot in enumerate(row_prots):
+                            with img_cols[ci]:
+                                if prot.get("image_url"):
+                                    st.markdown(
+                                        f'<img src="{prot["image_url"]}" onerror="this.style.display=\'none\'" '
+                                        f'style="width:100%;'
+                                        f'border-radius:8px;aspect-ratio:1/1;object-fit:cover;'
+                                        f'margin-bottom:4px;">',
+                                        unsafe_allow_html=True,
+                                    )
+                                upcharge = f" +${prot['upcharge']:.2f}" if prot.get("upcharge") else ""
+                                if st.checkbox(
+                                    f"{prot['name']}{upcharge}",
+                                    key=f"build_prot_{rid}_{row_start + ci}",
+                                ):
+                                    chosen.append(prot["name"])
+                    if len(chosen) > n:
+                        st.warning(
+                            f"⚠️ {fmt} comes with {n} entrée{'s' if n > 1 else ''} — "
+                            f"please uncheck {len(chosen) - n}."
                         )
-                    if st.form_submit_button("Add to my order", use_container_width=True, type="primary"):
-                        if chosen and len(chosen) <= n:
-                            item_name = f"{fmt} — {', '.join(chosen)}"
-                            note_parts = []
-                            for _label, vals in opt_pick.items():
-                                note_parts += [v for v in vals if v]
-                            notes = ", ".join(note_parts)
-                            current = {o["person"]: o for o in db.get_todays_orders()}
-                            cur_items = parse_items(current.get(user, {}).get("order_text", ""))
-                            save_items(user, cur_items + [{
-                                "item": item_name, "qty": int(bqty),
-                                "notes": notes, "price": bprice,
-                            }])
-                            st.rerun()
+                else:
+                    if n == 1:
+                        chosen = [st.selectbox(entree_label, prot_names, key=f"build_ent_{rid}")]
+                    else:
+                        chosen = st.multiselect(
+                            f"{entree_label} (pick up to {n})", prot_names,
+                            max_selections=n, key=f"build_ent_{rid}",
+                        )
+
+                opt_pick = {}
+                for label, choices in (b.get("options") or {}).items():
+                    if not choices:
+                        continue
+                    okey = f"build_opt_{rid}_{label}"
+                    if any(k in label.lower() for k in ("toppings", "add-ons", "extras", "mix-ins")):
+                        opt_pick[label] = st.multiselect(label, choices, placeholder="Optional…", key=okey)
+                    else:
+                        opt_pick[label] = [st.selectbox(label, choices, key=okey)]
+                bq1, bq2 = st.columns([1, 3])
+                with bq1:
+                    bqty = st.number_input("Qty", min_value=1, max_value=10, value=1, key=f"build_qty_{rid}")
+                fmt_base = next((f["base"] for f in b["formats"] if f["name"] == fmt), 0.0)
+                up = sum(
+                    next((p.get("upcharge", 0.0) for p in b["proteins"] if p["name"] == pn), 0.0)
+                    for pn in chosen
+                )
+                bprice = round(fmt_base + up, 2)
+                with bq2:
+                    st.markdown(
+                        f"<div style='padding-top:26px;font-weight:800;color:#141413;font-size:18px;'>"
+                        f"Price: ${bprice:.2f}</div>",
+                        unsafe_allow_html=True,
+                    )
+                valid_build = bool(chosen) and len(chosen) <= n
+                if st.button("Add to my order", use_container_width=True, type="primary",
+                             key=f"build_add_{rid}", disabled=not valid_build):
+                    item_name = f"{fmt} — {', '.join(chosen)}"
+                    note_parts = []
+                    for _label, vals in opt_pick.items():
+                        note_parts += [v for v in vals if v]
+                    notes = ", ".join(note_parts)
+                    current = {o["person"]: o for o in db.get_todays_orders()}
+                    cur_items = parse_items(current.get(user, {}).get("order_text", ""))
+                    save_items(user, cur_items + [{
+                        "item": item_name, "qty": int(bqty),
+                        "notes": notes, "price": bprice,
+                    }])
+                    # Reset the builder widgets for the next item (format is kept).
+                    for k in list(st.session_state.keys()):
+                        if (k.startswith(f"build_prot_{rid}_")
+                                or k == f"build_ent_{rid}"
+                                or k.startswith(f"build_opt_{rid}_")
+                                or k == f"build_qty_{rid}"):
+                            del st.session_state[k]
+                    st.rerun()
             if menu_data.get("categories"):
                 st.markdown("##### Sides, drinks & extras")
 
