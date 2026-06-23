@@ -23,9 +23,12 @@ jobs:
       - name: Ping the app to keep it warm
         run: |
           URL="https://deansliang26-lunch-picker-app-nwrd5m.streamlit.app"
+          # No -L: the app returns 303s and following them loops (curl exit 47).
+          # A single request still counts as traffic. Never fail the job on a
+          # transient curl/network error.
           for i in 1 2 3; do
-            code=$(curl -sL -o /dev/null -w "%{http_code}" -A "keep-warm-bot" "$URL/")
-            health=$(curl -sL -o /dev/null -w "%{http_code}" -A "keep-warm-bot" "$URL/_stcore/health")
-            echo "attempt $i: app=$code health=$health"
+            app=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -A "keep-warm-bot" "$URL/" || echo "ERR")
+            health=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -A "keep-warm-bot" "$URL/_stcore/health" || echo "ERR")
+            echo "attempt $i: app=$app health=$health"
             sleep 10
           done
