@@ -107,7 +107,7 @@ if not menu_data or not menu_data.get("categories"):
 if not menu_data.get("prices_verified", False):
     st.warning("⚠️  Prices for this restaurant haven't been verified — they may be outdated.")
 
-categories = menu_data["categories"]
+categories = menus.display_categories(menu_data)
 
 if len(categories) <= 8:
     tabs = st.tabs([c["name"] for c in categories])

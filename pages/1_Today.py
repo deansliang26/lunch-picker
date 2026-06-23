@@ -276,7 +276,7 @@ for i, r in enumerate(suggestions):
             card_menu = menus.get_menu(r["id"])
             if card_menu and card_menu.get("categories"):
                 with st.expander("📋 See menu"):
-                    for cat in card_menu["categories"]:
+                    for cat in menus.display_categories(card_menu):
                         items_in_cat = cat.get("items", [])
                         if not items_in_cat:
                             continue
