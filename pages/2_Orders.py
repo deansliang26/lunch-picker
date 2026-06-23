@@ -223,10 +223,17 @@ with menu_col:
             if not user:
                 st.info("Pick your name in the sidebar to build an order.")
             else:
+                # Format lives OUTSIDE the form so changing it reruns immediately
+                # and updates how many entrées you can pick (Bowl=1, Plate=2,
+                # Bigger Plate=3). Inside a form, widget changes don't apply until
+                # submit, so the entrée count wouldn't track the format.
+                fmt = st.selectbox(
+                    "Format", [f["name"] for f in b["formats"]],
+                    key=f"build_fmt_{winner_row['winner_place_id']}",
+                )
+                selected_fmt_obj = next((f for f in b["formats"] if f["name"] == fmt), {})
+                n = selected_fmt_obj.get("num_entrees", b.get("num_proteins", 1))
                 with st.form("build_form", clear_on_submit=True):
-                    fmt = st.selectbox("Format", [f["name"] for f in b["formats"]])
-                    selected_fmt_obj = next((f for f in b["formats"] if f["name"] == fmt), {})
-                    n = selected_fmt_obj.get("num_entrees", b.get("num_proteins", 1))
                     prot_names = [p["name"] for p in b["proteins"]]
                     entree_label = b.get("entree_label", "Protein")
                     has_protein_images = any(p.get("image_url") for p in b["proteins"])
