@@ -5,7 +5,7 @@ from datetime import datetime, date, time
 
 import db
 
-TEAM = ["Dean", "Evan", "Parth", "Cooper", "Aaron"]
+from roster import TEAM
 DEFAULT_CUTOFF = time(12, 0)  # noon; the orderer can change it inline
 
 

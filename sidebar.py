@@ -3,7 +3,7 @@ import db
 import yelp
 import avatar
 
-TEAM = ["Dean", "Evan", "Parth", "Cooper", "Aaron"]
+from roster import TEAM
 
 _CSS = """
 <style>

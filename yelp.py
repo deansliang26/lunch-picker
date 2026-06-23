@@ -1,5 +1,4 @@
 import os
-import hashlib
 import requests
 from datetime import date
 from dotenv import load_dotenv
@@ -111,16 +110,6 @@ def _fetch_from_yelp(category: str | None = None) -> list[dict]:
             "fetched_on": today_str,
         })
     return results
-
-
-def _deterministic_pick(restaurants: list[dict], n: int, seed: str) -> list[dict]:
-    """Pick n restaurants deterministically based on today's date so all users see the same suggestions."""
-    def sort_key(r):
-        h = hashlib.md5(f"{r['id']}{seed}".encode()).hexdigest()
-        return h
-
-    sorted_restaurants = sorted(restaurants, key=sort_key)
-    return sorted_restaurants[:n]
 
 
 def get_suggestions(cuisine_filter: str | None = None) -> list[dict]:

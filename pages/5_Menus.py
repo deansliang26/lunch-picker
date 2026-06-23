@@ -22,7 +22,7 @@ def _render_category(cat):
         return
     for it in items:
         badge = "🔥 " if it.get("popular") else ""
-        price_str = f"  ·  ${it['price']:.2f}" if it.get("price") else ""
+        price_str = f"  ·  **${it['price']:.2f}**" if it.get("price") else ""
         desc_str = (
             f"<span style='font-size:12px;color:#76726A;display:block;margin-top:2px;'>"
             f"{it['description']}</span>"
@@ -31,7 +31,7 @@ def _render_category(cat):
         st.markdown(
             f"<div style='padding:6px 0;border-bottom:1px solid #F5F3EC;'>"
             f"<span style='font-weight:600;color:#141413;'>{badge}{it['name']}</span>"
-            f"<span style='color:#D97757;font-weight:600;'>{price_str}</span>"
+            f"<span style='color:#D97757;'>{price_str}</span>"
             f"{desc_str}</div>",
             unsafe_allow_html=True,
         )

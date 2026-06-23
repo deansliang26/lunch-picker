@@ -22,11 +22,10 @@ import yelp
 import sidebar
 import menus
 import avatar
-from autoorder import SUPPORTED_RESTAURANTS
 
 db.init_db()
 
-TEAM = ["Dean", "Evan", "Parth", "Cooper", "Aaron"]
+from roster import TEAM
 MAJORITY = math.ceil(len(TEAM) / 2)
 
 st.set_page_config(page_title="Today's Lunch · PA", page_icon="🍜", layout="wide")
@@ -54,8 +53,8 @@ if not user:
 
 # --- Check if winner already decided ---
 winner_row = db.get_todays_winner()
-if winner_row and db.get_restaurant(winner_row["winner_place_id"]):
-    winner = db.get_restaurant(winner_row["winner_place_id"])
+winner = db.get_restaurant(winner_row["winner_place_id"]) if winner_row else None
+if winner:
     meta = " · ".join(filter(None, [winner.get('cuisine'), winner.get('price'), f"★ {winner.get('rating')}" if winner.get('rating') else None]))
     _, cta_col, _ = st.columns([1, 2, 1])
     with cta_col:

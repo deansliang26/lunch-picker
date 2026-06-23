@@ -10,7 +10,7 @@ import sidebar
 
 db.init_db()
 
-TEAM = ["Dean", "Evan", "Parth", "Cooper", "Aaron"]
+from roster import TEAM
 
 st.set_page_config(page_title="History · PA Lunch", page_icon="🍜", layout="wide")
 

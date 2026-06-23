@@ -1,6 +1,6 @@
 import sqlite3
 import os
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "lunch.db")
 
@@ -140,7 +140,7 @@ def upsert_restaurants(restaurants: list[dict]):
 
 
 def get_cached_restaurants(max_age_days: int = 7) -> list[dict]:
-    cutoff = date.fromordinal(date.today().toordinal() - max_age_days).isoformat()
+    cutoff = (date.today() - timedelta(days=max_age_days)).isoformat()
     with _conn() as conn:
         rows = conn.execute(
             "SELECT * FROM restaurants_cache WHERE fetched_on >= ?", (cutoff,)

@@ -4,7 +4,6 @@ import os
 import json
 import time
 import streamlit as st
-from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import db
@@ -18,7 +17,7 @@ db.init_db()
 HERE = os.path.dirname(os.path.abspath(__file__))   # pages/
 PROJECT_ROOT = os.path.dirname(HERE)                 # lunch-picker/
 
-TEAM = ["Dean", "Evan", "Parth", "Cooper", "Aaron"]
+from roster import TEAM
 BUDGET = 20.00
 
 # On a hosted (headless) deploy there is no browser/display, so the auto-fill
