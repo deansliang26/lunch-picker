@@ -83,11 +83,13 @@ def _seed_if_empty():
         ).fetchone()
         if row is None:
             seed.seed()
-        # Backfill photos/coords on existing seed rows missing them.
+        # Make baked enrichment authoritative for seed photos/coords. image_url
+        # is set outright (so a dead/removed URL recorded by an earlier build is
+        # cleared); lat/lng only fill when missing so real coords aren't clobbered.
         for sid, e in seed._ENRICHMENT.items():
             conn.execute(
                 """UPDATE restaurants_cache
-                   SET image_url = COALESCE(NULLIF(image_url, ''), ?),
+                   SET image_url = ?,
                        lat = COALESCE(lat, ?),
                        lng = COALESCE(lng, ?)
                    WHERE id = ?""",
