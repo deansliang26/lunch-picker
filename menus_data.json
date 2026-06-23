@@ -4518,7 +4518,7 @@
           {
             "name": "Green Curry with Chicken",
             "price": 17.95,
-            "description": "Hot. Spicy green curry with chicken breast, bell peppers, broccoli, cauliflower, and seasonal vegetables. Includes a side of jasmine rice. **photo shows premium substitution with shrimp**",
+            "description": "Hot. Spicy green curry with chicken breast, bell peppers, broccoli, cauliflower, and seasonal vegetables. Includes a side of jasmine rice. photo shows premium substitution with shrimp",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/qvM8dw02wdhurn0bULu2LAI8nwcH7LmwajQtaSBH-o4/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/4/item-600000047173584624_1765171463.jpg"
           }
@@ -5041,31 +5041,31 @@
         "name": "Sides",
         "items": [
           {
-            "name": "Side Chicken**",
+            "name": "Side Chicken",
             "price": 5,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Steak**",
+            "name": "Side Steak",
             "price": 6.99,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Salmon**",
+            "name": "Side Salmon",
             "price": 6.99,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Tofu**",
+            "name": "Side Tofu",
             "price": 5,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Pork**",
+            "name": "Side Pork",
             "price": 5,
             "description": "",
             "popular": false
@@ -5116,7 +5116,7 @@
         ]
       },
       {
-        "name": "Boba Drinks**",
+        "name": "Boba Drinks",
         "items": [
           {
             "name": "Brown Sugar Boba",
