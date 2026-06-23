@@ -246,7 +246,8 @@ with menu_col:
                                 with img_cols[ci]:
                                     if prot.get("image_url"):
                                         st.markdown(
-                                            f'<img src="{prot["image_url"]}" style="width:100%;'
+                                            f'<img src="{prot["image_url"]}" onerror="this.style.display=\'none\'" '
+                                            f'style="width:100%;'
                                             f'border-radius:8px;aspect-ratio:1/1;object-fit:cover;'
                                             f'margin-bottom:4px;">',
                                             unsafe_allow_html=True,
@@ -322,7 +323,8 @@ with menu_col:
                 with img_col:
                     if item.get("image_url"):
                         st.markdown(
-                            f'<img src="{item["image_url"]}" style="width:100%;aspect-ratio:1/1;'
+                            f'<img src="{item["image_url"]}" onerror="this.style.display=\'none\'" '
+                            'style="width:100%;aspect-ratio:1/1;'
                             'object-fit:cover;border-radius:6px;display:block;">',
                             unsafe_allow_html=True,
                         )

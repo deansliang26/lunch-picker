@@ -201,7 +201,8 @@ for i, r in enumerate(suggestions):
             with img_col:
                 if r.get("image_url"):
                     st.markdown(
-                        f'<img src="{r["image_url"]}" style="width:100%;aspect-ratio:1/1;'
+                        f'<img src="{r["image_url"]}" onerror="this.style.display=\'none\'" '
+                        'style="width:100%;aspect-ratio:1/1;'
                         'object-fit:cover;border-radius:8px;display:block;">',
                         unsafe_allow_html=True,
                     )
