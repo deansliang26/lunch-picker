@@ -1,0 +1,31 @@
+name: keep-warm
+
+# Streamlit Community Cloud puts free apps to sleep after inactivity, which
+# makes the next visit wait ~30-60s for a cold start. This pings the app on a
+# schedule during weekday work hours so it stays awake. It's prevention: keep
+# regular traffic flowing so the inactivity timer never trips.
+#
+# Caveats:
+#   - GitHub cron can lag several minutes under load, so real interval is looser
+#     than 10 min. The app may still recycle occasionally.
+#   - GitHub disables scheduled workflows after 60 days with no repo activity;
+#     any push (or a manual run via "Run workflow") re-enables it.
+
+on:
+  schedule:
+    - cron: "*/10 13-23 * * 1-5"   # every 10 min, ~6am-4pm PT, Mon-Fri (UTC 13:00-23:59)
+  workflow_dispatch: {}             # allow manual runs from the Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the app to keep it warm
+        run: |
+          URL="https://deansliang26-lunch-picker-app-nwrd5m.streamlit.app"
+          for i in 1 2 3; do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" -A "keep-warm-bot" "$URL/")
+            health=$(curl -sL -o /dev/null -w "%{http_code}" -A "keep-warm-bot" "$URL/_stcore/health")
+            echo "attempt $i: app=$code health=$health"
+            sleep 10
+          done
