@@ -1,5 +1,6 @@
 import sqlite3
 import os
+import random
 from datetime import datetime, date, timedelta
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "lunch.db")
@@ -216,6 +217,18 @@ def tally_votes() -> dict[str, int]:
     for v in votes:
         tally[v["place_id"]] = tally.get(v["place_id"], 0) + 1
     return tally
+
+
+def pick_weighted_winner() -> str | None:
+    """Pick a winner from today's votes, weighted by vote count — more votes
+    means better odds, but an underdog can still win (that's the fun of it).
+    Returns the chosen place_id, or None if nobody has voted yet."""
+    tally = tally_votes()
+    if not tally:
+        return None
+    pids = list(tally.keys())
+    weights = [tally[p] for p in pids]
+    return random.choices(pids, weights=weights, k=1)[0]
 
 
 # --- history ---

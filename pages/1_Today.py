@@ -1,11 +1,12 @@
 import math
 import sys
 import os
+import time
 import streamlit as st
 
 OFFICE_LAT, OFFICE_LNG = 37.4076, -122.1459
 
-def _drive_time(lat, lng):
+def _drive_mins(lat, lng):
     if not lat or not lng:
         return None
     R = 3958.8
@@ -13,8 +14,11 @@ def _drive_time(lat, lng):
     dp, dl = math.radians(lat - OFFICE_LAT), math.radians(lng - OFFICE_LNG)
     a = math.sin(dp/2)**2 + math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
     miles = 2 * R * math.asin(math.sqrt(a))
-    mins = max(1, round(miles * 2.5))
-    return f"~{mins} min drive"
+    return max(1, round(miles * 2.5))
+
+def _drive_time(lat, lng):
+    mins = _drive_mins(lat, lng)
+    return f"~{mins} min drive" if mins is not None else None
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import db
@@ -28,12 +32,59 @@ db.init_db()
 from roster import TEAM
 MAJORITY = math.ceil(len(TEAM) / 2)
 
+_VEG_HINTS = (
+    "salad", "mediterranean", "vegan", "vegetarian", "poke", "falafel",
+    "hummus", "sweetgreen", "bowl", "healthy", "juice", "cafe", "greek",
+)
+
+def _is_veg_friendly(r: dict) -> bool:
+    blob = f"{r.get('cuisine','')} {r.get('name','')}".lower()
+    return any(h in blob for h in _VEG_HINTS)
+
+def _reveal_card(name: str, final: bool = False) -> str:
+    if final:
+        border, bg, kicker, kicker_color = "#D97757", "#D9775718", "🏆 TODAY'S PICK", "#D97757"
+    else:
+        border, bg, kicker, kicker_color = "#DED9C7", "#F5F3EC", "🎲 DECIDING…", "#9C978C"
+    return (
+        f"<div style='border:2px solid {border};background:{bg};border-radius:16px;"
+        f"padding:28px 24px;text-align:center;margin:8px 0;"
+        f"box-shadow:0 4px 20px rgba(20,20,19,0.08);'>"
+        f"<div style='font-family:var(--font-mono),monospace;font-size:12px;font-weight:700;"
+        f"letter-spacing:2px;color:{kicker_color};margin-bottom:8px;'>{kicker}</div>"
+        f"<div style='font-family:var(--font-serif),serif;font-size:34px;font-weight:700;"
+        f"color:#141413;line-height:1.15;'>{name}</div>"
+        f"</div>"
+    )
+
+def _run_reveal(suggestions: list, chosen_pid: str):
+    """Roulette-style reveal: cycle the candidate names, ease out, land on the
+    winner. Blocks ~2.5s — that's the whole point (the suspense)."""
+    names = [r["name"] for r in suggestions] or ["Lunch"]
+    chosen = next((r for r in suggestions if r["id"] == chosen_pid), None)
+    chosen_name = chosen["name"] if chosen else "Lunch"
+    placeholder = st.empty()
+    spins = 22
+    delay = 0.04
+    for i in range(spins):
+        placeholder.markdown(_reveal_card(names[i % len(names)]), unsafe_allow_html=True)
+        time.sleep(delay)
+        if i > spins // 2:
+            delay *= 1.18  # ease out toward the end
+    placeholder.markdown(_reveal_card(chosen_name, final=True), unsafe_allow_html=True)
+    st.balloons()
+    time.sleep(0.6)
+
 st.set_page_config(page_title="Today's Lunch · PA", page_icon="🍜", layout="wide")
 
 sidebar.render()
 
 user = st.session_state.user
 cuisine_alias = yelp.CUISINES.get(st.session_state.cuisine_filter)
+
+# Celebrate a freshly-decided winner (set by the vote handler / decide button).
+if st.session_state.pop("_celebrate", False):
+    st.balloons()
 
 # --- Header ---
 from datetime import date
@@ -165,6 +216,25 @@ def vote_tally():
 
 vote_tally()
 
+# --- Decide-now CTA (resolves any state with ≥1 vote, incl. a full tie) ---
+_decide_votes = db.get_todays_votes()
+if not winner_row and _decide_votes:
+    _n_voted = len({v["voter"] for v in _decide_votes})
+    _, dc, _ = st.columns([1, 2, 1])
+    with dc:
+        if st.button("🎲  Decide for us now", use_container_width=True, type="primary", key="decide_now"):
+            chosen_pid = db.pick_weighted_winner()
+            if chosen_pid:
+                _run_reveal(suggestions, chosen_pid)
+                _final_tally = db.tally_votes()
+                db.record_winner(chosen_pid, _final_tally.get(chosen_pid, 0), len(TEAM))
+                st.session_state["_celebrate"] = True
+                st.rerun()
+        st.caption(
+            f"Picks from the {_n_voted} vote{'s' if _n_voted != 1 else ''} so far — "
+            "weighted by votes, but an underdog can still win 🍀"
+        )
+
 st.divider()
 
 # --- Restaurant cards ---
@@ -184,9 +254,43 @@ is_full_tie = (
     and max(tally.values()) == 1
 )
 if is_full_tie and not winner_row:
-    st.warning("🤷 5-way tie — everyone picked a different spot. Someone needs to switch their vote!")
+    st.warning("🤷 Dead heat — everyone picked a different spot. Hit **🎲 Decide for us now** above to settle it.")
 
-for i, r in enumerate(suggestions):
+# --- Quick filter chips (client-side; narrows the cards below) ---
+# NB: a bare "$"/"$$" label renders as a LaTeX math block in Streamlit markdown
+# (and shows blank), so the price chips use escaped labels mapped to a tag.
+_PRICE_LABELS = {r"\$": "$", r"\$\$": "$$"}
+_RATING_LABEL = "Top rated"
+_FILTERS = list(_PRICE_LABELS) + ["Nearby", _RATING_LABEL, "Veg-friendly", "Has menu"]
+_active = st.pills("Filter", _FILTERS, selection_mode="multi", key="today_filters", label_visibility="collapsed") or []
+_price_sel = {_PRICE_LABELS[f] for f in _active if f in _PRICE_LABELS}
+
+def _passes(r: dict) -> bool:
+    if _price_sel:
+        tag = {1: "$", 2: "$$"}.get(len((r.get("price") or "").strip()))
+        if tag not in _price_sel:
+            return False
+    if "Nearby" in _active:
+        m = _drive_mins(r.get("lat"), r.get("lng"))
+        if m is None or m > 10:
+            return False
+    if _RATING_LABEL in _active and (r.get("rating") or 0) < 4.2:
+        return False
+    if "Veg-friendly" in _active and not _is_veg_friendly(r):
+        return False
+    if "Has menu" in _active:
+        md = menus.get_menu(r["id"])
+        if not (md and (md.get("categories") or md.get("menu_type") == "build")):
+            return False
+    return True
+
+shown = [r for r in suggestions if _passes(r)] if _active else suggestions
+if _active:
+    st.caption(f"Showing {len(shown)} of {len(suggestions)} spots")
+if not shown:
+    st.info("No spots match these filters — clear a chip to see more.")
+
+for i, r in enumerate(shown):
     col = cols[i % 2]
     with col:
         is_leader = r["id"] == leader
@@ -263,7 +367,10 @@ for i, r in enumerate(suggestions):
                                         key=lambda pid: (db.get_restaurant(pid) or {}).get("rating") or 0
                                     )
                                     db.record_winner(winner_pid, max_cnt, len(TEAM))
+                                    winner_found = True
 
+                            if winner_found:
+                                st.session_state["_celebrate"] = True
                             st.rerun()
                 with withdraw_col:
                     if not winner_row and user and is_my_vote:

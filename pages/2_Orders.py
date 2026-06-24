@@ -663,11 +663,28 @@ def team_summary():
             st.markdown(f"### Group total: ${grand:.2f}")
             st.caption(f"{total_items} items across {submitted} people")
 
-    # Order document
+    # Kitchen ticket — identical items combined across everyone, so the orderer
+    # can read off totals ("3× Chicken Burrito") instead of name-by-name.
+    if orders_by_person:
+        agg: dict = {}
+        for items in orders_by_person.values():
+            for it in items:
+                key = (it.get("item", ""), (it.get("notes") or "").strip())
+                agg[key] = agg.get(key, 0) + (it.get("qty") or 1)
+        st.divider()
+        st.subheader("🧑‍🍳 Kitchen ticket")
+        st.caption("Identical items combined — read this off when you call it in")
+        ticket_lines = []
+        for (name, notes), qty in sorted(agg.items(), key=lambda x: (-x[1], x[0][0].lower())):
+            note_str = f"  ({notes})" if notes else ""
+            ticket_lines.append(f"{qty:>2}×  {name}{note_str}")
+        st.code("\n".join(ticket_lines), language=None)
+
+    # Order document (per-person breakdown with prices + budget)
     if orders_by_person:
         st.divider()
         st.subheader("Order document")
-        st.caption("Use this to place the order online or read off to the counter")
+        st.caption("Per-person breakdown — for splitting cost or the receipt")
         doc = format_order_doc(orders_by_person)
         st.code(doc, language=None)
 
