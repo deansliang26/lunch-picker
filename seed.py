@@ -8,7 +8,6 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "lunch.db")
 
 RESTAURANTS = [
     # Fast food / very budget ($)
-    {"name": "In-N-Out Burger",         "cuisine": "Burgers",        "address": "3895 El Camino Real, Palo Alto",           "price": "$",   "rating": 4.4},
     {"name": "Chipotle Mexican Grill",  "cuisine": "Mexican",        "address": "180 El Camino Real, Mountain View",        "price": "$",   "rating": 3.7},
     {"name": "Jersey Mike's Subs",      "cuisine": "Sandwiches",     "address": "3600 El Camino Real, Palo Alto",           "price": "$",   "rating": 4.0},
     {"name": "Panda Express",           "cuisine": "Chinese",        "address": "40 Showers Dr, Mountain View",             "price": "$",   "rating": 3.5},
@@ -78,7 +77,6 @@ _ENRICHMENT = {
     "seed-five-guys": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/OZ_1zK9OVJUsR1AMyY3vMQ/o.jpg", "lat": 37.396018966518525, "lng": -122.10150728282072},
     "seed-fuki-sushi": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/XSWqCSbjJHp4Wr2KhjFHwA/o.jpg", "lat": 37.4138844, "lng": -122.125805},
     "seed-ike-s-love-sandwiches": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/nnJPn9qSIa-3xiyaa68JXQ/o.jpg", "lat": 37.419941, "lng": -122.096053},
-    "seed-in-n-out-burger": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/5GYYf24CSqRuhYdSdMjwmQ/o.jpg", "lat": 37.4209471, "lng": -122.093343},
     "seed-jersey-mike-s-subs": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/xk5qT9dVWeygRHBZObQLtg/o.jpg", "lat": 37.37357, "lng": -122.0541651},
     "seed-la-bodeguita-del-medio": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/a2WwuexMytQzCWVlDF3TRg/o.jpg", "lat": 37.4254329, "lng": -122.1451937073576},
     "seed-la-viga-seafood": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/yS15Wvs6OdF9wIOHReTXgg/o.jpg", "lat": 37.486981969862065, "lng": -122.222848},

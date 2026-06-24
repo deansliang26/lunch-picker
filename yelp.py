@@ -32,7 +32,6 @@ SUGGESTIONS_PER_DAY = 35
 # These restaurants always appear in daily suggestions regardless of the random rotation.
 # When a cuisine filter is active, only pinned restaurants matching the filter are kept.
 PINNED_IDS = {
-    "seed-in-n-out-burger",
     "seed-chipotle-mexican-grill",
     "seed-panda-express",
     "seed-pizza-my-heart",

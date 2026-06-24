@@ -69,10 +69,10 @@ def init_db():
 
 
 def _seed_if_empty():
-    """Keep the canonical restaurant list populated on an ephemeral cloud
-    filesystem. (Re)seed whenever any seed restaurant is missing — covers both a
-    fresh DB and a DB seeded by an older build before a restaurant was added —
-    then make the baked photos/coords authoritative on the seed rows."""
+    """Keep the canonical restaurant list in sync on an ephemeral cloud
+    filesystem. (Re)seed whenever the seed-row count doesn't match the roster —
+    covers a fresh DB, a restaurant added, OR one removed (seed() rewrites the
+    full list) — then make the baked photos/coords authoritative on seed rows."""
     try:
         import seed
     except Exception:
@@ -81,8 +81,8 @@ def _seed_if_empty():
         seeded = conn.execute(
             "SELECT COUNT(*) FROM restaurants_cache WHERE id LIKE 'seed-%'"
         ).fetchone()[0]
-    # seed() is idempotent (INSERT OR REPLACE); only run it when rows are missing.
-    if seeded < len(seed.RESTAURANTS):
+    # seed() rewrites the seed rows (delete-then-insert); run it on any mismatch.
+    if seeded != len(seed.RESTAURANTS):
         seed.seed()
     # Make baked enrichment authoritative for seed photos/coords. image_url is set
     # outright (so a dead/removed URL recorded by an earlier build is cleared);
