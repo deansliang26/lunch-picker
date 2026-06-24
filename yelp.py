@@ -46,6 +46,7 @@ PINNED_IDS = {
     "seed-asian-box",
     "seed-poke-house",
     "seed-zareen-s",
+    "seed-coupa-cafe-research-park",
 }
 
 CUISINES = {

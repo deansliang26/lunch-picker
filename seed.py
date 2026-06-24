@@ -55,6 +55,7 @@ RESTAURANTS = [
     # Have full scraped menus + auto-fill support and are pinned; need a row to appear.
     {"name": "MJ Sushi",                "cuisine": "Japanese",       "address": "2305 El Camino Real, Palo Alto",           "price": "$$",  "rating": 4.1, "ordering_url": "https://www.mjsushipaloalto.com/"},
     {"name": "Starbird",                "cuisine": "Chicken",        "address": "1241 W El Camino Real, Sunnyvale",         "price": "$$",  "rating": 3.8, "ordering_url": "https://order.starbirdchicken.com/venue/?id=3223&order-type=6"},
+    {"name": "Coupa Cafe (Research Park)", "cuisine": "Cafe",        "address": "3215 Porter Dr, Palo Alto",                "price": "$$",  "rating": 3.7, "ordering_url": "https://coupacafe.alohaorderonline.com/Engage.aspx?#/engage/ordering/menu/"},
 ]
 
 def slug(name):
@@ -94,6 +95,7 @@ _ENRICHMENT = {
     "seed-zareen-s": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/T7t7eyLiLIntkiH61HhI3Q/o.jpg", "lat": 37.426757, "lng": -122.144093},
     "seed-mj-sushi": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/dPBu4lv73PDA8R3opf4FoA/o.jpg", "lat": 37.425727, "lng": -122.146453},
     "seed-starbird": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/b0pexR0TIQchr0FZF6gMiA/o.jpg", "lat": 37.374678, "lng": -122.057094},
+    "seed-coupa-cafe-research-park": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/bEQ6lif6pXFvGqt4x-ukRg/o.jpg", "lat": 37.4092, "lng": -122.14797},
 }
 
 

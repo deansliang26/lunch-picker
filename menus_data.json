@@ -4518,7 +4518,7 @@
           {
             "name": "Green Curry with Chicken",
             "price": 17.95,
-            "description": "Hot. Spicy green curry with chicken breast, bell peppers, broccoli, cauliflower, and seasonal vegetables. Includes a side of jasmine rice. photo shows premium substitution with shrimp",
+            "description": "Hot. Spicy green curry with chicken breast, bell peppers, broccoli, cauliflower, and seasonal vegetables. Includes a side of jasmine rice. **photo shows premium substitution with shrimp**",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/qvM8dw02wdhurn0bULu2LAI8nwcH7LmwajQtaSBH-o4/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/4/item-600000047173584624_1765171463.jpg"
           }
@@ -5041,31 +5041,31 @@
         "name": "Sides",
         "items": [
           {
-            "name": "Side Chicken",
+            "name": "Side Chicken**",
             "price": 5,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Steak",
+            "name": "Side Steak**",
             "price": 6.99,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Salmon",
+            "name": "Side Salmon**",
             "price": 6.99,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Tofu",
+            "name": "Side Tofu**",
             "price": 5,
             "description": "",
             "popular": false
           },
           {
-            "name": "Side Pork",
+            "name": "Side Pork**",
             "price": 5,
             "description": "",
             "popular": false
@@ -5116,7 +5116,7 @@
         ]
       },
       {
-        "name": "Boba Drinks",
+        "name": "Boba Drinks**",
         "items": [
           {
             "name": "Brown Sugar Boba",
@@ -6072,6 +6072,1198 @@
             "name": "Open Water",
             "price": 2.5,
             "image_url": "https://olo-images-live.imgix.net/10/108ff7ac22be4a50aa3457affaf9301f.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=528&h=352&fit=fill&fm=png32&bg=transparent&s=c1a2911d9a8b0fe53c26dfc3316bf5fe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "seed-coupa-cafe-research-park",
+    "success": true,
+    "menu_url": "https://coupacafe.alohaorderonline.com/Engage.aspx?#/engage/ordering/menu/",
+    "prices_verified": true,
+    "categories": [
+      {
+        "name": "Coffee",
+        "items": [
+          {
+            "name": "Pumpkin Spice Latte",
+            "price": 5.85,
+            "description": "Prepared with espresso, tiger spice chai, pumpkin syrup, topped with whipped cream and cinnamon sprinkles."
+          },
+          {
+            "name": "Creamy Cold Brew",
+            "price": 6.25,
+            "description": "sweet creamy vanilla cold brew topped with heavy cream"
+          },
+          {
+            "name": "Ube Latte",
+            "price": 5.15,
+            "description": "creamy, earthy-sweet & vibrant purple ube with a hint of vanilla"
+          },
+          {
+            "name": "Matcha Latte",
+            "price": 5.15,
+            "description": "premium japanese matcha green tea with steamed milk"
+          },
+          {
+            "name": "Vietnamese Coffee",
+            "price": 5.25,
+            "description": "silky iced Vietnamese coffee, crafted with bold espresso, sweetened condensed milk, and a touch of rich heavy cream"
+          },
+          {
+            "name": "Vanilla Frappe",
+            "price": 7.25,
+            "description": "blended iced espresso, milk and vanilla syrup"
+          },
+          {
+            "name": "Latte",
+            "price": 4.6
+          },
+          {
+            "name": "Iced Latte",
+            "price": 5.5
+          },
+          {
+            "name": "Cappuccino",
+            "price": 4.6
+          },
+          {
+            "name": "Drip Coffee",
+            "price": 3.65
+          },
+          {
+            "name": "Guayoyo (Americano)",
+            "price": 3.9,
+            "description": "venezuelan style americano"
+          },
+          {
+            "name": "Deluxious Dark Mocha",
+            "price": 5.45,
+            "description": "rich and oh-so-creamy mocha crafted with chunks of decadent dark chocolate"
+          },
+          {
+            "name": "Spicy Maya Mocha",
+            "price": 5.45,
+            "description": "dark chocolate mocha lightly infused with seductive cinnamon and an infusion of cayenne and pasilla chile with just enough heat to melt your heart at first sip."
+          },
+          {
+            "name": "Iced Deluxious Dark Mocha",
+            "price": 6.35,
+            "description": "iced rich and oh-so-creamy mocha crafted with chunks of decadent dark chocolate"
+          },
+          {
+            "name": "Iced Spicy Maya Mocha",
+            "price": 6.35,
+            "description": "iced dark chocolate mocha lightly infused with seductive cinnamon and an infusion of cayenne and pasilla chile with just enough heat to melt your heart at first sip."
+          },
+          {
+            "name": "Cafe Caracas",
+            "price": 4.95,
+            "description": "soft & aromatic venezuelan latte"
+          },
+          {
+            "name": "Marron",
+            "price": 6.4,
+            "description": "strong & aromatic venezuelan latte"
+          },
+          {
+            "name": "Cold Brew",
+            "price": 4.65,
+            "description": "brewed for a minimum of 12 hours at 38 degrees, coupa\u2019s cold brewed method enhances the flavor & aroma of our coffee while minimizing acidity"
+          },
+          {
+            "name": "Nitro Cold Brew",
+            "price": 5.5,
+            "description": "our nitrogen infused cold brew has a creamy smooth cascading texture with a velvety foam crown"
+          },
+          {
+            "name": "Espresso",
+            "price": 3.75
+          },
+          {
+            "name": "Cortado",
+            "price": 4.95,
+            "description": "double shot of espresso mixed with equal parts of steamed milk"
+          },
+          {
+            "name": "Flat White",
+            "price": 5.15,
+            "description": "double shot of espresso mixed with 4oz of smooth velvety steamed milk"
+          },
+          {
+            "name": "Machiatto",
+            "price": 4
+          },
+          {
+            "name": "Caramel Macchiato",
+            "price": 6.2,
+            "description": "espresso, milk, caramel syrup"
+          },
+          {
+            "name": "Cafe Au Lait",
+            "price": 4.8
+          },
+          {
+            "name": "Hot Milk",
+            "price": 3.9
+          },
+          {
+            "name": "Cold Milk",
+            "price": 3.35
+          },
+          {
+            "name": "Coffee Traveler 96oz",
+            "price": 28.95,
+            "description": "Serves 12 8oz cups."
+          },
+          {
+            "name": "Cold Brew Traveler 96oz",
+            "price": 37.5,
+            "description": "Serves 6 16oz cups."
+          },
+          {
+            "name": "Hot Water Traveler 96oz",
+            "price": 14.95,
+            "description": "Serves 6 16oz cups"
+          },
+          {
+            "name": "Whole Bean Dark Roast Coffee Pack 12oz",
+            "price": 19.95,
+            "description": "High altitude coffees, rich, well balanced, full bodied & complex with moderate acidity, fruity aroma & hints of chocolate & caramel"
+          },
+          {
+            "name": "Ground Dark Roast Coffee Pack 12oz",
+            "price": 19.95,
+            "description": "High altitude coffees, rich, well balanced, full bodied & complex with moderate acidity, fruity aroma & hints of chocolate & caramel"
+          },
+          {
+            "name": "Dark Roast 5lb Whole Bean",
+            "price": 125,
+            "description": "High altitude coffees, rich, well balanced, full bodied & complex with moderate acidity, fruity aroma & hints of chocolate & caramel"
+          }
+        ]
+      },
+      {
+        "name": "Hot Choco, Chai & Tea",
+        "items": [
+          {
+            "name": "Deluxious Dark Hot Chocolate",
+            "price": 4.95,
+            "description": "rich and oh-so-creamy hot chocolate crafted with chunks of decadent dark chocolate"
+          },
+          {
+            "name": "Spicy Maya Hot Chocolate",
+            "price": 4.95,
+            "description": "chunks of velvety dark chocolate lightly infused with seductive cinnamon and an infusion of cayenne and pasilla chile with just enough heat to melt your heart at first sip."
+          },
+          {
+            "name": "Tiger Spice Chai",
+            "price": 4.95,
+            "description": "rich and creamy mixture of black tea and premium spices, including cinnamon, cardamom, and clove."
+          },
+          {
+            "name": "Elephant Vanilla Chai",
+            "price": 4.95,
+            "description": "rich and creamy mixture of black tea and premium spices."
+          },
+          {
+            "name": "Orca Spice Chai \ud83c\udd62",
+            "price": 4.95,
+            "description": "sugar-free chai made with sucralose. rich and creamy mixture of black tea and premium spices. \ud83c\udd62=Sugar-Free"
+          },
+          {
+            "name": "Flamingo Vanilla Chai \ud83c\udd53\ud83c\udd62",
+            "price": 4.95,
+            "description": "decaf sugar-free chai made with sucralos. rich and creamy mixture of black tea and premium spices like cinnamon, cardamom and vanilla. \ud83c\udd53=Decaf \ud83c\udd62=Sugar-Free"
+          },
+          {
+            "name": "London Fog",
+            "price": 5.15,
+            "description": "earl grey tea, steamed milk, vanilla syrup"
+          },
+          {
+            "name": "Earl Grey Tea",
+            "price": 4.15,
+            "description": "Black Tea: A timeless expression of robust Assam and bergamot."
+          },
+          {
+            "name": "English Breakfast Tea",
+            "price": 4.15,
+            "description": "Black Tea: From India's Assam growing region and famous Sewpur Estate, an outstanding example of a rich and robust, pure Assam wake up tea."
+          },
+          {
+            "name": "Jasmine Green Tea",
+            "price": 4.15,
+            "description": "Green Tea: Rare, exceptional Chung Hao tea, scented with jasmine flowers."
+          },
+          {
+            "name": "Chamomile Citron Tea",
+            "price": 4.15,
+            "description": "Herbal Tea: Sunny Egyptian chamomile brightened by herbs and flowers."
+          },
+          {
+            "name": "Ginger Lemongrass Tea",
+            "price": 4.15,
+            "description": "Herbal Tea: Citrus notes balanced by cool spearmint and mellow licorice."
+          },
+          {
+            "name": "Citrus Mint Tea",
+            "price": 4.15,
+            "description": "Herbal Tea: An herbal infusion of peppermint and citrus."
+          },
+          {
+            "name": "Hot Chocolate Traveler 96oz",
+            "price": 47.95,
+            "description": "DELUXIOUS DARK: rich and oh-so-creamy hot chocolate crafted with chunks of decadent dark chocolate. | SPICY MAYA: chunks of velvety dark chocolate lightly infused with seductive ci"
+          },
+          {
+            "name": "Hot Choco Mix 12oz",
+            "price": 17,
+            "description": "Your Choice of Deluxious Dark or Spicy Maya Hot Chocolate,"
+          },
+          {
+            "name": "Chai Mix 12oz",
+            "price": 18.65,
+            "description": "Your Choice of Chai Flavor"
+          }
+        ]
+      },
+      {
+        "name": "Protein Drinks",
+        "items": [
+          {
+            "name": "Vanilla Protein Latte\u26a1",
+            "price": 4.6,
+            "description": "Just Ingredients grass-fed casein free protein, vanilla syrup"
+          },
+          {
+            "name": "Iced Vanilla Protein Latte\u26a1",
+            "price": 5.5,
+            "description": "Just Ingredients grass-fed casein free protein, vanilla syrup, ice"
+          },
+          {
+            "name": "Matcha Protein Latte\u26a1",
+            "price": 5.15,
+            "description": "Just Ingredients grass-fed casein free protein, premium japanese matcha green tea with steamed milk"
+          },
+          {
+            "name": "Iced Matcha Protein Latte\u26a1",
+            "price": 5.15,
+            "description": "Just Ingredients grass-fed casein free protein, premium japanese matcha green tea with milk and ice"
+          },
+          {
+            "name": "Matcha Protein Smoothie\u26a1",
+            "price": 12.15,
+            "description": "Just Ingredients grass-fed casein free protein, japanese matcha green tea powder, almond milk, mangoes, fresh spinach"
+          },
+          {
+            "name": "Coupa Protein Smoothie\u26a1",
+            "price": 12.15,
+            "description": "Just Ingredients grass-fed casein free protein, mango & strawberry blend, milk, mangoes, strawberries"
+          },
+          {
+            "name": "Caramel Protein Latte\u26a1",
+            "price": 4.6,
+            "description": "Just Ingredients grass-fed casein free protein, caramel syrup"
+          },
+          {
+            "name": "Iced Caramel Protein Latte\u26a1",
+            "price": 5.5,
+            "description": "Just Ingredients grass-fed casein free protein, caramel syrup, ice"
+          },
+          {
+            "name": "Mango Protein Smoothie\u26a1",
+            "price": 12.15,
+            "description": "Just Ingredients grass-fed casein free protein, mango blend, milk, mangoes"
+          },
+          {
+            "name": "StrawBana Protein Smoothie\u26a1",
+            "price": 12.15,
+            "description": "Just Ingredients grass-fed casein free protein, strawberry blend, milk, banana"
+          },
+          {
+            "name": "Strawberry Protein Smoothie\u26a1",
+            "price": 12.15,
+            "description": "Just Ingredients grass-fed casein free protein, strawberry blend, milk, strawberries"
+          },
+          {
+            "name": "Vanilla Protein Frappe\u26a1",
+            "price": 12.15,
+            "description": "Just Ingredients grass-fed casein free protein, blended iced espresso, milk and vanilla syrup"
+          }
+        ]
+      },
+      {
+        "name": "Cold Drinks & Smoothies",
+        "items": [
+          {
+            "name": "Strawberry Matcha Boba",
+            "price": 7.25
+          },
+          {
+            "name": "Ube Matcha Boba",
+            "price": 7.25
+          },
+          {
+            "name": "Ube Lemonade",
+            "price": 5.5,
+            "description": "creamy, earthy-sweet & vibrant purple ube with a hint of vanilla, layered with fresh lemonade"
+          },
+          {
+            "name": "Matcha Smoothie",
+            "price": 7.25,
+            "description": "japanese matcha green tea powder, almond milk, mangoes, fresh spinach"
+          },
+          {
+            "name": "Mango Smoothie",
+            "price": 7.25,
+            "description": "mango blend, milk, mangoes"
+          },
+          {
+            "name": "Strawberry Smoothie",
+            "price": 7.25,
+            "description": "strawberry blend, milk, strawberries"
+          },
+          {
+            "name": "Strawberry Banana Smoothie",
+            "price": 7.25,
+            "description": "strawberry blend, milk, banana"
+          },
+          {
+            "name": "Coupa Smoothie",
+            "price": 7.25,
+            "description": "mango & strawberry blend, milk, mangoes, strawberries"
+          },
+          {
+            "name": "Coupa Boba Tea",
+            "price": 4.9
+          },
+          {
+            "name": "Chai Boba Tea \ud83c\udd53\ud83c\udd62",
+            "price": 6.15
+          },
+          {
+            "name": "Oat Milk Matcha Boba Tea",
+            "price": 6.25
+          },
+          {
+            "name": "Black Iced Tea",
+            "price": 4.25,
+            "description": "Organic Los Andes Black Iced Tea"
+          },
+          {
+            "name": "Mango Iced Tea",
+            "price": 4.25,
+            "description": "Organic Mango Indica Iced Tea"
+          },
+          {
+            "name": "Arnold Palmer",
+            "price": 4.45,
+            "description": "Half Lemonade, Half Iced Tea"
+          },
+          {
+            "name": "Lemonade",
+            "price": 4.45,
+            "description": "Fresh Lemonade"
+          },
+          {
+            "name": "Orange Juice",
+            "price": 4.75
+          },
+          {
+            "name": "Yerba Mate",
+            "price": 5.5,
+            "description": "yerba mate accented with lemon, ginger, and elderflower"
+          },
+          {
+            "name": "Red Bull",
+            "price": 4.95,
+            "description": "Red Bull is a utility drink to be taken against mental or physical weariness or exhaustion. Red Bull combines two natural substances and important metabolic transmitters - the amin"
+          },
+          {
+            "name": "Coke",
+            "price": 3.25
+          },
+          {
+            "name": "Diet Coke",
+            "price": 3.25
+          },
+          {
+            "name": "San Pellegrino 250ml",
+            "price": 3.5
+          },
+          {
+            "name": "Aranciata",
+            "price": 3.5,
+            "description": "Delicate on the nose with notes of juicy squeezed orange, San Pellegrino Aranciata has a medium sweetness that is balanced with subtle bitter notes of natural orange that is carrie"
+          },
+          {
+            "name": "Gatorade Lemon Lime",
+            "price": 3.5
+          },
+          {
+            "name": "Coupa Water",
+            "price": 3.45,
+            "description": "refill | reuse | recycle: natural spring water, sourced & bottled in Califorinia in our eco-friendly aluminum bottle. You can refill and reuse the Coupa Water bottle many times, th"
+          },
+          {
+            "name": "Cup Cold Water 16oz",
+            "price": 0.25,
+            "description": "Includes a 16oz Compostable cup, compostable lid, compostable straw, ice & tap water. Our goal is to be as ecofriendly as possible. We will happily fill your container of water for"
+          }
+        ]
+      },
+      {
+        "name": "Beer & Wine",
+        "items": [
+          {
+            "name": "Peroni (Pint)",
+            "price": 7,
+            "description": "a pale golden, crisp and refreshing beer, with a delicate balance of bitterness, citrus and aromatic notes and a fast, clean finish. It's a modern Italian masterpiece."
+          },
+          {
+            "name": "Peroni (Pitcher)",
+            "price": 19,
+            "description": "a pale golden, crisp and refreshing beer, with a delicate balance of bitterness, citrus and aromatic notes and a fast, clean finish. It's a modern Italian masterpiece."
+          },
+          {
+            "name": "Firestone 805 (Pint)",
+            "price": 7,
+            "description": "A light, refreshing blonde ale created for the laid-back California lifestyle. Subtle malt sweetness is balanced by a touch of hops, creating a versatile beer with a clean finish."
+          },
+          {
+            "name": "Firestone 805 (Pitcher)",
+            "price": 19,
+            "description": "A light, refreshing blonde ale created for the laid-back California lifestyle. Subtle malt sweetness is balanced by a touch of hops, creating a versatile beer with a clean finish."
+          },
+          {
+            "name": "Breaking Bud (Pint)",
+            "price": 7,
+            "description": "features the restrained bitterness and alcohol of a classic IPA with newer tropical fruit hop flavors and aromas of Mosaic. Also in the hop mix are Simcoe and CTZ, creating layers"
+          },
+          {
+            "name": "Breaking Bud (Pitcher)",
+            "price": 19,
+            "description": "features the restrained bitterness and alcohol of a classic IPA with newer tropical fruit hop flavors and aromas of Mosaic. Also in the hop mix are Simcoe and CTZ, creating layers"
+          },
+          {
+            "name": "Sierra Nevada (Can)",
+            "price": 5.95,
+            "description": "pale ale, floral fragrant hop, little malt taste ending with citrus notes (chico, ca)"
+          },
+          {
+            "name": "Blue Moon (Can)",
+            "price": 5.95,
+            "description": "belgian style white ale, cloudy orange color, non-filtered, citrus orange, light spice (golden, co)"
+          },
+          {
+            "name": "Polar Pilsner",
+            "price": 5.95,
+            "description": "a Venezuelan style Pilsener"
+          },
+          {
+            "name": "Corona",
+            "price": 5.95,
+            "description": "pale lager, fourth best selling beer in the U.S. (golden, co)"
+          },
+          {
+            "name": "Ballast Point Sculpin",
+            "price": 5.95,
+            "description": "Gold-medal winning IPA, whose inspired use of hops creates hints of apricot, peach, mango and lemon flavors, but still packs a bit of a sting, just like a Sculpin fish."
+          },
+          {
+            "name": "Lagunitas IPA",
+            "price": 5.95,
+            "description": "A beautiful amber hue presents a distinct citrus hop aroma and a full-bodied malt character. A very approachable IPA, this beer is well rounded with distinct hop notes throughout a"
+          },
+          {
+            "name": "VooDoo Ranger Imperial IPA",
+            "price": 5.95,
+            "description": "New Belgium Voodoo Ranger Imperial IPA is a rare blend of choice hops that creates an explosion of fresh-cut pine and citrus flavors for a complex, rich and delicious flavor."
+          },
+          {
+            "name": "Calicraft Coast Kolsch",
+            "price": 5.95,
+            "description": "Coast is the taste of California. It's a brew for the bracing waves of NorCal or the sunny summers of SoCal. Mt. Shasta-grown malt adds body, while Noble and Crystal hops give it a"
+          },
+          {
+            "name": "Peroni 0.0 (Non Alcoholic)",
+            "price": 5.95,
+            "description": "Peroni Nastro Azzurro 0.0% is an alcohol-free beer with a crisp, refreshing taste and a slightly hoppy, flowery flavor. It's made with the same ingredients as the original Peroni N"
+          },
+          {
+            "name": "Mimosa \ud83c\udf77",
+            "price": 12,
+            "description": "Mionetto Prosecco 187ml with 6oz of OJ"
+          },
+          {
+            "name": "Prosecco (Glass) \ud83c\udf77",
+            "price": 11,
+            "description": "italy - Mionetto Prosecco is a fruit forward, with peach & almond flavors"
+          },
+          {
+            "name": "Chardonnay (Glass) \ud83c\udf77",
+            "price": 11,
+            "description": "Just Enough Chardonnay with notes of fragrant pear, lime blossom, and wet stone"
+          },
+          {
+            "name": "Rose (Glass) \ud83c\udf77",
+            "price": 11,
+            "description": "Just Enough Rose with notes of bright guava, refreshing tangerines, and a smooth honey finish"
+          },
+          {
+            "name": "Pinot Noir (Glass) \ud83c\udf77",
+            "price": 11,
+            "description": "Just Enough Pinot with notes of red cherries, lush strawberries, baking spice."
+          },
+          {
+            "name": "Cabernet Sauvignon (Glass) \ud83c\udf77",
+            "price": 11,
+            "description": "Just Enough Cab with notes of bright cherries, vanilla, sandalwood"
+          },
+          {
+            "name": "Josh Chardonnay (Bottle)",
+            "price": 39,
+            "description": "well-balanced, with bright citrus, honey, and juicy peach notes rounded with a hint of oak to bring a light complexity."
+          },
+          {
+            "name": "Flowers Chardonnay (Bottle)",
+            "price": 58,
+            "description": "Bright citrus notes, white flower, nuances of dried apricot and hints of flint. Palate is energetic with acidity and tension balanced with flavors of orchard fruit and almond, fini"
+          },
+          {
+            "name": "Ava Grace Sauvignon Blanc (Bottle)",
+            "price": 35,
+            "description": "boasts notes of tropical fruit flavors and balanced acidity. Fresh aromas of grapefruit, gooseberry and melon fill the nose while the rich body leads to a refined finish on the pal"
+          },
+          {
+            "name": "Ava Grace Rose (Bottle)",
+            "price": 35,
+            "description": "bright with a nose of wild roses. The palate showcases a fresh, crisp, dry style, boasting with flavors of apricot, honeysuckle, and balanced acidit"
+          },
+          {
+            "name": "Love Noir Pinot Noir (Bottle)",
+            "price": 35,
+            "description": "aromatic dark fruit aromas, concentrated bold flavors & a velvety texture"
+          },
+          {
+            "name": "Flowers Pinot Noir (Bottle)",
+            "price": 58,
+            "description": "Red currents, earthy forest floor, bergamot and sea breeze. A balanced wine with persistent mid palate that is laced with acidity and tart cherry, finishing light and lifted with a"
+          },
+          {
+            "name": "Hayes Ranch Cabernet Sauvignon (Bottle)",
+            "price": 39,
+            "description": "well balanced, with medium tannin, a smooth mid-palate and a spicy, coffee finish"
+          },
+          {
+            "name": "The Prisoner Red Blend (Bottle)",
+            "price": 58,
+            "description": "The Prisoner Red Wine Blend features enticing notes of ripe raspberry, blackberry, pomegranate, coconut, and a lingering vanilla flavor. Enjoy this dark red wine with grilled meats"
+          },
+          {
+            "name": "Mionetto Prosecco (Bottle)",
+            "price": 39,
+            "description": "This is a bright straw-colored wine with fine bubbles; a lively floral aroma; and predominant notes of apple, pear and citrus."
+          },
+          {
+            "name": "Roederer Estate Brut (Bottle)",
+            "price": 58,
+            "description": "Roederer Estate Brut is crisp and elegant with complex pear, spice and hazelnut flavors. It is fresh and lightly fruity with great finesse and depth of flavor."
+          }
+        ]
+      },
+      {
+        "name": "Pastry & Dessert",
+        "items": [
+          {
+            "name": "Tres Leches \ud83c\udd65",
+            "price": 8.95,
+            "description": "cake marinated in three milks topped with meringue. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Chocolate Mousse \ud83c\udd65\ud83c\udd56",
+            "price": 8.95,
+            "description": "100% venezuelan chocolate. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Pie de Limon \ud83c\udd65",
+            "price": 8.95,
+            "description": "creamy lemon meringue pie with a cookie crust base and topped with meringue. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Parchita Mousse \ud83c\udd65",
+            "price": 8.95,
+            "description": "creamy passion fruit mousse with a cookie crust base. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Marquesa de Chocolate \ud83c\udd65",
+            "price": 8.95,
+            "description": "Traditional Venezuelan chocolate dessert with layers of cookies and chocolate topped with chocolate sprinkles. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Croissant \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Almond Croissant \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Pain au Chocolat \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Dulce De Leche Croissant \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Chocolate Chip Cookie \ud83c\udd65",
+            "price": 3.25
+          },
+          {
+            "name": "Brownie GF \ud83c\udd65\ud83c\udd56",
+            "price": 5.25,
+            "description": "our triple chocolate, gluten-free, nut-free, sesame-free, soy-free brownie is made with three kinds of the finest chocolates. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Coffee Cake \ud83c\udd65\ud83c\udd56\ud83c\udd5d",
+            "price": 5.25
+          },
+          {
+            "name": "Lemon Cake \ud83c\udd65\ud83c\udd56",
+            "price": 5.25
+          },
+          {
+            "name": "Cupcake \ud83c\udd65\ud83c\udd65\ud83c\udd56",
+            "price": 5.25,
+            "description": "our cream-filled moist chocolate cupcake is dairy-free, egg-free, gluten-free, nut-free, sesame-free, soy-free and vegan. \ud83c\udd65\ud83c\udd65=Vegan \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Chocolate Chip Scone \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Cinnamon Bun \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Blueberry Muffin \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Banana Muffin \ud83c\udd65",
+            "price": 4.25
+          },
+          {
+            "name": "Lemon Poppy Seed Mini Muffin \ud83c\udd65",
+            "price": 3.25,
+            "description": "\ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Banana Bread \ud83c\udd65\ud83c\udd5d",
+            "price": 4.25,
+            "description": "\ud83c\udd65=Vegetarian \ud83c\udd5d=Contains-Nuts"
+          },
+          {
+            "name": "Chocolate Dreams Crepe \ud83c\udd65\ud83c\udd56\ud83c\udd5d",
+            "price": 11.5,
+            "description": "nutella, powdered sugar. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free \ud83c\udd5d=Contains-Nuts"
+          },
+          {
+            "name": "JP's Crepe \ud83c\udd65\ud83c\udd56\ud83c\udd5d",
+            "price": 12.5,
+            "description": "Strawberry, Banana, Nutella, powdered sugar. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free \ud83c\udd5d=Contains-Nuts"
+          },
+          {
+            "name": "Banana Split Crepe \ud83c\udd65\ud83c\udd56\ud83c\udd5d",
+            "price": 11.95,
+            "description": "nutella, banana, powdered sugar, whipped cream. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free \ud83c\udd5d=Contains-Nuts"
+          },
+          {
+            "name": "Strazza Crepe \ud83c\udd65\ud83c\udd56\ud83c\udd5d",
+            "price": 11.95,
+            "description": "strawberries, nutella, powdered sugar, whipped cream. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free \ud83c\udd5d=Contains-Nuts"
+          }
+        ]
+      },
+      {
+        "name": "Breakfast",
+        "items": [
+          {
+            "name": "Sunrise Wrap \ud83c\udd56",
+            "price": 15.75,
+            "description": "scrambled egg whites with pinch of S&P, turkey, avocado, sun dried tomato, feta cheese, gluten free tortilla, side of fruit. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Breakfast Wrap",
+            "price": 13.75,
+            "description": "scrambled eggs with pinch of S&P, bacon, tomato, avocado, cheddar cheese, flour tortilla, side of fruit"
+          },
+          {
+            "name": "French Toast \ud83c\udd65",
+            "price": 12.95,
+            "description": "sourdough bread dipped in our french toast mix topped with fresh strawberries, topped with powdered sugar. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Buttermilk Pancakes \ud83c\udd65",
+            "price": 11.95,
+            "description": "topped with powdered sugar, side syrup. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Waffle \ud83c\udd65",
+            "price": 11.95,
+            "description": "topped with powdered sugar, side syrup. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Omelette \ud83c\udd65",
+            "price": 11.95,
+            "description": "eggs cooked with pinch of S&P, served with baguette & fresh fruit. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Scrambled Eggs \ud83c\udd65",
+            "price": 11.95,
+            "description": "eggs cooked with pinch of S&P, served with baguette & fresh fruit. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Breakfast Crepe \ud83c\udd65\ud83c\udd56",
+            "price": 13.75,
+            "description": "scrambled eggs with garlic mushrooms, avocado, gouda cheese, guasacaca, pinch of S&P. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Breakfast Tacos \ud83c\udd56",
+            "price": 13.95,
+            "description": "three corn tortillas filled with scrambled eggs with pinch of S&P, bacon, avocado, drizzled with guasacaca, side of pico de gallo. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Breakfast Arepa \ud83c\udd56",
+            "price": 13.95,
+            "description": "gluten-free traditional venezuelan griddle delight, scrambled eggs with pinch of S&P, bacon, gouda cheese, side of fruit (15 min cook time). \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Avocado Toast \ud83c\udd65\ud83c\udd65",
+            "price": 12.95,
+            "description": "avocado, salt, pepper, chili flakes & lemon juice on sourdough bread. \ud83c\udd65\ud83c\udd65=Vegan"
+          },
+          {
+            "name": "Perico Platter \ud83c\udd65\ud83c\udd56",
+            "price": 13.95,
+            "description": "gluten-free traditional venezuelan griddle delight filled with scrambled eggs with pinch of S&P, saut\u00e9ed tomatoes, onions, sweet peppers, side of fruit (15 min cook time) \ud83c\udd65=Vegeta"
+          },
+          {
+            "name": "Croissant Sandwich",
+            "price": 13.5,
+            "description": "scrambled eggs with pinch of S&P, tomato, bacon, cheddar cheese, side of fruit."
+          },
+          {
+            "name": "Bagel Sandwich",
+            "price": 11.95,
+            "description": "scrambled eggs with pinch of S&P, tomato, bacon, cheddar cheese, side of fruit."
+          },
+          {
+            "name": "Bagel \ud83c\udd65",
+            "price": 2.95,
+            "description": "\ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Fruit Cup 16oz \ud83c\udd65\ud83c\udd56",
+            "price": 6.75,
+            "description": "seasonal fresh fruit in a to-go cup. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Side of Bacon \ud83c\udd56",
+            "price": 4.5,
+            "description": "\ud83c\udd56=Gluten-Free"
+          }
+        ]
+      },
+      {
+        "name": "Starters",
+        "items": [
+          {
+            "name": "Hummus \ud83c\udd65\ud83c\udd65",
+            "price": 9.95,
+            "description": "hummus, extra virgin olive oil, paprika, pita bread. \ud83c\udd65\ud83c\udd65=Vegan"
+          },
+          {
+            "name": "Tequenos \ud83c\udd65",
+            "price": 13.95,
+            "description": "artisan handmade venezuelan fried white cheese sticks wrapped in a flour dough, served with sides of guasacaca, picante trujillano & garlic aioli. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Empanaditas \ud83c\udd56",
+            "price": 12.95,
+            "description": "gluten-free artisan handmade four venezuelan fried mini empanadas, two ground beef & two fresh white cheese, served with sides of guasacaca, picante trujillano & garlic aioli. \ud83c\udd56=G"
+          },
+          {
+            "name": "Coupa Fries \ud83c\udd65\ud83c\udd56",
+            "price": 6.95,
+            "description": "served with sides of guasacaca, picante trujillano & garlic aiol. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          }
+        ]
+      },
+      {
+        "name": "Burgers",
+        "items": [
+          {
+            "name": "Coupa Burger",
+            "price": 16.5,
+            "description": "1/2 lb. harris ranch angus beef, caramelized onions, bacon, romaine lettuce, cheddar cheese, tomato, side of fries. (consuming raw or undercooked meats may increase your risk of fo"
+          },
+          {
+            "name": "Smith Burger",
+            "price": 16.95,
+            "description": "1/2 lb. harris ranch angus beef, swiss cheese, avocado, sauteed mushrooms, garlic aioli, side of fries. (consuming raw or undercooked meats may increase your risk of foodborne illn"
+          },
+          {
+            "name": "Chipotle Bacon Burger",
+            "price": 16.5,
+            "description": "1/2 lb angus beef, chipotle aioli, bacon, gouda cheese, avocado, side of ketchup, side of fries. (consuming raw or undercooked meats may increase your risk of foodborne illness, es"
+          },
+          {
+            "name": "Just-A-Burger",
+            "price": 9.5,
+            "description": "baby gems lettuce, tomato, side of ketchup. (consuming raw or undercooked meats may increase your risk of foodborne illness, especially if you have certain medical conditions)"
+          }
+        ]
+      },
+      {
+        "name": "Salads",
+        "items": [
+          {
+            "name": "Hummus Harvest Salad",
+            "price": 15.25,
+            "description": "baby gems, arugula, cabbage, cucumbers, sundried tomatoes, feta cheese, grilled chicken, croutons, scoop of hummus sprinkled with paprika, sesame ginger dressing"
+          },
+          {
+            "name": "Palo Alto Chopped Salad \ud83c\udd65\ud83c\udd56",
+            "price": 14.5,
+            "description": "chopped mixed greens & romaine lettuce, carrots, avocado, cucumbers, organic quinoa, garbanzo beans, feta cheese, lemon vinaigrette. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Arugula & Avocado Salad \ud83c\udd65\ud83c\udd56",
+            "price": 14.5,
+            "description": "arugula, avocado, organic quinoa, pumpkin seeds, parmesan cheese, lemon vinaigrette. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Sesame Ginger Salad \ud83c\udd65\ud83c\udd65\ud83c\udd56\ud83c\udd5d",
+            "price": 14.75,
+            "description": "arugula & cabbage, quinoa, sliced almonds, tofu, asparagus, cucumbers, carrots, avocado, sesame ginger dressing. \ud83c\udd65\ud83c\udd65=Vegan \ud83c\udd56=Gluten-Free \ud83c\udd5d=Contains-Nuts"
+          },
+          {
+            "name": "Caesar Salad",
+            "price": 14.95,
+            "description": "romaine, grilled chicken breast, tomato, avocado, parmesan cheese, croutons, caesar dressing."
+          },
+          {
+            "name": "Beverly Hills Salad \ud83c\udd56",
+            "price": 15.25,
+            "description": "chopped mixed greens & romaine lettuce, olives, asparagus, grilled chicken, avocado, tomato, gouda cheese, dijon mustard vinaigrette. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Cowboy Salad \ud83c\udd56",
+            "price": 15.25,
+            "description": "baby gems, romaine, chipotle chicken, avocado, bell pepper, red onion, black beans, cilantro, tomatoes, queso fresco, chipotle aioli. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "BLT+ Salad \ud83c\udd56",
+            "price": 15.25,
+            "description": "baby gems, romaine, grilled chicken, bacon, mushrooms, red onion, bell peppers, avocado, tomatoes, gouda cheese, dijon vinaigrette. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Build Your Own Salad",
+            "price": 8.95,
+            "description": "personalize your salad any which way you like."
+          }
+        ]
+      },
+      {
+        "name": "Panini & Wraps",
+        "items": [
+          {
+            "name": "Capresa Panini \ud83c\udd65",
+            "price": 13.95,
+            "description": "mozzarella cheese, tomato, arugula, nut-free pesto, garlic aioli, side of mixed green salad. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Hummus Avocado Panini \ud83c\udd65",
+            "price": 13.5,
+            "description": "hummus, avocado, spinach, feta cheese, sun-dried tomato, vegan aioli, side of mixed greens salad. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Oven Roasted Turkey Panini",
+            "price": 14.25,
+            "description": "oven roasted turkey breast, spinach, avocado, swiss cheese, tomato, dijon mustard, garlic aioli, side of mixed green salad"
+          },
+          {
+            "name": "Chicken Chipotle Panini",
+            "price": 14.25,
+            "description": "spicy chipotle chicken, gouda cheese, chipotle aioli, mixed greens, side of mixed green salad"
+          },
+          {
+            "name": "Mediterranean Panini",
+            "price": 14.95,
+            "description": "grilled chicken, fresh mozzarella, mixed greens, sun-dried tomato, nut-free pesto, side of mixed green salad"
+          },
+          {
+            "name": "Bacon Club Panini",
+            "price": 14.5,
+            "description": "bacon, turkey, avocado, baby gems lettuce, cheddar cheese, tomato, garlic aioli"
+          },
+          {
+            "name": "Carne Mechada Panini",
+            "price": 14.5,
+            "description": "venezuelan style shredded beef, gouda cheese, romaine lettuce, guasacaca & garlic aioli, side of mixed green salad"
+          },
+          {
+            "name": "Turkey Avocado Wrap",
+            "price": 13.5,
+            "description": "oven roasted turkey breast, tomato, avocado, mixed greens, garlic aioli, dijon mustard, flour tortilla, side of mixed green salad"
+          },
+          {
+            "name": "Caesar Wrap",
+            "price": 13.25,
+            "description": "romaine, grilled chicken breast, tomato, avocado, parmesan cheese, croutons, caesar dressing, flour tortilla"
+          },
+          {
+            "name": "Hummus Veggie Wrap \ud83c\udd65",
+            "price": 12.95,
+            "description": "hummus, tomato, cucumber, arugula, fresh mozzarella, avocado, guasacaca, flour tortilla, side of mixed green salad \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Veggie Crunch Wrap \ud83c\udd65\ud83c\udd65",
+            "price": 12.95,
+            "description": "organic tofu, romaine lettuce, avocado, cucumber, carrots, vegan aioli, guasacaca, flour tortilla, side of mixed green salad. \ud83c\udd65\ud83c\udd65=Vegan"
+          }
+        ]
+      },
+      {
+        "name": "Arepas & Specialties",
+        "items": [
+          {
+            "name": "La Luna Arepa \ud83c\udd65\ud83c\udd65\ud83c\udd56",
+            "price": 13.25,
+            "description": "gluten-free traditional venezuelan griddle delight, organic tofu, black beans, avocado, vegan aioli, guascaca, side of mixed green salad (15 min cook time). \ud83c\udd65\ud83c\udd65=Vegan \ud83c\udd56=Gluten-Fr"
+          },
+          {
+            "name": "Cami's Arepa \ud83c\udd65\ud83c\udd56",
+            "price": 13.5,
+            "description": "gluten-free traditional venezuelan griddle delight, fresh white cheese, sweet fried plantains, avocado, guasacaca, side of mixed green salad (15 min cook time). \ud83c\udd65=Vegetarian \ud83c\udd56=Gl"
+          },
+          {
+            "name": "Carne Mechada Arepa \ud83c\udd56",
+            "price": 14.5,
+            "description": "gluten-free traditional venezuelan griddle delight, venezuelan style shredded beef, caramelized onions, guasacaca, garlic aioli, side of mixed green salad (15 min cook time). \ud83c\udd56=Gl"
+          },
+          {
+            "name": "Pabellon Arepa \ud83c\udd56",
+            "price": 14.95,
+            "description": "gluten-free traditional venezuelan griddle delight, venezuelan style shredded beef, black beans, sweet fried plantains, fresh white cheese, guasacaca, side of mixed green salad (15"
+          },
+          {
+            "name": "Pollo Arepa \ud83c\udd56",
+            "price": 13.95,
+            "description": "gluten-free traditional venezuelan griddle delight, grilled chicken, cheddar cheese, caramelized onions, garlic aioli, side of mixed green salad (15 min cook time). \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Pabellon Plate \ud83c\udd56",
+            "price": 20.95,
+            "description": "national dish of venezuela, shredded beef, white rice, black beans, fried mini arepitas, sweet fried plantains, side of nata & fresh white cheese. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Vegan Pabellon Plate \ud83c\udd65\ud83c\udd65\ud83c\udd56",
+            "price": 18.95,
+            "description": "white rice, black beans, organic tofu, sweet fried plantains, mini arepitas & side of guasacaca. \ud83c\udd65\ud83c\udd65=Vegan \ud83c\udd56=Gluten-Free"
+          }
+        ]
+      },
+      {
+        "name": "Tacos & Quesadillas",
+        "items": [
+          {
+            "name": "Coupa Burrito \ud83c\udd56",
+            "price": 15.95,
+            "description": "your choice of chicken, shredded beef or tofu with white rice, black beans, cheddar cheese, guasacaca, garlic aioli, gluten free tortilla and side of pico de gallo. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Chicken Tacos \ud83c\udd56",
+            "price": 14.25,
+            "description": "grilled chicken, avocado, vegan cabbage slaw, fresh white cheese, guasacaca, corn tortilla, side of pico de gallo. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Carne Mechada Tacos \ud83c\udd56",
+            "price": 15.5,
+            "description": "venezuelan style shredded beef, vegan cabbage slaw, fresh white cheese, guasacaca, garlic aioli, corn tortilla, side of pico de gallo. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "California Tacos \ud83c\udd65\ud83c\udd56",
+            "price": 13.25,
+            "description": "organic tofu, black beans, vegan cabbage slaw, fresh white cheese, guasacaca, nata, corn tortilla, side of pico de gallo. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Chicken Chipotle Quesadilla",
+            "price": 13.5,
+            "description": "spicy chipotle chicken, gouda cheese, avocado, chipotle aioli, flour tortilla, side of pico de gallo"
+          },
+          {
+            "name": "Carne Mechada Quesadilla",
+            "price": 15.75,
+            "description": "venezuelan style shredded beef, gouda cheese, caramelized onions, guasacaca, garlic aioli, flour tortilla, side of pico de gallo"
+          }
+        ]
+      },
+      {
+        "name": "Crepes",
+        "items": [
+          {
+            "name": "Vegetarian Spinach Crepe \ud83c\udd65\ud83c\udd56",
+            "price": 12.95,
+            "description": "baby spinach, mushrooms, swiss cheese, guasacaca. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Pesto Chicken Crepe \ud83c\udd56",
+            "price": 13.95,
+            "description": "chicken, mushrooms, swiss cheese, nut-free pesto \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Turkey Avocado Crepe \ud83c\udd56",
+            "price": 13.95,
+            "description": "oven roasted turkey breast, swiss cheese, avocado, tomato, garlic aioli \ud83c\udd56=Gluten-Free"
+          }
+        ]
+      },
+      {
+        "name": "Pasta & Soup Specials",
+        "items": [
+          {
+            "name": "Chipotle Pasta",
+            "price": 13.95,
+            "description": "grilled chicken breast, chipotle aioli, bell peppers, onions, parmesan, cream, garlic, salt, pepper, butter, parsley"
+          },
+          {
+            "name": "Pesto Pasta",
+            "price": 13.95,
+            "description": "grilled chicken breast, nut-free pesto, almonds, parmesan, mozzarella, garlic, salt, pepper, lemon juice, parsley"
+          },
+          {
+            "name": "Sundried Tomato Pasta \ud83c\udd65",
+            "price": 11.95,
+            "description": "sundried tomato, tomato, spinach, mozzarella, parmesan, garlic, salt, pepper, lemon juice, olive oil, parsley. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Tomato Bisque Soup \ud83c\udd65",
+            "price": 9.95,
+            "description": "topped with nut-free pesto, nata, feta cheese and basil, side of croutons and side of grilled cheese sandwich with cheddar, garlic aioli and caramelized onions. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Chicken Tortilla Soup \ud83c\udd56",
+            "price": 9.95,
+            "description": "with tomatoes, sweet corn, green chilies and black beans, topped with white cheese, tortilla strips, avocado with chili flakes, cilantro and a side of bread. \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Side 8oz Tomato Bisque Soup",
+            "price": 4,
+            "description": "no toppings or sides"
+          }
+        ]
+      },
+      {
+        "name": "Snacks",
+        "items": [
+          {
+            "name": "Fiora Crostata \ud83c\udd65",
+            "price": 6.5,
+            "description": "Crispy sweet pastry covered with Caribbean Guava Caramel. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Hippeas Puffs \ud83c\udd65\ud83c\udd56",
+            "price": 4.15,
+            "description": "Tangy-sweet and spicy jalape\u00f1o and paprika puffs. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Sunchips",
+            "price": 2.25,
+            "description": "Garden Salsa or Cheddar Flavor"
+          },
+          {
+            "name": "RXBar \ud83c\udd65\ud83c\udd56",
+            "price": 4.95,
+            "description": "These delicious bars are made with soft-rolled oats, peanuts, egg whites, honey, and decadent dark chocolate.. \ud83c\udd65=Vegetarian \ud83c\udd56=Gluten-Free"
+          },
+          {
+            "name": "Clif Bar",
+            "price": 3.75,
+            "description": "Chocolate Chip"
+          },
+          {
+            "name": "Fresh Banana",
+            "price": 1.65
+          }
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          {
+            "name": "Fia's Pancake \ud83c\udd65",
+            "price": 8.5,
+            "description": "buttermilk pancake topped, fresh bananas, sprinkled with powdered sugar and side syrup. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Lucas' Waffle \ud83c\udd65",
+            "price": 8.75,
+            "description": "waffle topped with fresh strawberries, bananas, whipped cream, sprinkled with powdered sugar and side of syrup. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Cachin's French Toast \ud83c\udd65",
+            "price": 9,
+            "description": "sourdough french toast topped with fresh strawberries, sprinkled with powdered sugar and a side of syrup. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Luna's Avocado Toast \ud83c\udd65",
+            "price": 7,
+            "description": "sourdough bread topped with sliced avocado. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "QuiQue's Quesadilla \ud83c\udd65",
+            "price": 7,
+            "description": "corn tortillas with gouda cheese and side of black beans. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Chiqui's Grilled Cheese \ud83c\udd65",
+            "price": 9,
+            "description": "sourdough bread with cheddar cheese and a side of fries, or strawberries, or side of carrots & cucumbers. \ud83c\udd65=Vegetarian"
+          },
+          {
+            "name": "Milu's Turkey & Swiss",
+            "price": 9.25,
+            "description": "Oven roasted Turkey breast and Swiss cheese on ciabatta bread, side of fries, or side of strawberries, or side of carrots & cucumber"
+          },
+          {
+            "name": "Tito's Cheeseburger",
+            "price": 9.5,
+            "description": "kids cheeseburger, \u00bc pound beef, cheddar cheese, fries, side ketchup"
+          }
+        ]
+      },
+      {
+        "name": "Catering",
+        "items": [
+          {
+            "name": "OJ Traveler 96oz",
+            "price": 36.95,
+            "description": "Serves 6 16oz cups"
+          },
+          {
+            "name": "Iced Tea Traveler 96oz",
+            "price": 26.5,
+            "description": "Organic Los Andes Black Iced Tea or Organic Mango Indica Iced Tea | Serves 6 16oz cups"
+          },
+          {
+            "name": "Lemonade Traveler 96oz",
+            "price": 26.5,
+            "description": "Serves 6 16oz cups"
           }
         ]
       }
