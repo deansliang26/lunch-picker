@@ -9027,7 +9027,7 @@
      {
       "name": "Slice of the Day",
       "price": 6,
-      "description": "Sunday- Greens & Cream Monday- Po-Tay-To Tuesday- Here Comes Sunshine Wednesday- Smitty Thursday-Salami Sam Friday- Scarlet Begonias Saturday- Super Chorizo con Papas",
+      "description": "Sunday- Greens & Cream Monday- Po-Tay-To Tuesday- Here Comes Sunshine Wednesday- Smitty Thursday-Salami Sam Friday- Scarlet Begonias Saturday- Super Chorizo con",
       "image_url": "",
       "popular": false
      }
@@ -9124,7 +9124,7 @@
       "name": "Vegan Margherita",
       "price": 30,
       "description": "organic sauce, vegan cashew cream, evoo, basil",
-      "image_url": "",
+      "image_url": "https://d1w7312wesee68.cloudfront.net/KaMdhhPFxrpDui0ocfeFN7MgAvlWgx_QAbtckOAJSTU/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-62909000000000000/menu/items/9/item-500000015382501879_1697233117.jpg",
       "popular": false
      },
      {
@@ -9219,7 +9219,7 @@
      {
       "name": "Garlic Knots",
       "price": 5.75,
-      "description": "An order of 4 of our house made garlic knots tossed in a mixture of evoo, garlic, piment d\u2019ville, and thyme. Served with your choice of organic red sauce or house made ranch dressing.",
+      "description": "An order of 4 of our house made garlic knots tossed in a mixture of evoo, garlic, piment d\u2019ville, and thyme. Served with your choice of organic red sauce or hou",
       "image_url": "https://d1w7312wesee68.cloudfront.net/e6yYkeVGOhFrjeZjIPIzfG5fxsoZjMwhqKT4uf7tl8w/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-62909000000000000/menu/items/0/item-500000010078967250_1630011679.jpg",
       "popular": false
      }
@@ -9399,7 +9399,7 @@
       "name": "Alameda Soda Cans",
       "price": 3.5,
       "description": "",
-      "image_url": "",
+      "image_url": "https://d1w7312wesee68.cloudfront.net/lUAmkSlGPP2vnOGIeTf6DMuUVFmcVNttkGc6q4BR8BM/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-62909000000000000/menu/items/0/item-500000005864960540_1667862180.jpg",
       "popular": false
      },
      {
@@ -9460,7 +9460,8 @@
      }
     ]
    }
-  ]
+  ],
+  "prices_verified": true
  },
  {
   "id": "seed-shake-shack",
