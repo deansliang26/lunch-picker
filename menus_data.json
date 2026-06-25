@@ -7733,14 +7733,14 @@
       "name": "BBQ Sauce",
       "price": 1.4,
       "description": "",
-      "image_url": "",
+      "image_url": "https://storage.googleapis.com/open-merchant-app-assets/squarepieguys/item_placeholder.png",
       "popular": false
      },
      {
       "name": "Alabama Sauce",
       "price": 1.4,
       "description": "",
-      "image_url": "",
+      "image_url": "https://storage.googleapis.com/open-merchant-app-assets/squarepieguys/item_placeholder.png",
       "popular": false
      }
     ]
@@ -7799,14 +7799,14 @@
      },
      {
       "name": "Hoptonic Green Tea",
-      "price": null,
+      "price": 5,
       "description": "Hoptonic sparkling green tea combines uniquely sourced whole jasmine flowers and green tea grown in the high elevations of the Yunnan province. Paired with Citra hops to compliment the floral notes of the tea.   Enjoy!\r\n\r\nServed in a 12oz can.\r\n\r\nIngredients: Carbonated Water, Organic Green Jasmine Tea, Hops",
       "image_url": "https://storage.googleapis.com/open-merchant-app-assets/squarepieguys/items/f072ba2f-2626-4d1f-b912-21c9cc255fb2/c3d1273131f0095d3ef450efa2037dc6.jpg",
       "popular": false
      },
      {
       "name": "Hoptonic Earl Grey",
-      "price": null,
+      "price": 5,
       "description": "This sparkling tea is comprised of French Earl Grey tea containing organic rose petals sourced from a high elevation farm in Poland. Brewed with Amarillo hops to accentuate the deep citrus note of a classic Earl Grey tea. Enjoy!\r\n\r\nServed in a 12oz can.\r\n\r\nIngredients: Carbonated Water, Organic Black Tea, Hops, Organic Rose Petals",
       "image_url": "https://storage.googleapis.com/open-merchant-app-assets/squarepieguys/items/ebfe701e-af89-4f08-8820-f11687a14391/ce6c0c01ad9a3a1d72d2d28483607022.jpg",
       "popular": false
@@ -7994,7 +7994,8 @@
      }
     ]
    }
-  ]
+  ],
+  "prices_verified": true
  },
  {
   "id": "seed-the-melt",
