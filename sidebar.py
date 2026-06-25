@@ -186,6 +186,35 @@ _TOPBAR = """
 """
 
 
+def _render_user_gate():
+    """Full-screen 'who are you?' picker shown before any page content when no
+    user is selected. Renders in the main area (the sidebar is already drawn)."""
+    st.markdown(
+        "<div style='text-align:center;max-width:560px;margin:7vh auto 0;'>"
+        "<div style='font-size:46px;'>🍜</div>"
+        "<div style='font-family:var(--font-serif),serif;font-size:30px;font-weight:700;"
+        "color:#141413;margin-top:6px;'>Welcome to PA Lunch</div>"
+        "<div style='color:#76726A;font-size:15px;margin-top:6px;'>"
+        "Pick your name to start voting on today's lunch.</div>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
+    _, mid, _ = st.columns([1, 3, 1])
+    with mid:
+        cols = st.columns(len(TEAM))
+        for i, name in enumerate(TEAM):
+            with cols[i]:
+                st.markdown(
+                    "<div style='display:flex;justify-content:center;margin-bottom:8px;'>"
+                    f"{avatar.html(name, size=54)}</div>",
+                    unsafe_allow_html=True,
+                )
+                if st.button(name, key=f"gate_pick_{name}", use_container_width=True):
+                    st.session_state.user = name
+                    st.query_params["user"] = name
+                    st.rerun()
+
+
 def render():
     st.markdown(_CSS, unsafe_allow_html=True)
     st.markdown(_TOPBAR, unsafe_allow_html=True)
@@ -254,3 +283,8 @@ def render():
                         st.warning("Name and Cuisine are required.")
 
         st.caption("Pareto Agent · Palo Alto")
+
+    # Gate: nobody gets past this until they've picked who they are.
+    if not st.session_state.user:
+        _render_user_gate()
+        st.stop()

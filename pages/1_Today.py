@@ -99,17 +99,11 @@ with col_date:
         unsafe_allow_html=True,
     )
 
-if not user:
-    st.info("👋  Pick your name in the sidebar to vote.")
-
 # --- Check if winner already decided ---
 winner_row = db.get_todays_winner()
 winner = db.get_restaurant(winner_row["winner_place_id"]) if winner_row else None
 if winner:
     meta = " · ".join(filter(None, [winner.get('cuisine'), winner.get('price'), f"★ {winner.get('rating')}" if winner.get('rating') else None]))
-    _, cta_col, _ = st.columns([1, 2, 1])
-    with cta_col:
-        st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
     st.markdown(
         f"""
         <div style="
@@ -117,7 +111,7 @@ if winner:
             border: 1.5px solid #D9775755;
             border-radius: 14px;
             padding: 16px 20px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 14px;
@@ -131,14 +125,16 @@ if winner:
             <a href="{winner.get('yelp_url','#')}" target="_blank"
                style="background:#D97757; color:white; padding:8px 14px; border-radius:8px;
                       text-decoration:none; font-weight:600; font-size:13px;">Yelp ↗</a>
-            <a href="2_Orders"
-               style="background:#141413; color:white; padding:8px 14px; border-radius:8px;
-                      text-decoration:none; font-weight:600; font-size:13px;">Orders →</a>
           </div>
         </div>
         """,
         unsafe_allow_html=True,
     )
+    # Order CTA: use Streamlit's native page nav (a raw <a href="2_Orders"> hit the
+    # wrong page slug and silently did nothing, esp. under a hosted base path).
+    _, cta_col, _ = st.columns([1, 2, 1])
+    with cta_col:
+        st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
 
 # --- Load today's suggestions ---
 with st.spinner("Loading restaurants..."):
@@ -331,7 +327,9 @@ for i, r in enumerate(shown):
                 if r.get("address"):
                     st.caption(r["address"])
 
-                link_col, vote_count_col, btn_col, withdraw_col = st.columns([2, 2, 1, 1])
+                # Vote / Withdraw are mutually exclusive, so they share one wide
+                # action column — narrow columns made the labels wrap vertically.
+                link_col, vote_count_col, action_col = st.columns([3, 2, 3])
                 with link_col:
                     if r.get("yelp_url"):
                         st.markdown(f"[View on Yelp ↗]({r['yelp_url']})")
@@ -341,9 +339,9 @@ for i, r in enumerate(shown):
                         st.markdown("**✓ Your pick**")
                     elif vote_count:
                         st.caption(f"{vote_count} vote{'s' if vote_count > 1 else ''}")
-                with btn_col:
+                with action_col:
                     if not winner_row and user and not user_vote:
-                        if st.button("Vote", key=f"vote_{r['id']}"):
+                        if st.button("Vote", key=f"vote_{r['id']}", use_container_width=True):
                             db.cast_vote(user, r["id"])
                             new_tally = db.tally_votes()
                             total_votes = sum(new_tally.values())
@@ -372,9 +370,8 @@ for i, r in enumerate(shown):
                             if winner_found:
                                 st.session_state["_celebrate"] = True
                             st.rerun()
-                with withdraw_col:
-                    if not winner_row and user and is_my_vote:
-                        if st.button("Withdraw", key=f"withdraw_{r['id']}"):
+                    elif not winner_row and user and is_my_vote:
+                        if st.button("Withdraw", key=f"withdraw_{r['id']}", use_container_width=True):
                             db.withdraw_vote(user)
                             st.rerun()
 
