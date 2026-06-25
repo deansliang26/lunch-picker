@@ -29,6 +29,7 @@ SWEETGREEN_URL = "https://order.sweetgreen.com/palo-alto/menu"
 MENDOCINO_URL  = "https://order.mendocinofarms.com/menu/palo-alto"  # Olo (direct store URL)
 ORENS_URL      = "https://order.toasttab.com/online/orens-hummus-palo-alto"  # Toast
 ROOST_ROAST_URL = "https://order.toasttab.com/online/roost-and-roast"           # Toast
+SOM_SLICE_URL  = "https://order.toasttab.com/online/state-of-mind-slice-house"   # Toast
 ASIAN_BOX_URL   = "https://order.spoton.com/asian-box-962/palo-alto-ca/65b13a4621728ea769f7f0b2/welcome"  # SpotOn
 ZAREEN_URL      = "https://orderingatzareens.square.site/"                       # Square
 POKE_HOUSE_URL  = "https://www.doordash.com/store/poke-house-palo-alto-458519/" # DoorDash (bot-blocked)
@@ -1355,6 +1356,156 @@ async def fill_cart_chipotle(page, items: list) -> None:
 
 
 
+# ── Toast (order.toasttab.com) — Oren's Hummus, Roost & Roast ──────────────────
+#
+# Toast item flow: click a [data-testid="menu-item-card"] → an item modal opens
+# with modifier groups ([role="radiogroup"] = pick 1, [role="group"] = checkbox
+# "Select N"). We satisfy required groups (radios always; checkbox groups only
+# when their header says "Required", selecting N, preferring no-upcharge options),
+# then click "Add to Cart". Each add is verified by a cart-count increase, so an
+# item with required modifiers we couldn't satisfy is reported skipped, not faked.
+
+_TOAST_SATISFY_JS = r"""
+() => {
+  const groups=[...document.querySelectorAll('[role="radiogroup"],[role="group"]')]
+    .filter(g=>g.querySelector('[data-testid$="-toggle-label"]'));
+  for(const g of groups){
+    const isRadio=g.getAttribute('role')==='radiogroup';
+    let header='', p=g.previousElementSibling, hops=0;
+    while(p && hops<4){ const t=(p.innerText||''); if(/required|select\s+\d/i.test(t)){header=t;break;} p=p.previousElementSibling; hops++; }
+    if(!header && g.parentElement) header=(g.parentElement.innerText||'').slice(0,80);
+    const required=/required/i.test(header);
+    let n = isRadio ? 1 : (parseInt((header.match(/select\s+(\d+)/i)||[])[1])||0);
+    if(!isRadio && !required) continue;     // leave optional add-on groups alone
+    if(n<1) n=1;
+    const labels=[...g.querySelectorAll('[data-testid$="-toggle-label"]')];
+    const cheap=labels.filter(l=>!/\+\$/.test(l.innerText||''));   // prefer no upcharge
+    const order=[...cheap, ...labels.filter(l=>/\+\$/.test(l.innerText||''))];
+    let picked=0;
+    for(const l of order){
+      if(picked>=n) break;
+      const inp=document.querySelector('[data-testid="'+l.getAttribute('data-testid').replace('-toggle-label','-input')+'"]');
+      if(inp && inp.checked){ picked++; continue; }
+      l.click(); picked++;
+    }
+  }
+}
+"""
+
+
+async def _toast_cart_count(page) -> int:
+    try:
+        txt = await page.evaluate(
+            r"""()=>{const b=document.querySelector('[data-testid="cart-button"],a[href$="/checkout"],[aria-label*="cart" i]');"""
+            r"""const m=b&&(b.innerText||'').match(/\d+/);return m?m[0]:'0';}"""
+        )
+        return int(txt)
+    except Exception:
+        return 0
+
+
+async def _open_toast_menu(page, url: str, name: str) -> bool:
+    print(f"\n→ Navigating to {name} (Toast)...")
+    try:
+        await page.goto(url, timeout=45000, wait_until="domcontentloaded")
+    except Exception as e:
+        print(f"  Load error: {e}")
+        return False
+    # The menu cards render underneath the cookie-consent banner and the
+    # "Order timing" modal, so wait for them FIRST (don't click nav buttons —
+    # in testing that destabilized the SPA and the menu failed to render).
+    try:
+        await page.wait_for_selector('[data-testid="menu-item-card"]', timeout=25000)
+    except Exception:
+        print("  Menu didn't render.")
+        return False
+    # Now strip the click-intercepting overlays so menu-card clicks land:
+    #   - cookie consent (Ethyca/Fides or OneTrust — vendor/button text varies)
+    #   - the Order-timing dialog and any dark backdrop
+    # Run it a couple times since the SPA can re-mount the timing dialog.
+    for _ in range(2):
+        try:
+            await page.evaluate(
+                r"""()=>{document.querySelectorAll('[id*="onetrust" i],[class*="onetrust" i],"""
+                r"""[id*="ethyca" i],[class*="ethyca" i],[id*="fides" i],[class*="fides" i],"""
+                r""".onetrust-pc-dark-filter,[role="dialog"],[aria-modal="true"],"""
+                r"""[class*="backdrop" i],[class*="modalOverlay" i],[class*="dialogOverlay" i],"""
+                r"""[class*="overlay" i][class*="dark" i]').forEach(e=>e.remove());"""
+                r"""document.body.style.overflow='auto';}"""
+            )
+            await page.wait_for_timeout(600)
+        except Exception:
+            pass
+    return True
+
+
+async def _fill_cart_toast(page, items: list, restaurant_name: str) -> None:
+    _print_order_reference(items, restaurant_name)
+    added, skipped = [], []
+    for order_item in items:
+        item_name = order_item["item"]
+        qty = order_item.get("qty", 1)
+        print(f"\n  Adding: {item_name} ×{qty}")
+        before = await _toast_cart_count(page)
+        card = page.locator('[data-testid="menu-item-card"]', has_text=item_name).first
+        try:
+            await card.scroll_into_view_if_needed(timeout=4000)
+            await page.wait_for_timeout(400)
+            await card.click(timeout=4000)
+        except Exception:
+            print("    ✗ Not found in menu")
+            skipped.append(item_name)
+            continue
+        await page.wait_for_timeout(1800)
+        try:
+            await page.evaluate(_TOAST_SATISFY_JS)
+        except Exception:
+            pass
+        await page.wait_for_timeout(500)
+        for _ in range(qty - 1):
+            try:
+                await page.locator(
+                    'button[aria-label*="ncrease" i], [class*="quantity"] button:has-text("+")'
+                ).first.click(timeout=1500)
+                await page.wait_for_timeout(250)
+            except Exception:
+                break
+        try:
+            await page.locator('button:has-text("Add to Cart")').first.click(timeout=4000)
+        except Exception:
+            print("    ✗ Could not add (Add to Cart blocked)")
+            await page.keyboard.press("Escape")
+            await page.wait_for_timeout(600)
+            skipped.append(item_name)
+            continue
+        await page.wait_for_timeout(2200)
+        if await _toast_cart_count(page) > before:
+            print("    ✓ Added")
+            added.append(item_name)
+        else:
+            print("    ✗ Add didn't register (unmet required options?)")
+            await page.keyboard.press("Escape")
+            await page.wait_for_timeout(600)
+            skipped.append(item_name)
+    await _finalize(page, added, skipped,
+                    ['[data-testid="cart-button"]', 'a[href$="/checkout"]', '[aria-label*="cart" i]'])
+
+
+async def fill_cart_orens(page, items: list) -> None:
+    if await _open_toast_menu(page, ORENS_URL, "Oren's Hummus"):
+        await _fill_cart_toast(page, items, "Oren's Hummus")
+
+
+async def fill_cart_roast(page, items: list) -> None:
+    if await _open_toast_menu(page, ROOST_ROAST_URL, "Roost & Roast"):
+        await _fill_cart_toast(page, items, "Roost & Roast")
+
+
+async def fill_cart_som_slice(page, items: list) -> None:
+    if await _open_toast_menu(page, SOM_SLICE_URL, "State of Mind Slice House"):
+        await _fill_cart_toast(page, items, "State of Mind Slice House")
+
+
 # ── Restaurant dispatch ────────────────────────────────────────────────────────
 
 # Only restaurants whose auto-fill has been VERIFIED end-to-end (items confirmed
@@ -1370,6 +1521,16 @@ SUPPORTED_RESTAURANTS: dict = {
     #   seed-chipotle-mexican-grill (fill_cart_chipotle): menu is a cross-origin
     #     iframe gated behind store selection — automation can't drive it.
     #   seed-mendocino-farms (fill_cart_mendocino): Cloudflare-blocked.
+    #   seed-state-of-mind-slice-house (fill_cart_som_slice): same Toast platform;
+    #     menu renders 0 cards on automated cold-load (blank page) — left manual.
+    #   seed-oren-s-hummus-shop (fill_cart_orens) and seed-roost-roast
+    #     (fill_cart_roast): the per-item add flow IS verified (item match +
+    #     required-modifier selection + add confirmed via cart-count in a live
+    #     human browser), but the launched-browser entry is not reliable yet —
+    #     the Toast page stacks a cookie-consent banner (Ethyca/Fides) and an
+    #     "Order timing" modal whose dismissal is timing-flaky, so the menu only
+    #     renders intermittently on a cold automated load. Re-register once
+    #     _open_toast_menu clears both overlays reliably.
     # Their fillers remain defined above for future use; re-register only after a
     # clean verified run.
 }

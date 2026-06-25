@@ -48,6 +48,10 @@ PINNED_IDS = {
     "seed-zareen-s",
     "seed-coupa-cafe-research-park",
     "seed-square-pie-guys",
+    "seed-the-melt",
+    "seed-shake-shack",
+    "seed-mediterranean-wraps",
+    "seed-state-of-mind-slice-house",
 }
 
 CUISINES = {
