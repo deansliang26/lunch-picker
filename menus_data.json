@@ -8487,28 +8487,28 @@
     "items": [
      {
       "name": "Falafel Wrap",
-      "price": 13.0,
+      "price": 13,
       "description": "Vegetarian. Fresh falafels wrapped with Mediterranean salad, lettuce and tahini sauce",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f06ebeb48c9f9001242705d.png?v=5437333124",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f06ebeb48c9f9001242705d.png?fit=cover",
       "popular": true
      },
      {
       "name": "Hummus Wrap",
-      "price": 13.0,
+      "price": 13,
       "description": "Our fresh hummus wrapped with lettuce & tabouleh salad.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8aa70c40f50012b735ed.png?v=7990995482",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8aa70c40f50012b735ed.png?fit=cover",
       "popular": false
      },
      {
       "name": "Falafel Deluxe Wrap",
-      "price": 16.0,
+      "price": 16,
       "description": "Freshly cooked eggplants & fries added to the traditional falafel wrap.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e89604c40b50012eb0dd5.png?v=3411703278",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e89604c40b50012eb0dd5.png?fit=cover",
       "popular": true
      },
      {
       "name": "Veggie Wrap",
-      "price": 16.0,
+      "price": 16,
       "description": "Falafel, Hummus, Zucchini, Cauliflower and Tahini",
       "image_url": "",
       "popular": false
@@ -8520,44 +8520,44 @@
     "items": [
      {
       "name": "Veggie Combo Plate",
-      "price": 19.0,
+      "price": 19,
       "description": "Hummus, falafels, tabouleh, baba ghanoush, dolma & salad, served with hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f06f09048c9f90012427268.png?v=8298270032",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f06f09048c9f90012427268.png?fit=cover",
       "popular": true
      },
      {
       "name": "Falafel Plate",
-      "price": 17.0,
+      "price": 17,
       "description": "Fresh falafels, served on a bed of lettuce, hummus dip & salad, served with hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8bb44c40b50012eb0fca.png?v=2005541859",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8bb44c40b50012eb0fca.png?fit=cover",
       "popular": false
      },
      {
       "name": "Hummus Plate",
-      "price": 17.0,
+      "price": 17,
       "description": "Traditional chickpeas dip served with salad, pickles, falafel, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8c0e4c40b50012eb105a.png?v=5006248960",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8c0e4c40b50012eb105a.png?fit=cover",
       "popular": false
      },
      {
       "name": "Baba Ghanoush Plate",
-      "price": 17.0,
+      "price": 17,
       "description": "A delightful dip of charbroiled eggplants served with salad and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8c3e0c40f50012b73745.png?v=0290912347",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8c3e0c40f50012b73745.png?fit=cover",
       "popular": false
      },
      {
       "name": "Dolma Plate",
-      "price": 17.0,
+      "price": 17,
       "description": "Vegetarian stuffed grape leaves served with hummus, salad, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8c644c40b50012eb10a1.png?v=9328422478",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8c644c40b50012eb10a1.png?fit=cover",
       "popular": false
      },
      {
       "name": "Mujaddara Plate",
-      "price": 17.0,
+      "price": 17,
       "description": "Rice, whole lentil, grilled onions, served with hummus, salad, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8c854c40b50012eb10cb.png?v=5636484153",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8c854c40b50012eb10cb.png?fit=cover",
       "popular": false
      }
     ]
@@ -8569,21 +8569,21 @@
       "name": "Shawarma Wrap",
       "price": 16.99,
       "description": "Thin, marinated slices of lambs and beef wrapped with broiled fresh tomatoes, lettuce, onions, parsley, and tahini.",
-      "image_url": "",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/uberEatsPhotoCoverage0426/5f00500dae37b400128861e2/5f06edf948c9f9001242712f.jpg?fit=cover",
       "popular": false
      },
      {
       "name": "Chicken Wrap",
       "price": 16.99,
       "description": "Chicken wrapped with boiled fresh tomatoes, lettuce, onions, parsley, and tahini.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8a140c40f50012b7352f.png?v=1661238334",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8a140c40f50012b7352f.png?fit=cover",
       "popular": true
      },
      {
       "name": "Kufta Kabab Wrap",
       "price": 16.99,
       "description": "Lamb & beef minced with parsley, onions, and our house spices wrapped with broiled fresh tomatoes, lettuce, onions, parsley, and tahini sauce.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8a290c40f50012b73552.png?v=0863180884",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8a290c40f50012b73552.png?fit=cover",
       "popular": true
      }
     ]
@@ -8595,21 +8595,21 @@
       "name": "Shawarma Plate",
       "price": 19.99,
       "description": "Thin, marinated slices of lamb and beef served with broiled fresh tomatoes, hummus dip, fresh salad, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f06fc3f48c9f900124277c2.png?v=7184874103",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f06fc3f48c9f900124277c2.png?fit=cover",
       "popular": true
      },
      {
       "name": "Chicken Shawarma Plate",
       "price": 19.99,
       "description": "Chicken served with broiled fresh tomatoes, hummus dip, fresh salad, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e90c04c40b50012eb14e0.png?v=2539712453",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e90c04c40b50012eb14e0.png?fit=cover",
       "popular": true
      },
      {
       "name": "Kufta Kabob Plate",
       "price": 19.99,
       "description": "Lamb and beef minced with parsley, onions, our house spices, and pita bread. Plates are served with broiled fresh tomatoes, hummus dip, fresh salad.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e90e30c40f50012b73b3e.png?v=7884226659",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e90e30c40f50012b73b3e.png?fit=cover",
       "popular": false
      },
      {
@@ -8635,35 +8635,35 @@
       "name": "Lamb & Beef Shawarma Combo Plate",
       "price": 23.99,
       "description": "Thin, marinated slices of lamb and beef served with hummus, falafels, tabbouleh, baba ghanoush, salad, dolma, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f06f3ed48c9f9001242742a.png?v=7961719573",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f06f3ed48c9f9001242742a.png?fit=cover",
       "popular": false
      },
      {
       "name": "Chicken Shawarma Combo Plate",
       "price": 23.99,
       "description": "Served with hummus, falafels, tabbouleh, baba ghanoush, salad, dolma, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8dc60c40f50012b73875.png?v=8527120806",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8dc60c40f50012b73875.png?fit=cover",
       "popular": true
      },
      {
       "name": "Kufta Kabob Combo Plate",
       "price": 23.99,
       "description": "Lamb and beef minced with parsley, onions, and our house spices served with hummus, falafels, tabbouleh, baba ghanoush, salad, dolma, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e8ded0c40f50012b7389b.png?v=6988750041",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e8ded0c40f50012b7389b.png?fit=cover",
       "popular": false
      },
      {
       "name": "Veggie Plate With Any 2 Meats",
       "price": 29.99,
       "description": "Served with hummus, falafels, tabbouleh, baba ghanoush, salad, dolma, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f06f61f48c9f90012427528.png?v=9000485618",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f06f61f48c9f90012427528.png?fit=cover",
       "popular": false
      },
      {
       "name": "Veggie Plate With Any 3 Meats",
-      "price": 34.0,
+      "price": 34,
       "description": "Served with hummus, falafels, tabbouleh, baba ghanoush, salad, dolma, and hot pita bread.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f06f64248c9f90012427540.png?v=5919570426",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f06f64248c9f90012427540.png?fit=cover",
       "popular": false
      }
     ]
@@ -8673,37 +8673,37 @@
     "items": [
      {
       "name": "Greek Salad",
-      "price": 10.0,
+      "price": 10,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f07059048c9f90012427bc4.png?v=1975189262",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f07059048c9f90012427bc4.png?fit=cover",
       "popular": false
      },
      {
       "name": "Mediterranean Salad",
-      "price": 10.0,
+      "price": 10,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e92a40c40f50012b73d2f.png?v=9655329559",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e92a40c40f50012b73d2f.png?fit=cover",
       "popular": false
      },
      {
       "name": "Falafel Salad",
       "price": 13.99,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e92c44c40b50012eb16bf.png?v=3528938813",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e92c44c40b50012eb16bf.png?fit=cover",
       "popular": false
      },
      {
       "name": "Chicken Salad",
       "price": 16.99,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e92df0c40f50012b73d68.png?v=1634678977",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e92df0c40f50012b73d68.png?fit=cover",
       "popular": false
      },
      {
       "name": "Lamb & Beef Shawarma Salad",
       "price": 16.99,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e92fd0c40f50012b73d8d.png?v=0090328811",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e92fd0c40f50012b73d8d.png?fit=cover",
       "popular": false
      }
     ]
@@ -8713,9 +8713,9 @@
     "items": [
      {
       "name": "1/2 Pt. Lentil Soup",
-      "price": 5.0,
+      "price": 5,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f07069a9f0c1700120555ae.png?v=5375904316",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f07069a9f0c1700120555ae.png?fit=cover",
       "popular": false
      }
     ]
@@ -8725,93 +8725,93 @@
     "items": [
      {
       "name": "1/2 Pt Hummus",
-      "price": 7.0,
+      "price": 7,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f07071148c9f90012427c9d.png?v=0139877706",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f07071148c9f90012427c9d.png?fit=cover",
       "popular": false
      },
      {
       "name": "1/2 Pt. Baba Ghanoush",
-      "price": 9.0,
+      "price": 9,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e953b0c40f50012b73f7f.png?v=1760679362",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e953b0c40f50012b73f7f.png?fit=cover",
       "popular": false
      },
      {
       "name": "1/2 pt Tabbouleh Salad",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0707a09f0c170012055622.png?v=7991465177",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0707a09f0c170012055622.png?fit=cover",
       "popular": false
      },
      {
       "name": "1/2 Pt. Mediterranean Salad",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0707f59f0c17001205563e.png?v=0984940088",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0707f59f0c17001205563e.png?fit=cover",
       "popular": false
      },
      {
       "name": "1/2 Pt. Mujaddara",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f07080c9f0c170012055650.png?v=5039628715",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f07080c9f0c170012055650.png?fit=cover",
       "popular": false
      },
      {
       "name": "Side /Fried Eggplant",
-      "price": 10.0,
+      "price": 10,
       "description": "",
       "image_url": "",
       "popular": false
      },
      {
       "name": "Side ( 6 )Dolma",
-      "price": 6.0,
+      "price": 6,
       "description": "Choose number of pieces.",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f07088748c9f90012427d77.png?v=1679333868",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f07088748c9f90012427d77.png?fit=cover",
       "popular": false
      },
      {
       "name": "Side of Meat",
-      "price": 14.0,
+      "price": 14,
       "description": "Chicken shawarma | lamb & beef | kufta",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070d8748c9f90012427f8b.png?v=2324723911",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070d8748c9f90012427f8b.png?fit=cover",
       "popular": false
      },
      {
       "name": "1/2 Doz. Falafel",
-      "price": 7.0,
+      "price": 7,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070de49f0c1700120558f0.png?v=1251979789",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070de49f0c1700120558f0.png?fit=cover",
       "popular": false
      },
      {
       "name": "Bag of Pita Bread (6 pcs)",
-      "price": 8.0,
+      "price": 8,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070e0948c9f90012427fc9.png?v=8148493085",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070e0948c9f90012427fc9.png?fit=cover",
       "popular": false
      },
      {
       "name": "1/2 Pt. Tahini",
-      "price": 8.0,
+      "price": 8,
       "description": "",
       "image_url": "",
       "popular": false
      },
      {
       "name": "Olives",
-      "price": 8.0,
+      "price": 8,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e94f60c40f50012b73f4d.png?v=5131178880",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e94f60c40f50012b73f4d.png?fit=cover",
       "popular": false
      },
      {
       "name": "Labneh",
-      "price": 9.0,
+      "price": 9,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e95150c40f50012b73f63.png?v=8736284670",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e95150c40f50012b73f63.png?fit=cover",
       "popular": false
      }
     ]
@@ -8830,7 +8830,7 @@
       "name": "Cola",
       "price": 2.75,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070ebb9f0c170012055960.png?v=4748772813",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070ebb9f0c170012055960.png?fit=cover",
       "popular": false
      },
      {
@@ -8851,28 +8851,28 @@
       "name": "Abali Yogurt Drink",
       "price": 3.99,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070f3d9f0c17001205599c.png?v=5522869409",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070f3d9f0c17001205599c.png?fit=cover",
       "popular": false
      },
      {
       "name": "Tejava",
       "price": 3.5,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070f5848c9f90012428050.png?v=4489516551",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070f5848c9f90012428050.png?fit=cover",
       "popular": false
      },
      {
       "name": "Aranciata",
       "price": 3.5,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e96200c40f50012b7404d.png?v=5274650900",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e96200c40f50012b7404d.png?fit=cover",
       "popular": false
      },
      {
       "name": "Apple Juice",
-      "price": 3.0,
+      "price": 3,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e96c44c40b50012eb19e3.png?v=1817895383",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e96c44c40b50012eb19e3.png?fit=cover",
       "popular": false
      }
     ]
@@ -8882,42 +8882,43 @@
     "items": [
      {
       "name": "Finger Baklava",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070f9648c9f90012428074.png?v=9431814931",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070f9648c9f90012428074.png?fit=cover",
       "popular": false
      },
      {
       "name": "Barazek Sesame Cookie",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070fd048c9f90012428095.png?v=5632163726",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070fd048c9f90012428095.png?fit=cover",
       "popular": false
      },
      {
       "name": "Ghreibah Butter Cookie",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070fea9f0c1700120559e3.png?v=5020518376",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070fea9f0c1700120559e3.png?fit=cover",
       "popular": false
      },
      {
       "name": "Turkish Delights",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f070fff48c9f900124280aa.png?v=5082358218",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f070fff48c9f900124280aa.png?fit=cover",
       "popular": false
      },
      {
       "name": "Home Made Rice Pudding",
-      "price": 6.0,
+      "price": 6,
       "description": "",
-      "image_url": "https://static-content.owner.com/menu-items/items/5f0e95da4c40b50012eb1927.png?v=2132674251",
+      "image_url": "https://mediterraneanwraps.com/pluto-images/menu-items/items/5f0e95da4c40b50012eb1927.png?fit=cover",
       "popular": false
      }
     ]
    }
-  ]
+  ],
+  "prices_verified": true
  },
  {
   "id": "seed-state-of-mind-slice-house",
