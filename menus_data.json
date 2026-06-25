@@ -8477,387 +8477,6 @@
   ]
  },
  {
-  "id": "seed-shake-shack",
-  "success": true,
-  "menu_url": "https://order.shakeshack.com/",
-  "categories": [
-   {
-    "name": "Burgers",
-    "items": [
-     {
-      "name": "ShackBurger (Single)",
-      "price": 8.85,
-      "description": "Cheeseburger topped with lettuce, tomato and ShackSauce. 100% all-natural Angus beef.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shackburger_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "ShackBurger (Double)",
-      "price": 11.8,
-      "description": "Double cheeseburger topped with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shackburger_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "SmokeShack (Single)",
-      "price": 11.09,
-      "description": "Cheeseburger topped with applewood smoked bacon, chopped cherry peppers and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_smokeshack_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "SmokeShack (Double)",
-      "price": 13.99,
-      "description": "Double cheeseburger with applewood smoked bacon, chopped cherry peppers and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_smokeshack_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Hamburger (Single)",
-      "price": 7.59,
-      "description": "Single all-natural Angus beef burger with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_hamburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Hamburger (Double)",
-      "price": 10.59,
-      "description": "Double all-natural Angus beef burger with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_hamburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Cheeseburger (Single)",
-      "price": 8.29,
-      "description": "Single Angus beef cheeseburger with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_cheeseburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Cheeseburger (Double)",
-      "price": 11.29,
-      "description": "Double Angus beef cheeseburger with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_cheeseburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Bacon Cheeseburger (Single)",
-      "price": 9.99,
-      "description": "Cheeseburger with applewood smoked bacon, lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_bacon_cheeseburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Bacon Cheeseburger (Double)",
-      "price": 12.99,
-      "description": "Double cheeseburger with applewood smoked bacon, lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_bacon_cheeseburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Avocado Bacon Burger (Single)",
-      "price": 11.29,
-      "description": "Cheeseburger with sliced avocado, applewood smoked bacon, lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_avocado_bacon_burger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Avocado Bacon Burger (Double)",
-      "price": 14.29,
-      "description": "Double cheeseburger with sliced avocado, applewood smoked bacon, lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_avocado_bacon_burger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Shack Stack",
-      "price": 13.79,
-      "description": "A cheeseburger and a 'Shroom Burger stacked, topped with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shack_stack_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "'Shroom Burger",
-      "price": 10.09,
-      "description": "Crisp-fried portobello mushroom filled with melted muenster and cheddar cheeses, topped with lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shroom_burger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Veggie Shack",
-      "price": 9.79,
-      "description": "House-made veggie patty with mushrooms, sweet potato, carrots, farro and quinoa, topped with crispy onions, pickles, lettuce, tomato and ShackSauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_veggie_shack_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Chicken",
-    "items": [
-     {
-      "name": "Chicken Shack",
-      "price": 9.29,
-      "description": "Crispy or grilled all-natural antibiotic-free chicken breast with lettuce, pickles and buttermilk herb mayo.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_shack_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "Hot Chicken",
-      "price": 9.79,
-      "description": "Crispy chicken breast tossed in a guajillo and cayenne pepper blend, topped with pickles and slaw.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_shack_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Avocado Bacon Chicken",
-      "price": 11.29,
-      "description": "Crispy or grilled chicken breast with sliced avocado, applewood smoked bacon, lettuce and buttermilk herb mayo.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_avocado_bacon_chicken_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Chicken Bites (6 pc)",
-      "price": 6.49,
-      "description": "All-natural, cage-free white-meat chicken bites with your choice of dipping sauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_bites_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Chicken Bites (10 pc)",
-      "price": 9.99,
-      "description": "All-natural, cage-free white-meat chicken bites with your choice of dipping sauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_bites_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Flat-Top Dogs",
-    "items": [
-     {
-      "name": "Flat-Top Dog (Single)",
-      "price": 5.49,
-      "description": "Split and griddled all-beef Vienna dog in a toasted potato bun.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_hot_dog_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Flat-Top Dog (Double)",
-      "price": 7.99,
-      "description": "Two split-and-griddled all-beef Vienna dogs in a toasted potato bun.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_hot_dog_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Shack-cago Dog",
-      "price": 6.49,
-      "description": "Split and griddled all-beef dog topped with ShackRelish, onion, cucumber, pickle, tomato, sport pepper, celery salt and mustard.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_hot_dog_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Fries",
-    "items": [
-     {
-      "name": "Fries",
-      "price": 4.49,
-      "description": "Crinkle-cut fries cooked in pure, cholesterol-free vegetable oil.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_fries_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "Cheese Fries",
-      "price": 5.49,
-      "description": "Crinkle-cut fries topped with our proprietary cheese sauce.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_cheese_fries_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "Bacon Cheese Fries",
-      "price": 6.99,
-      "description": "Crinkle-cut fries topped with cheese sauce and chopped applewood smoked bacon.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_bacon_cheese_fries_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Shakes",
-    "items": [
-     {
-      "name": "Vanilla Shake",
-      "price": 6.99,
-      "description": "Hand-spun vanilla frozen custard shake.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_vanilla_shake_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "Chocolate Shake",
-      "price": 6.99,
-      "description": "Hand-spun chocolate frozen custard shake.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_chocolate_shake_md.jpeg",
-      "popular": true
-     },
-     {
-      "name": "Strawberry Shake",
-      "price": 6.99,
-      "description": "Hand-spun strawberry frozen custard shake.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_strawberry_shake_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Black & White Shake",
-      "price": 6.99,
-      "description": "Hand-spun vanilla and chocolate frozen custard shake.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_black_white_shake_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Salted Caramel Shake",
-      "price": 6.99,
-      "description": "Hand-spun salted caramel frozen custard shake.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_vanilla_shake_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Cookies & Cream Shake",
-      "price": 6.99,
-      "description": "Hand-spun vanilla frozen custard shake blended with chocolate cookie pieces.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_oreo_cookies_and_cream_shake_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Frozen Custard",
-    "items": [
-     {
-      "name": "Cup or Cone (Single)",
-      "price": 4.79,
-      "description": "Vanilla or chocolate frozen custard, made fresh throughout the day.",
-      "image_url": "",
-      "popular": false
-     },
-     {
-      "name": "Cup or Cone (Double)",
-      "price": 5.79,
-      "description": "Two scoops of vanilla or chocolate frozen custard.",
-      "image_url": "",
-      "popular": false
-     },
-     {
-      "name": "Concrete",
-      "price": 6.49,
-      "description": "Dense frozen custard blended at high speed with mix-ins.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_frozen_custard_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Pint To-Go",
-      "price": 6.99,
-      "description": "A pint of vanilla or chocolate frozen custard to take home.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_frozen_custard_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Floats",
-    "items": [
-     {
-      "name": "Purple Cow Float",
-      "price": 6.49,
-      "description": "Grape soda and vanilla frozen custard.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_floats_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Root Beer Float",
-      "price": 6.49,
-      "description": "Fifty/Fifty root beer and vanilla frozen custard.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_floats_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Drinks",
-    "items": [
-     {
-      "name": "Fountain Soda",
-      "price": 3.49,
-      "description": "Coca-Cola fountain beverages.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_coke_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Shack-Made Lemonade",
-      "price": 4.29,
-      "description": "House-made lemonade.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_shack_made_lemonade_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Organic Fresh-Brewed Iced Tea",
-      "price": 3.79,
-      "description": "Organic fair-trade fresh-brewed iced tea.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_organic_iced_tea_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Fifty/Fifty Tea & Lemonade",
-      "price": 4.29,
-      "description": "Half organic iced tea, half Shack-made lemonade.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_fifty_fifty_lemonades_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Honest Organic Apple Juice",
-      "price": 2.49,
-      "description": "Honest Kids organic apple juice.",
-      "image_url": "",
-      "popular": false
-     },
-     {
-      "name": "Bottled Water",
-      "price": 2.99,
-      "description": "Bottled spring water.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_shack2o_water_md.jpeg",
-      "popular": false
-     }
-    ]
-   },
-   {
-    "name": "Kids (Shack Meals)",
-    "items": [
-     {
-      "name": "Hamburger Kids Meal",
-      "price": 9.49,
-      "description": "Single hamburger with fries or apple slices and a drink.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_hamburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Cheeseburger Kids Meal",
-      "price": 9.99,
-      "description": "Single cheeseburger with fries or apple slices and a drink.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_cheeseburger_md.jpeg",
-      "popular": false
-     },
-     {
-      "name": "Chicken Bites Kids Meal",
-      "price": 9.99,
-      "description": "Chicken bites with fries or apple slices and a drink.",
-      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_bites_md.jpeg",
-      "popular": false
-     }
-    ]
-   }
-  ]
- },
- {
   "id": "seed-mediterranean-wraps",
   "success": true,
   "menu_url": "https://mediterraneanwraps.com/menu",
@@ -9842,5 +9461,508 @@
     ]
    }
   ]
+ },
+ {
+  "id": "seed-shake-shack",
+  "success": true,
+  "menu_url": "https://order.shakeshack.com/",
+  "categories": [
+   {
+    "name": "Burgers & More",
+    "items": [
+     {
+      "name": "Smoky Classic BBQ Burger",
+      "price": 13.49,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_smoky_classic_bbq_burger_lg.jpeg?1780485257000",
+      "popular": false
+     },
+     {
+      "name": "BBQ Boneless Baby Back Rib Sandwich",
+      "price": 14.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_bbq_boneless_baby_back_rib_sandwich_lg.jpeg?1780485257000",
+      "popular": false
+     },
+     {
+      "name": "ShackBurger\u00ae",
+      "price": 10.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shackburger_lg.jpeg?1780484963000",
+      "popular": false
+     },
+     {
+      "name": "Avocado Bacon Burger",
+      "price": 13.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_avocado_bacon_burger_lg.jpeg?1780485008000",
+      "popular": false
+     },
+     {
+      "name": "SmokeShack\u00ae",
+      "price": 12.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_smokeshack_lg.jpeg?1780484965000",
+      "popular": false
+     },
+     {
+      "name": "Bacon Cheeseburger",
+      "price": 12.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_bacon_cheeseburger_lg.jpeg?1780485014000",
+      "popular": false
+     },
+     {
+      "name": "Veggie Shack\u2122",
+      "price": 13.49,
+      "description": "VEGETARIAN",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_veggie_shack_lg.jpeg?1780485023000",
+      "popular": false
+     },
+     {
+      "name": "'Shroom Burger",
+      "price": 10.49,
+      "description": "VEGETARIAN",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shroom_burger_lg.jpeg?1780484967000",
+      "popular": false
+     },
+     {
+      "name": "Shack Stack\u00ae",
+      "price": 13.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shack_stack_lg.jpeg?1780484968000",
+      "popular": false
+     },
+     {
+      "name": "Hamburger",
+      "price": 10.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_hamburger_lg.jpeg?1780484968000",
+      "popular": false
+     },
+     {
+      "name": "Cheeseburger",
+      "price": 10.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_cheeseburger_lg.jpeg?1780484970000",
+      "popular": false
+     },
+     {
+      "name": "BLT",
+      "price": 6.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_blt_lg.jpeg?1780484998000",
+      "popular": false
+     },
+     {
+      "name": "Grilled Cheese",
+      "price": 5.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_grilled_cheese_lg.jpeg?1780484984000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Chicken",
+    "items": [
+     {
+      "name": "Smoky Classic BBQ Chicken Sandwich",
+      "price": 10.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_smoky_classic_bbq_chicken_sandwich_lg.jpeg?1780485260000",
+      "popular": false
+     },
+     {
+      "name": "Avocado Bacon Chicken",
+      "price": 11.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_avocado_bacon_chicken_lg.jpeg?1780485007000",
+      "popular": false
+     },
+     {
+      "name": "Chicken Shack\u2122",
+      "price": 9.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_shack_lg.jpeg?1780485000000",
+      "popular": false
+     },
+     {
+      "name": "Chicken Bites\u2122",
+      "price": 5.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_bites_lg.jpeg?1780485159000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Good Fit",
+    "items": [
+     {
+      "name": "ShackBurger\u00ae Lettuce Wrap",
+      "price": 8.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_shackburger_lettuce_wrap_lg.jpeg?1780485216000",
+      "popular": false
+     },
+     {
+      "name": "Chicken Shack\u2122 Lettuce Wrap",
+      "price": 9.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_chicken_shack_lettuce_wrap_lg.jpeg?1780485219000",
+      "popular": false
+     },
+     {
+      "name": "Gluten-Free ShackBurger\u00ae",
+      "price": 11.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_gluten_free_shackburger_lg.jpeg?1780485220000",
+      "popular": false
+     },
+     {
+      "name": "Veggie Shack\u2122 Lettuce Wrap",
+      "price": 10.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_veggie_shack_lettuce_wrap_lg.jpeg?1780485222000",
+      "popular": false
+     },
+     {
+      "name": "SmokeShack\u00ae Lettuce Wrap",
+      "price": 12.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_smokeshack_lettuce_wrap_lg.jpeg?1780485224000",
+      "popular": false
+     },
+     {
+      "name": "Avocado Bacon Burger Lettuce Wrap",
+      "price": 13.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_avocado_bacon_burger_lettuce_wrap_lg.jpeg?1780485227000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Flat-Top Dogs",
+    "items": [
+     {
+      "name": "Hot Dog",
+      "price": 4.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_hot_dog_lg.jpeg?1780484973000",
+      "popular": false
+     },
+     {
+      "name": "Crispy Onion Cheese Dog",
+      "price": 6.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_crispy_onion_cheese_dog_lg.jpeg?1780485199000",
+      "popular": false
+     },
+     {
+      "name": "Bacon Cheese Dog",
+      "price": 7.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_bacon_cheese_dog_lg.jpeg?1780485200000",
+      "popular": false
+     },
+     {
+      "name": "Cheese Dog",
+      "price": 5.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_cheese_dog_lg.jpeg?1780485199000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Sides",
+    "items": [
+     {
+      "name": "Spicy Cheese Fries with Ranch",
+      "price": 6.49,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_spicy_cheese_fries_with_ranch_lg.jpeg?1780485261000",
+      "popular": false
+     },
+     {
+      "name": "Spicy Fries with Ranch",
+      "price": 5.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_spicy_fries_with_ranch_lg.jpeg?1780485261000",
+      "popular": false
+     },
+     {
+      "name": "Mac & Cheese",
+      "price": 6.49,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_mac_cheese_lg.jpeg?1780485262000",
+      "popular": false
+     },
+     {
+      "name": "Onion Rings",
+      "price": 5.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_onion_rings_lg.jpeg?1780485204000",
+      "popular": false
+     },
+     {
+      "name": "Fries",
+      "price": 4,
+      "description": "$4 FRIES!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_fries_lg.jpeg?1780485206000",
+      "popular": false
+     },
+     {
+      "name": "Cheese Fries",
+      "price": 5.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_cheese_fries_lg.jpeg?1780484974000",
+      "popular": false
+     },
+     {
+      "name": "Bacon Cheese Fries",
+      "price": 6.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_bacon_cheese_fries_lg.jpeg?1780484983000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Shakes & Desserts",
+    "items": [
+     {
+      "name": "Dubai Chocolate Pistachio Shake",
+      "price": 9.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_dubai_chocolate_pistachio_shake_lg.jpeg?1780485289000",
+      "popular": false
+     },
+     {
+      "name": "Chocolate Toasted Marshmallow S'mores Shake",
+      "price": 6.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_chocolate_toasted_marshmallow_s_mores_shake_lg.jpeg?1780485265000",
+      "popular": false
+     },
+     {
+      "name": "Tropical Mango Shake with Passionfruit Popping Boba",
+      "price": 7.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_tropical_mango_shake_with_passionfruit_popping_boba_lg.jpeg?1780485266000",
+      "popular": false
+     },
+     {
+      "name": "Key Lime Pie Shake",
+      "price": 6.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_key_lime_pie_shake_lg.jpeg?1780485267000",
+      "popular": false
+     },
+     {
+      "name": "Vanilla Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_vanilla_shake_lg.jpeg?1780485211000",
+      "popular": false
+     },
+     {
+      "name": "Chocolate Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_chocolate_shake_lg.jpeg?1780485212000",
+      "popular": false
+     },
+     {
+      "name": "Strawberry Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_strawberry_shake_lg.jpeg?1780485212000",
+      "popular": false
+     },
+     {
+      "name": "OREO\u00ae Cookies and Cream Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_oreo_cookies_and_cream_shake_lg.jpeg?1780485213000",
+      "popular": false
+     },
+     {
+      "name": "Coffee Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_coffee_shake_lg.jpeg?1780485214000",
+      "popular": false
+     },
+     {
+      "name": "Black & White Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_black_white_shake_lg.jpeg?1780485214000",
+      "popular": false
+     },
+     {
+      "name": "Vanilla & Chocolate Shake",
+      "price": 6,
+      "description": "$6 SHAKE!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_vanilla_chocolate_shake_lg.jpeg?1780485211000",
+      "popular": false
+     },
+     {
+      "name": "Floats",
+      "price": 6.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_floats_lg.jpeg?1780484975000",
+      "popular": false
+     },
+     {
+      "name": "Frozen Custard",
+      "price": 4.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_frozen_custard_lg.jpeg?1780484990000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Signature Sips",
+    "items": [
+     {
+      "name": "Mini Passionfruit Popping Boba Lemonades",
+      "price": 5.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_mini_passionfruit_popping_boba_lemonades_lg.jpeg?1780485268000",
+      "popular": false
+     },
+     {
+      "name": "Tropical Mango Lemonade",
+      "price": 4.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_tropical_mango_lemonade_lg.jpeg?1780485269000",
+      "popular": false
+     },
+     {
+      "name": "Sparkling Cucumber Basil",
+      "price": 4.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_sparkling_cucumber_basil_lg.jpeg?1780485269000",
+      "popular": false
+     },
+     {
+      "name": "Strawberry Lemonade",
+      "price": 4.99,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_strawberry_lemonade_lg.jpeg?1780485163000",
+      "popular": false
+     },
+     {
+      "name": "Shack-made Lemonade",
+      "price": 4.49,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_shack_made_lemonade_lg.jpeg?1780484977000",
+      "popular": false
+     },
+     {
+      "name": "Fifty/Fifty\u2122 Lemonades",
+      "price": 4.49,
+      "description": "LIMITED TIME",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_fifty_fifty_lemonades_lg.jpeg?1780484978000",
+      "popular": false
+     },
+     {
+      "name": "Organic Iced Tea",
+      "price": 3.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_organic_iced_tea_lg.jpeg?1780484977000",
+      "popular": false
+     },
+     {
+      "name": "Organic Apple Juice Drink",
+      "price": 3.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_organic_apple_juice_drink_lg.jpeg?1780484980000",
+      "popular": false
+     },
+     {
+      "name": "Shack2O Water",
+      "price": 3.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_shack2o_water_lg.jpeg?1780484981000",
+      "popular": false
+     },
+     {
+      "name": "Sparkling Shack2O Water",
+      "price": 3.99,
+      "description": "",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_sparkling_shack2o_water_lg.jpeg?1780485004000",
+      "popular": false
+     }
+    ]
+   },
+   {
+    "name": "Soda",
+    "items": [
+     {
+      "name": "Coke",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_coke_lg.jpeg?1780485244000",
+      "popular": false
+     },
+     {
+      "name": "Coke Zero",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_coke_zero_lg.jpeg?1780485245000",
+      "popular": false
+     },
+     {
+      "name": "Diet Coke",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_diet_coke_lg.jpeg?1780485245000",
+      "popular": false
+     },
+     {
+      "name": "Sprite",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_sprite_lg.jpeg?1780485246000",
+      "popular": false
+     },
+     {
+      "name": "Fanta Orange",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_fanta_orange_lg.jpeg?1780485246000",
+      "popular": false
+     },
+     {
+      "name": "Dr. Pepper",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_dr_pepper_lg.jpeg?1780485247000",
+      "popular": false
+     },
+     {
+      "name": "Ginger Ale",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_ginger_ale_lg.jpeg?1780485247000",
+      "popular": false
+     },
+     {
+      "name": "Barq's Rootbeer",
+      "price": 2,
+      "description": "$2 SODAS!",
+      "image_url": "https://product-image-shakeshack-prod.ssma24.com/soda_prd_barq_s_rootbeer_lg.jpeg?1780485248000",
+      "popular": false
+     }
+    ]
+   }
+  ],
+  "prices_verified": true
  }
 ]
