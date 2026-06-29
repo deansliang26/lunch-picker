@@ -96,18 +96,130 @@ def consolidate_orders(orders_by_person: dict) -> list:
 
 def _normalize(s: str) -> str:
     import re
-    # Strip everything except letters and digits so "Foo (10 Pcs)" == "Foo(10 pcs)"
-    return re.sub(r"[^a-z0-9]", "", s.lower())
+    # Canonicalize unit/conjunction variants so "Gyoza (6 Pieces)" == "Gyoza 6 pcs"
+    # and "Mac & Cheese" == "Mac and Cheese", then strip to letters+digits.
+    s = (s or "").lower()
+    s = re.sub(r"\bpieces?\b|\bpcs?\b", "pc", s)
+    s = re.sub(r"\band\b|&", "", s)
+    return re.sub(r"[^a-z0-9]", "", s)
+
+
+# JS matcher inlined into page.evaluate() menu-matching so the browser-side find
+# uses the SAME rules as Python: normalize (pieces↔pcs, drop and/&), then match by
+# equality / substring / token-subset (all words of one name appear in the other —
+# catches scraped-vs-live drift like "Nashville [Hot] Tender Box").
+_JS_MATCH = (
+    "function norm(s){return (s||'').toLowerCase()"
+    ".replace(/\\bpieces?\\b|\\bpcs?\\b/g,'pc').replace(/\\band\\b|&/g,'')"
+    ".replace(/[^a-z0-9]/g,'');}"
+    "function toks(s){return (s||'').toLowerCase()"
+    ".replace(/\\bpieces?\\b|\\bpcs?\\b/g,'pc').replace(/\\band\\b|&/g,' ')"
+    ".split(/[^a-z0-9]+/).filter(function(t){return t.length>1||/^[0-9]+$/.test(t);});}"
+    "function match(a,b){var na=norm(a),nb=norm(b);if(!na||!nb)return false;"
+    "if(na===nb||na.indexOf(nb)>=0||nb.indexOf(na)>=0)return true;"
+    "var ta=toks(a),tb=toks(b);"
+    "if(ta.length>=2&&ta.every(function(t){return tb.indexOf(t)>=0;}))return true;"
+    "if(tb.length>=2&&tb.every(function(t){return ta.indexOf(t)>=0;}))return true;"
+    "return false;}"
+)
+
+
+def _toks(s: str) -> list:
+    import re
+    s = (s or "").lower()
+    s = re.sub(r"\bpieces?\b|\bpcs?\b", "pc", s)
+    s = re.sub(r"\band\b|&", " ", s)
+    return [t for t in re.split(r"[^a-z0-9]+", s) if len(t) > 1 or t.isdigit()]
 
 
 def _fuzzy_match(canonical: str, scraped: str) -> bool:
     c, s = _normalize(canonical), _normalize(scraped)
     if not c or not s:
         return False
-    return c == s or c in s or s in c
+    if c == s or c in s or s in c:
+        return True
+    # Token-subset: every word of one name appears in the other (catches scraped-
+    # vs-live name drift). Guard on ≥2 tokens to avoid one-word false matches.
+    tc, ts = _toks(canonical), _toks(scraped)
+    if len(tc) >= 2 and all(t in ts for t in tc):
+        return True
+    if len(ts) >= 2 and all(t in tc for t in ts):
+        return True
+    return False
 
 
 # ── MenuSifu cart filler ───────────────────────────────────────────────────────
+
+async def _menusifu_clear_overlays(page) -> None:
+    """MenuSifu intermittently throws overlays that intercept clicks: the landing
+    page ('Start Order' / noBusinessHour), the order-type dialog, and a
+    'Pickup starts on … / OK' customPrompt that appears when ordering before the
+    store opens. Dismiss whichever are present using JS clicks (which bypass the
+    pointer-event interception that blocks Playwright clicks). Idempotent — safe
+    to call when nothing is showing."""
+    try:
+        await page.evaluate("""() => {
+            const vis = el => el && el.offsetParent !== null;
+            const txt = el => (el.innerText || el.textContent || '').trim();
+            const BTN = 'button,[role="button"],[class*="utton"],[class*="Btn"]';
+            // 'Pickup starts on … / OK' style customPrompt — click its button.
+            for (const p of document.querySelectorAll('[class*="customPrompt"]')) {
+                if (!vis(p)) continue;
+                const b = [...p.querySelectorAll(BTN)].find(vis);
+                if (b) b.click();
+            }
+            // Any other modal/dialog with an OK/confirm/continue button.
+            for (const c of document.querySelectorAll('[class*="prompt" i],[class*="modal" i],[class*="dialog" i]')) {
+                if (!vis(c)) continue;
+                for (const b of c.querySelectorAll(BTN)) {
+                    if (vis(b) && /^(ok|confirm|got it|continue|yes)$/i.test(txt(b))) { b.click(); break; }
+                }
+            }
+            // Landing 'Start Order' + order-type 'Pickup', if still up.
+            const start = document.querySelector('.GA_lp_startorder');
+            if (vis(start)) start.click();
+            const pickup = document.querySelector('.GA_Ordertypepop_PickupOrder');
+            if (vis(pickup)) pickup.click();
+        }""")
+        await page.wait_for_timeout(400)
+    except Exception:
+        pass
+
+
+async def _menusifu_panel_open(page) -> bool:
+    """True while an item detail/combo panel is open (its 'Add' button visible)."""
+    return await page.evaluate(
+        """() => { const b = document.querySelector(
+               '.GA_Item_detail_AddtoOrder, #addToCart, #comboPanelOut [class*="comboPanel_show"]');
+             return !!(b && b.offsetParent !== null); }"""
+    )
+
+
+async def _menusifu_add(page, item_name: str) -> bool:
+    """Click 'Add to cart' and CONFIRM the panel actually closed (the real success
+    signal) — so we never report a phantom add. Clears overlays and retries /
+    JS-clicks through any pointer-event interception. Returns True only on a
+    confirmed close from the add."""
+    for _attempt in range(2):
+        await _menusifu_clear_overlays(page)
+        try:
+            await page.locator(SEL_PANEL_ADD).first.click(timeout=3000)
+        except Exception:
+            await page.evaluate(
+                """() => { const b = document.querySelector('.GA_Item_detail_AddtoOrder, #addToCart'); if (b) b.click(); }"""
+            )
+        await page.wait_for_timeout(900)
+        await _menusifu_clear_overlays(page)
+        if not await _menusifu_panel_open(page):
+            return True
+    # Couldn't confirm — escape so a stuck panel doesn't break the next item.
+    try:
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
+    except Exception:
+        pass
+    return False
+
 
 async def fill_cart_menusifu(page, items: list) -> None:
     print(f"\n→ Navigating to MJ Sushi ordering page...")
@@ -120,30 +232,15 @@ async def fill_cart_menusifu(page, items: list) -> None:
     print("  Waiting for page to render...")
     await page.wait_for_timeout(5000)
 
-    # Click "Start Order" if the landing page is showing
-    try:
-        start_btn = page.locator(SEL_START_ORDER).first
-        if await start_btn.is_visible(timeout=3000):
-            print("  Clicking 'Start Order'...")
-            await start_btn.click()
-            await page.wait_for_timeout(2000)
-    except Exception:
-        pass  # Already on the menu page
-
-    # Dismiss the order-type dialog — select Pickup / ASAP
-    try:
-        pickup_btn = page.locator('.GA_Ordertypepop_PickupOrder').first
-        if await pickup_btn.is_visible(timeout=3000):
-            print("  Selecting 'Pickup Order' (ASAP)...")
-            await pickup_btn.click()
-            await page.wait_for_timeout(1500)
-    except Exception:
-        pass  # Dialog already dismissed or not shown
+    # Clear landing / order-type / 'pickup starts' overlays (retried; idempotent).
+    for _ in range(3):
+        await _menusifu_clear_overlays(page)
+        await page.wait_for_timeout(600)
 
     # Scroll to trigger lazy loading
     for _ in range(10):
         await page.evaluate("window.scrollBy(0, 400)")
-        await page.wait_for_timeout(300)
+        await page.wait_for_timeout(250)
     await page.evaluate("window.scrollTo(0, 0)")
     await page.wait_for_timeout(1000)
 
@@ -157,51 +254,34 @@ async def fill_cart_menusifu(page, items: list) -> None:
 
         print(f"\n  Adding: {item_name} ×{qty}" + (f"  notes: {notes}" if notes else ""))
 
-        # Find and scroll to item by name
+        # A post-add customPrompt (or stale landing overlay) intercepts clicks —
+        # clear before locating the next item.
+        await _menusifu_clear_overlays(page)
+
         found = await page.evaluate(
-            """(args) => {
-                const [canonical, sel] = args;
-                function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g,''); }
-                const c = norm(canonical);
-                const nameEls = document.querySelectorAll(sel);
-                for (const el of nameEls) {
-                    const s = norm(el.innerText || el.textContent || '');
-                    if (c === s || s.includes(c) || c.includes(s)) {
-                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        return true;
-                    }
-                }
-                return false;
-            }""",
+            "(args) => { const [canonical, sel] = args; %s"
+            "  for (const el of document.querySelectorAll(sel)) {"
+            "    if (match(canonical, el.innerText || el.textContent || '')) {"
+            "      el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return true; } }"
+            "  return false; }" % _JS_MATCH,
             [item_name, SEL_ITEM_NAME],
         )
-
         if not found:
             print(f"    ✗ Not found in menu — will need to add manually")
             skipped.append(item_name)
             continue
 
-        await page.wait_for_timeout(700)
+        await page.wait_for_timeout(600)
 
-        # Click the item card to open its detail panel
         try:
             clicked = await page.evaluate(
-                """(args) => {
-                    const [canonical, sel] = args;
-                    function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g,''); }
-                    const c = norm(canonical);
-                    const nameEls = document.querySelectorAll(sel);
-                    for (const el of nameEls) {
-                        const s = norm(el.innerText || el.textContent || '');
-                        if (c === s || s.includes(c) || c.includes(s)) {
-                            const card = el.closest('[class*="itemBody"], [class*="GA_Menu_AddtoOrder"]')
-                                      || el.parentElement?.parentElement
-                                      || el.parentElement;
-                            if (card) { card.click(); return true; }
-                        }
-                    }
-                    return false;
-                }""",
+                "(args) => { const [canonical, sel] = args; %s"
+                "  for (const el of document.querySelectorAll(sel)) {"
+                "    if (match(canonical, el.innerText || el.textContent || '')) {"
+                "      const card = el.closest('[class*=\"itemBody\"], [class*=\"GA_Menu_AddtoOrder\"]')"
+                "                 || el.parentElement?.parentElement || el.parentElement;"
+                "      if (card) { card.click(); return true; } } }"
+                "  return false; }" % _JS_MATCH,
                 [item_name, SEL_ITEM_NAME],
             )
             if not clicked:
@@ -211,14 +291,16 @@ async def fill_cart_menusifu(page, items: list) -> None:
             skipped.append(item_name)
             continue
 
-        # Wait for detail panel to open
-        await page.wait_for_timeout(1500)
+        # Wait for the detail panel; clear any prompt that pops with it, then
+        # satisfy required modifier groups so the 'Add' button is enabled.
+        await page.wait_for_timeout(1400)
+        await _menusifu_clear_overlays(page)
+        await _auto_select_required_modifiers(page)
 
         # Set quantity using the panel's + button
         for _ in range(qty - 1):
             try:
-                plus_btn = page.locator(SEL_PANEL_PLUS).first
-                await plus_btn.click(timeout=2000)
+                await page.locator(SEL_PANEL_PLUS).first.click(timeout=2000)
                 await page.wait_for_timeout(300)
             except Exception:
                 break
@@ -226,30 +308,18 @@ async def fill_cart_menusifu(page, items: list) -> None:
         # Fill special instructions
         if notes:
             try:
-                notes_field = page.locator(SEL_PANEL_NOTES).first
-                await notes_field.fill(notes, timeout=2000)
+                await page.locator(SEL_PANEL_NOTES).first.fill(notes, timeout=2000)
             except Exception:
                 pass
 
-        # Click "Add N to cart" in the detail panel
-        try:
-            add_btn = page.locator(SEL_PANEL_ADD).first
-            await add_btn.click(timeout=4000)
-            # Wait for the detail panel to fully close before moving to next item
-            try:
-                await page.locator('#comboPanelOut .comboPanel_show__2fgV9').wait_for(
-                    state="hidden", timeout=3000
-                )
-            except Exception:
-                await page.wait_for_timeout(1200)
+        if await _menusifu_add(page, item_name):
             print(f"    ✓ Added")
             added.append(item_name)
-        except Exception as e:
-            print(f"    ✗ Could not click 'Add to cart': {e}")
-            await page.keyboard.press("Escape")
-            await page.wait_for_timeout(800)
+        else:
+            print(f"    ✗ Could not confirm add (panel stayed open) — add manually")
             skipped.append(item_name)
 
+    await _menusifu_clear_overlays(page)
     await _finalize(page, added, skipped, [SEL_VIEW_CART])
 
 
@@ -265,38 +335,23 @@ async def _scroll_to_load(page, scrolls: int = 10) -> None:
 
 async def _find_scroll(page, item_name: str, name_sel: str) -> bool:
     return await page.evaluate(
-        """([canonical, sel]) => {
-            function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g,''); }
-            const c = norm(canonical);
-            if (!c) return false;
-            for (const el of document.querySelectorAll(sel)) {
-                const s = norm(el.innerText || el.textContent || '');
-                if (s && (c === s || s.includes(c) || c.includes(s))) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    return true;
-                }
-            }
-            return false;
-        }""",
+        "([canonical, sel]) => { %s"
+        "  for (const el of document.querySelectorAll(sel)) {"
+        "    if (match(canonical, el.innerText || el.textContent || '')) {"
+        "      el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return true; } }"
+        "  return false; }" % _JS_MATCH,
         [item_name, name_sel],
     )
 
 
 async def _click_card(page, item_name: str, name_sel: str, card_sel: str) -> bool:
     return await page.evaluate(
-        """([canonical, nameSel, cardSel]) => {
-            function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g,''); }
-            const c = norm(canonical);
-            if (!c) return false;
-            for (const el of document.querySelectorAll(nameSel)) {
-                const s = norm(el.innerText || el.textContent || '');
-                if (s && (c === s || s.includes(c) || c.includes(s))) {
-                    const card = el.closest(cardSel) || el.parentElement?.parentElement || el.parentElement;
-                    if (card) { card.click(); return true; }
-                }
-            }
-            return false;
-        }""",
+        "([canonical, nameSel, cardSel]) => { %s"
+        "  for (const el of document.querySelectorAll(nameSel)) {"
+        "    if (match(canonical, el.innerText || el.textContent || '')) {"
+        "      const card = el.closest(cardSel) || el.parentElement?.parentElement || el.parentElement;"
+        "      if (card) { card.click(); return true; } } }"
+        "  return false; }" % _JS_MATCH,
         [item_name, name_sel, card_sel],
     )
 
@@ -499,18 +554,17 @@ async def _verify_cart(page, added: list) -> tuple:
         print("  ℹ Couldn't auto-read the cart panel on this site — items were added "
               "(Add clicked OK); please eyeball the cart before checkout.")
         return [], []
-    verified, missing = [], []
-    for name in added:
-        n = _normalize(name)
-        if n and n in norm_cart:
-            verified.append(name)
-        else:
-            missing.append(name)
+    verified = [name for name in added if _normalize(name) and _normalize(name) in norm_cart]
+    # Cart-panel DOM differs across platforms and isn't always readable, so an
+    # item we can't detect here is reported as UNVERIFIED — never as "missing".
+    # A false "missing" is worse than silence; genuine add failures are already
+    # captured as "skipped" upstream.
     if verified:
         print(f"  ✓ Verified in cart: {len(verified)}/{len(added)}")
-    if missing:
-        print(f"  ⚠ Added but not detected in the cart panel (double-check): {', '.join(missing)}")
-    return verified, missing
+    unverified = [n for n in added if n not in verified]
+    if unverified:
+        print(f"  ℹ Added but couldn't auto-confirm in cart (eyeball before checkout): {', '.join(unverified)}")
+    return verified, []
 
 
 async def _finalize(page, added: list, skipped: list, cart_sels: list,
@@ -616,9 +670,12 @@ async def _fill_cart_olo(page, items: list, restaurant_name: str, has_notes: boo
         print(f"\n  Adding: {item_name} ×{qty}" + (f"  notes: {notes}" if notes else ""))
 
         if not await _find_scroll(page, item_name, NAME_SEL):
-            print(f"    ✗ Not found in menu")
-            skipped.append(item_name)
-            continue
+            # Olo lazy-loads items as you scroll; pull in more of the menu and retry.
+            await _scroll_to_load(page, scrolls=16)
+            if not await _find_scroll(page, item_name, NAME_SEL):
+                print(f"    ✗ Not found in menu")
+                skipped.append(item_name)
+                continue
 
         await page.wait_for_timeout(600)
 

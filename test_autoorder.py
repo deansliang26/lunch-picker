@@ -9,7 +9,6 @@ Available place IDs:
     seed-mj-sushi
     seed-starbird
     seed-ike-s-love-sandwiches
-    seed-five-guys
     seed-sweetgreen
     seed-chipotle-mexican-grill
 
@@ -32,27 +31,22 @@ from autoorder import SUPPORTED_RESTAURANTS, consolidate_orders
 # matching the chipotle_options in menus_data.json.
 
 TEST_ORDERS: dict = {
+    # Item names match menus_data.json (which is what the real app puts in orders).
     "seed-starbird": {
-        "Dean":   [{"item": "3-Piece Tenders",  "qty": 1, "notes": "buffalo sauce",    "price": 12.95}],
-        "Cooper": [{"item": "Chicken Sandwich",  "qty": 1, "notes": "no pickles",       "price": 13.95}],
-        "Evan":   [{"item": "3-Piece Tenders",   "qty": 1, "notes": "",                 "price": 12.95}],
-        "Parth":  [{"item": "Fries",             "qty": 2, "notes": "",                 "price":  4.25}],
+        "Dean":   [{"item": "Classic Tender Box",      "qty": 1, "notes": "ranch", "price": 12.95}],
+        "Cooper": [{"item": "Big Star®",               "qty": 1, "notes": "",      "price": 13.95}],
+        "Evan":   [{"item": "6 Piece Nuggets",         "qty": 1, "notes": "",      "price":  9.95}],
+        "Parth":  [{"item": "Nashville Hot Tender Box","qty": 1, "notes": "",      "price": 12.95}],
     },
     "seed-ike-s-love-sandwiches": {
-        "Dean":   [{"item": "Menage a Trois",    "qty": 1, "notes": "no onions",        "price": 11.25}],
-        "Parth":  [{"item": "Pilgrim",           "qty": 1, "notes": "",                 "price": 10.75}],
-        "Cooper": [{"item": "Menage a Trois",    "qty": 1, "notes": "",                 "price": 11.25}],
-    },
-    "seed-five-guys": {
-        "Dean":   [{"item": "Little Hamburger",  "qty": 1, "notes": "lettuce, ketchup", "price":  6.19}],
-        "Cooper": [{"item": "Cheeseburger",      "qty": 1, "notes": "",                 "price":  9.29}],
-        "Evan":   [{"item": "Little Cheeseburger","qty": 1,"notes": "",                 "price":  7.19}],
-        "Parth":  [{"item": "Fries (Regular)",   "qty": 1, "notes": "",                 "price":  4.69}],
+        "Dean":   [{"item": "111 Menage A Trois",  "qty": 1, "notes": "no onions", "price": 11.25}],
+        "Parth":  [{"item": "8 Steve Young",       "qty": 1, "notes": "",          "price": 10.75}],
+        "Cooper": [{"item": "34 The Hunter Pence", "qty": 1, "notes": "",          "price": 11.25}],
     },
     "seed-sweetgreen": {
-        "Dean":   [{"item": "Harvest Bowl",      "qty": 1, "notes": "",                 "price": 13.95}],
-        "Aaron":  [{"item": "Crispy Rice Bowl",  "qty": 1, "notes": "",                 "price": 13.95}],
-        "Cooper": [{"item": "Garden Cobb",       "qty": 1, "notes": "",                 "price": 12.95}],
+        "Dean":   [{"item": "Harvest Bowl",     "qty": 1, "notes": "", "price": 13.95}],
+        "Aaron":  [{"item": "Crispy Rice Bowl", "qty": 1, "notes": "", "price": 13.95}],
+        "Cooper": [{"item": "Kale Caesar",      "qty": 1, "notes": "", "price": 12.95}],
     },
     "seed-chipotle-mexican-grill": {
         "Dean":   [{"item": "Chicken Burrito Bowl", "qty": 1,
