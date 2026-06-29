@@ -90,7 +90,7 @@ _ENRICHMENT = {
     "seed-mendocino-farms": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/29AnZLokOYFCRxbLQPEyaA/o.jpg", "lat": 37.44366249, "lng": -122.16207180325536},
     "seed-mod-pizza": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/6WFgUwni6Ro4xnQ_2AJkvw/o.jpg", "lat": 37.38246925256315, "lng": -121.8970118205723},
     "seed-oren-s-hummus-shop": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JJ2p55Nw3lvwqfDlAe6Vjg/o.jpg", "lat": 37.445717, "lng": -122.162173},
-    "seed-panda-express": {"image_url": "", "lat": 37.4252908, "lng": -122.1468323},
+    "seed-panda-express": {"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Panda_Express_Storefront_%2848128044623%29.jpg/960px-Panda_Express_Storefront_%2848128044623%29.jpg", "lat": 37.4252908, "lng": -122.1468323},
     "seed-pizza-my-heart": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rRp4AGHSqwfiQFLFWMrxlA/o.jpg", "lat": 37.44485, "lng": -122.16227},
     "seed-poke-house": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/NykOCjL6s7qiD4aZYKpbNQ/o.jpg", "lat": 37.438605, "lng": -122.160441},
     "seed-rangoon-ruby": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/DfkufSmD1QyodmAum3-3DA/o.jpg", "lat": 37.44514, "lng": -122.16305},

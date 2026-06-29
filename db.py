@@ -106,6 +106,12 @@ def _migrate():
             conn.execute("ALTER TABLE restaurants_cache ADD COLUMN image_url TEXT")
         except Exception:
             pass
+        # Order Station's "placed" checkmarks live here (not session_state) so
+        # they survive a page reload.
+        try:
+            conn.execute("ALTER TABLE orders ADD COLUMN placed INTEGER NOT NULL DEFAULT 0")
+        except Exception:
+            pass
 
 
 def add_custom_restaurant(name: str, cuisine: str, address: str = "", price: str = "", yelp_url: str = ""):
@@ -287,11 +293,26 @@ def get_history_orders(hist_date: str) -> list[dict]:
 # --- orders ---
 
 def upsert_order(person: str, order_text: str):
+    # UPSERT (not INSERT OR REPLACE) so editing an order keeps its `placed`
+    # flag — REPLACE would delete+reinsert the row and reset placed to 0.
     with _conn() as conn:
         conn.execute(
-            """INSERT OR REPLACE INTO orders (date, person, order_text, updated_at)
-               VALUES (?, ?, ?, ?)""",
+            """INSERT INTO orders (date, person, order_text, updated_at)
+               VALUES (?, ?, ?, ?)
+               ON CONFLICT(date, person) DO UPDATE SET
+                   order_text = excluded.order_text,
+                   updated_at = excluded.updated_at""",
             (today(), person, order_text, now()),
+        )
+
+
+def set_order_placed(person: str, placed: bool):
+    """Persist Order Station's per-person 'placed' checkmark for today so it
+    survives reloads. No-op if the person has no order row yet today."""
+    with _conn() as conn:
+        conn.execute(
+            "UPDATE orders SET placed = ? WHERE date = ? AND person = ?",
+            (1 if placed else 0, today(), person),
         )
 
 
@@ -318,3 +339,13 @@ def orders_count_for_date(hist_date: str) -> int:
             "SELECT COUNT(*) as cnt FROM orders WHERE date = ?", (hist_date,)
         ).fetchone()
     return row["cnt"] if row else 0
+
+
+def get_all_orders() -> list[dict]:
+    """Every order ever placed, oldest first — used by the running-tab page to
+    accumulate each person's over-budget spend over time."""
+    with _conn() as conn:
+        rows = conn.execute(
+            "SELECT * FROM orders ORDER BY date, person"
+        ).fetchall()
+    return [dict(r) for r in rows]
