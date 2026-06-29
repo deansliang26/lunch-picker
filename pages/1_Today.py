@@ -32,6 +32,10 @@ db.init_db()
 from roster import TEAM
 MAJORITY = math.ceil(len(TEAM) / 2)
 
+# Only this person sees the "Decide for us now" tiebreaker roll — the deadlock
+# break stays in one pair of hands rather than five.
+DECIDER = "Dean"
+
 _VEG_HINTS = (
     "salad", "mediterranean", "vegan", "vegetarian", "poke", "falafel",
     "hummus", "sweetgreen", "bowl", "healthy", "juice", "cafe", "greek",
@@ -86,11 +90,15 @@ cuisine_alias = yelp.CUISINES.get(st.session_state.cuisine_filter)
 if st.session_state.pop("_celebrate", False):
     st.balloons()
 
+# Confirm a reset kicked off by the organizer control in the header.
+if st.session_state.pop("_reset_done", False):
+    st.toast("Today's pick and votes were reset — vote away!", icon="🔄")
+
 # --- Header ---
 from datetime import date
 today_label = date.today().strftime("%A, %B %-d")
 
-col_title, col_date = st.columns([3, 1])
+col_title, col_date, col_admin = st.columns([7, 2, 1])
 with col_title:
     st.markdown("## 🍽️  Where are we eating today?")
 with col_date:
@@ -98,6 +106,20 @@ with col_date:
         f"<div style='text-align:right; padding-top:12px; color:#76726A; font-size:13px; font-weight:600;'>{today_label}</div>",
         unsafe_allow_html=True,
     )
+with col_admin:
+    # Organizer escape hatch. A locked-in winner — whether voted in or rolled by
+    # "Decide for us now" — otherwise can't be undone in the app. Tucked behind a
+    # popover so it's a deliberate, two-step action rather than a stray tap.
+    with st.popover("⚙️", use_container_width=True, help="Organizer tools"):
+        st.markdown("**Reset today's pick**")
+        st.caption(
+            "Clears today's locked-in winner **and** everyone's votes so the team "
+            "can start over. Orders and past days are left untouched."
+        )
+        if st.button("↺  Reset today", type="primary", use_container_width=True, key="reset_today"):
+            db.clear_todays_pick()
+            st.session_state["_reset_done"] = True
+            st.rerun()
 
 # --- Check if winner already decided ---
 winner_row = db.get_todays_winner()
@@ -213,8 +235,9 @@ def vote_tally():
 vote_tally()
 
 # --- Decide-now CTA (resolves any state with ≥1 vote, incl. a full tie) ---
+# Only the DECIDER sees/rolls it; the other four just wait on the result.
 _decide_votes = db.get_todays_votes()
-if not winner_row and _decide_votes:
+if not winner_row and _decide_votes and user == DECIDER:
     _n_voted = len({v["voter"] for v in _decide_votes})
     _, dc, _ = st.columns([1, 2, 1])
     with dc:
@@ -250,7 +273,10 @@ is_full_tie = (
     and max(tally.values()) == 1
 )
 if is_full_tie and not winner_row:
-    st.warning("🤷 Dead heat — everyone picked a different spot. Hit **🎲 Decide for us now** above to settle it.")
+    if user == DECIDER:
+        st.warning("🤷 Dead heat — everyone picked a different spot. Hit **🎲 Decide for us now** above to settle it.")
+    else:
+        st.warning(f"🤷 Dead heat — everyone picked a different spot. **{DECIDER}** can roll **🎲 Decide for us now** to settle it.")
 
 # --- Quick filter chips (client-side; narrows the cards below) ---
 # NB: a bare "$"/"$$" label renders as a LaTeX math block in Streamlit markdown
