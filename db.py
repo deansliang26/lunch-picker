@@ -251,6 +251,17 @@ def record_winner(place_id: str, vote_count: int, total_voters: int):
         )
 
 
+def clear_todays_pick():
+    """Undo today's decision: drop today's recorded winner AND everyone's votes
+    so the team can vote again from scratch. Leaves orders and every other day's
+    history untouched. Backs the 'Reset today's pick' organizer control — the app
+    otherwise has no way to un-decide a pick once one is locked in."""
+    d = today()
+    with _conn() as conn:
+        conn.execute("DELETE FROM history     WHERE date = ?", (d,))
+        conn.execute("DELETE FROM daily_votes WHERE date = ?", (d,))
+
+
 def get_history(limit: int = 30) -> list[dict]:
     with _conn() as conn:
         rows = conn.execute(
