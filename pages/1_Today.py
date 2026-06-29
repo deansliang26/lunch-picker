@@ -32,6 +32,10 @@ db.init_db()
 from roster import TEAM
 MAJORITY = math.ceil(len(TEAM) / 2)
 
+# Only this person sees the "Decide for us now" tiebreaker roll — the deadlock
+# break stays in one pair of hands rather than five.
+DECIDER = "Dean"
+
 _VEG_HINTS = (
     "salad", "mediterranean", "vegan", "vegetarian", "poke", "falafel",
     "hummus", "sweetgreen", "bowl", "healthy", "juice", "cafe", "greek",
@@ -231,8 +235,9 @@ def vote_tally():
 vote_tally()
 
 # --- Decide-now CTA (resolves any state with ≥1 vote, incl. a full tie) ---
+# Only the DECIDER sees/rolls it; the other four just wait on the result.
 _decide_votes = db.get_todays_votes()
-if not winner_row and _decide_votes:
+if not winner_row and _decide_votes and user == DECIDER:
     _n_voted = len({v["voter"] for v in _decide_votes})
     _, dc, _ = st.columns([1, 2, 1])
     with dc:
@@ -268,7 +273,10 @@ is_full_tie = (
     and max(tally.values()) == 1
 )
 if is_full_tie and not winner_row:
-    st.warning("🤷 Dead heat — everyone picked a different spot. Hit **🎲 Decide for us now** above to settle it.")
+    if user == DECIDER:
+        st.warning("🤷 Dead heat — everyone picked a different spot. Hit **🎲 Decide for us now** above to settle it.")
+    else:
+        st.warning(f"🤷 Dead heat — everyone picked a different spot. **{DECIDER}** can roll **🎲 Decide for us now** to settle it.")
 
 # --- Quick filter chips (client-side; narrows the cards below) ---
 # NB: a bare "$"/"$$" label renders as a LaTeX math block in Streamlit markdown
