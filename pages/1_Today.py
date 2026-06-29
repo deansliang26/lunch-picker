@@ -98,7 +98,7 @@ if st.session_state.pop("_reset_done", False):
 from datetime import date
 today_label = date.today().strftime("%A, %B %-d")
 
-col_title, col_date, col_admin = st.columns([7, 2, 1])
+col_title, col_date, col_admin = st.columns([8, 2, 1])
 with col_title:
     st.markdown("## 🍽️  Where are we eating today?")
 with col_date:
@@ -110,7 +110,7 @@ with col_admin:
     # Organizer escape hatch. A locked-in winner — whether voted in or rolled by
     # "Decide for us now" — otherwise can't be undone in the app. Tucked behind a
     # popover so it's a deliberate, two-step action rather than a stray tap.
-    with st.popover("⚙️", use_container_width=True, help="Organizer tools"):
+    with st.popover("⚙️", help="Organizer tools"):
         st.markdown("**Reset today's pick**")
         st.caption(
             "Clears today's locked-in winner **and** everyone's votes so the team "
@@ -126,6 +126,9 @@ winner_row = db.get_todays_winner()
 winner = db.get_restaurant(winner_row["winner_place_id"]) if winner_row else None
 if winner:
     meta = " · ".join(filter(None, [winner.get('cuisine'), winner.get('price'), f"★ {winner.get('rating')}" if winner.get('rating') else None]))
+    # "Order now" links to the Orders page (correct slug is "Orders", not the
+    # "2_Orders" that silently failed before) and preserves the current user.
+    _order_href = "Orders" + (f"?user={user}" if user else "")
     st.markdown(
         f"""
         <div style="
@@ -144,19 +147,17 @@ if winner:
             <div style="font-size:13px; color:#76726A; margin-top:2px;">{meta}</div>
           </div>
           <div style="display:flex; gap:8px;">
-            <a href="{winner.get('yelp_url','#')}" target="_blank"
+            <a href="{_order_href}"
                style="background:#D97757; color:white; padding:8px 14px; border-radius:8px;
+                      text-decoration:none; font-weight:700; font-size:13px;">🧾 Order now</a>
+            <a href="{winner.get('yelp_url','#')}" target="_blank"
+               style="background:#FFFFFF; color:#D97757; border:1.5px solid #D97757; padding:7px 14px; border-radius:8px;
                       text-decoration:none; font-weight:600; font-size:13px;">Yelp ↗</a>
           </div>
         </div>
         """,
         unsafe_allow_html=True,
     )
-    # Order CTA: use Streamlit's native page nav (a raw <a href="2_Orders"> hit the
-    # wrong page slug and silently did nothing, esp. under a hosted base path).
-    _, cta_col, _ = st.columns([1, 2, 1])
-    with cta_col:
-        st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
 
 # --- Load today's suggestions ---
 with st.spinner("Loading restaurants..."):

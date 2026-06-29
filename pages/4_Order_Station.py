@@ -121,13 +121,10 @@ if not submitted:
     st.page_link("pages/2_Orders.py", label="← Go to Orders", icon="🧾")
     st.stop()
 
-# ── Session state: placed checkboxes ──
+# ── Placed checkmarks (persisted in the DB so they survive a page reload) ──
 
-for p in TEAM:
-    if f"placed_{p}" not in st.session_state:
-        st.session_state[f"placed_{p}"] = False
-
-placed_count = sum(1 for p in submitted if st.session_state.get(f"placed_{p}"))
+placed_by_person = {o["person"]: bool(o.get("placed")) for o in orders}
+placed_count = sum(1 for p in submitted if placed_by_person.get(p))
 all_done = placed_count == len(submitted)
 
 # ── Header ──
@@ -216,7 +213,7 @@ with ac4:
 with ac5:
     if st.button("Reset", use_container_width=True, help="Uncheck all placed items"):
         for p in TEAM:
-            st.session_state[f"placed_{p}"] = False
+            db.set_order_placed(p, False)
         st.rerun()
 
 # ── Pre-flight: items the auto-fill browser can't match on the menu ──
@@ -296,8 +293,7 @@ for person in TEAM:
     if not items:
         continue
 
-    placed_key = f"placed_{person}"
-    is_placed = st.session_state.get(placed_key, False)
+    is_placed = placed_by_person.get(person, False)
     person_total = subtotal(items)
     overage = max(0.0, person_total - BUDGET)
 
@@ -325,12 +321,12 @@ for person in TEAM:
         with h3:
             if is_placed:
                 if st.button("↩ Undo", key=f"place_btn_{person}", use_container_width=True):
-                    st.session_state[placed_key] = False
+                    db.set_order_placed(person, False)
                     st.rerun()
             else:
                 if st.button("✓ Mark placed", key=f"place_btn_{person}",
                              use_container_width=True, type="primary"):
-                    st.session_state[placed_key] = True
+                    db.set_order_placed(person, True)
                     st.rerun()
 
         # Item rows
