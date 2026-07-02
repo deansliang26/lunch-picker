@@ -226,7 +226,6 @@ def render():
         st.page_link("pages/4_Order_Station.py",label="📋  Order Station",  use_container_width=True)
         st.page_link("pages/5_Menus.py",        label="🍽️  Menus",          use_container_width=True)
         st.page_link("pages/3_History.py",      label="📅  History",        use_container_width=True)
-        st.page_link("pages/6_Tab.py",          label="💸  The Tab",        use_container_width=True)
 
         st.divider()
 

@@ -37,7 +37,6 @@ PINNED_IDS = {
     "seed-pizza-my-heart",
     "seed-mendocino-farms",
     "seed-ike-s-love-sandwiches",
-    "seed-five-guys",
     "seed-starbird",
     "seed-mj-sushi",
     "seed-oren-s-hummus-shop",
@@ -52,6 +51,7 @@ PINNED_IDS = {
     "seed-shake-shack",
     "seed-mediterranean-wraps",
     "seed-state-of-mind-slice-house",
+    "seed-lotus-thai-bistro",
 }
 
 CUISINES = {

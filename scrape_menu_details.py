@@ -9,8 +9,8 @@ Usage:
     python scrape_menu_details.py <place_id>        # one restaurant
     python scrape_menu_details.py --all             # all reachable restaurants
 
-Reachable platforms only — bot-blocked sites (Mendocino, Panda, Pizza My Heart,
-Five Guys) are skipped automatically.
+Reachable platforms only — bot-blocked sites (Mendocino, Panda, Pizza My Heart)
+are skipped automatically.
 """
 import asyncio
 import json

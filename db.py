@@ -3,7 +3,9 @@ import os
 import random
 from datetime import datetime, date, timedelta
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "lunch.db")
+# Override with LUNCH_DB_PATH to run an isolated instance (e.g. the demo sandbox)
+# without touching the real lunch.db. Defaults to the normal DB when unset.
+DB_PATH = os.environ.get("LUNCH_DB_PATH") or os.path.join(os.path.dirname(__file__), "lunch.db")
 
 
 def _conn():
@@ -104,12 +106,6 @@ def _migrate():
     with _conn() as conn:
         try:
             conn.execute("ALTER TABLE restaurants_cache ADD COLUMN image_url TEXT")
-        except Exception:
-            pass
-        # Order Station's "placed" checkmarks live here (not session_state) so
-        # they survive a page reload.
-        try:
-            conn.execute("ALTER TABLE orders ADD COLUMN placed INTEGER NOT NULL DEFAULT 0")
         except Exception:
             pass
 
@@ -257,17 +253,6 @@ def record_winner(place_id: str, vote_count: int, total_voters: int):
         )
 
 
-def clear_todays_pick():
-    """Undo today's decision: drop today's recorded winner AND everyone's votes
-    so the team can vote again from scratch. Leaves orders and every other day's
-    history untouched. Backs the 'Reset today's pick' organizer control — the app
-    otherwise has no way to un-decide a pick once one is locked in."""
-    d = today()
-    with _conn() as conn:
-        conn.execute("DELETE FROM history     WHERE date = ?", (d,))
-        conn.execute("DELETE FROM daily_votes WHERE date = ?", (d,))
-
-
 def get_history(limit: int = 30) -> list[dict]:
     with _conn() as conn:
         rows = conn.execute(
@@ -293,26 +278,11 @@ def get_history_orders(hist_date: str) -> list[dict]:
 # --- orders ---
 
 def upsert_order(person: str, order_text: str):
-    # UPSERT (not INSERT OR REPLACE) so editing an order keeps its `placed`
-    # flag — REPLACE would delete+reinsert the row and reset placed to 0.
     with _conn() as conn:
         conn.execute(
-            """INSERT INTO orders (date, person, order_text, updated_at)
-               VALUES (?, ?, ?, ?)
-               ON CONFLICT(date, person) DO UPDATE SET
-                   order_text = excluded.order_text,
-                   updated_at = excluded.updated_at""",
+            """INSERT OR REPLACE INTO orders (date, person, order_text, updated_at)
+               VALUES (?, ?, ?, ?)""",
             (today(), person, order_text, now()),
-        )
-
-
-def set_order_placed(person: str, placed: bool):
-    """Persist Order Station's per-person 'placed' checkmark for today so it
-    survives reloads. No-op if the person has no order row yet today."""
-    with _conn() as conn:
-        conn.execute(
-            "UPDATE orders SET placed = ? WHERE date = ? AND person = ?",
-            (1 if placed else 0, today(), person),
         )
 
 
@@ -339,13 +309,3 @@ def orders_count_for_date(hist_date: str) -> int:
             "SELECT COUNT(*) as cnt FROM orders WHERE date = ?", (hist_date,)
         ).fetchone()
     return row["cnt"] if row else 0
-
-
-def get_all_orders() -> list[dict]:
-    """Every order ever placed, oldest first — used by the running-tab page to
-    accumulate each person's over-budget spend over time."""
-    with _conn() as conn:
-        rows = conn.execute(
-            "SELECT * FROM orders ORDER BY date, person"
-        ).fetchall()
-    return [dict(r) for r in rows]
