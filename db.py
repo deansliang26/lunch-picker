@@ -73,19 +73,24 @@ def init_db():
 
 def _seed_if_empty():
     """Keep the canonical restaurant list in sync on an ephemeral cloud
-    filesystem. (Re)seed whenever the seed-row count doesn't match the roster —
-    covers a fresh DB, a restaurant added, OR one removed (seed() rewrites the
-    full list) — then make the baked photos/coords authoritative on seed rows."""
+    filesystem. (Re)seed whenever the SET of seed ids in the DB differs from the
+    roster — covers a fresh DB, a restaurant added, one removed, OR a net-zero
+    one-out/one-in swap (seed() rewrites the full list). A bare COUNT check
+    misses the swap case (e.g. drop Five Guys + add Lotus keeps count at 45),
+    which leaves the new restaurant permanently unseeded on a persisted DB."""
     try:
         import seed
     except Exception:
         return
+    expected = {f"seed-{seed.slug(r['name'])}" for r in seed.RESTAURANTS}
     with _conn() as conn:
-        seeded = conn.execute(
-            "SELECT COUNT(*) FROM restaurants_cache WHERE id LIKE 'seed-%'"
-        ).fetchone()[0]
-    # seed() rewrites the seed rows (delete-then-insert); run it on any mismatch.
-    if seeded != len(seed.RESTAURANTS):
+        existing = {
+            row[0]
+            for row in conn.execute(
+                "SELECT id FROM restaurants_cache WHERE id LIKE 'seed-%'"
+            ).fetchall()
+        }
+    if existing != expected:
         seed.seed()
     # Make baked enrichment authoritative for seed photos/coords. image_url is set
     # outright (so a dead/removed URL recorded by an earlier build is cleared);
