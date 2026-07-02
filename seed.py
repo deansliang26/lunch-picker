@@ -89,7 +89,7 @@ _ENRICHMENT = {
     "seed-mendocino-farms": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/29AnZLokOYFCRxbLQPEyaA/o.jpg", "lat": 37.44366249, "lng": -122.16207180325536},
     "seed-mod-pizza": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/6WFgUwni6Ro4xnQ_2AJkvw/o.jpg", "lat": 37.38246925256315, "lng": -121.8970118205723},
     "seed-oren-s-hummus-shop": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JJ2p55Nw3lvwqfDlAe6Vjg/o.jpg", "lat": 37.445717, "lng": -122.162173},
-    "seed-panda-express": {"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Panda_Express_Storefront_%2848128044623%29.jpg/960px-Panda_Express_Storefront_%2848128044623%29.jpg", "lat": 37.4252908, "lng": -122.1468323},
+    "seed-panda-express": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/vNH9sXR-gHaYNNVS0TnSTw/o.jpg", "lat": 37.4252908, "lng": -122.1468323},
     "seed-pizza-my-heart": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/rRp4AGHSqwfiQFLFWMrxlA/o.jpg", "lat": 37.44485, "lng": -122.16227},
     "seed-poke-house": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/NykOCjL6s7qiD4aZYKpbNQ/o.jpg", "lat": 37.438605, "lng": -122.160441},
     "seed-rangoon-ruby": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/DfkufSmD1QyodmAum3-3DA/o.jpg", "lat": 37.44514, "lng": -122.16305},
@@ -105,7 +105,7 @@ _ENRICHMENT = {
     "seed-mj-sushi": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/dPBu4lv73PDA8R3opf4FoA/o.jpg", "lat": 37.425727, "lng": -122.146453},
     "seed-starbird": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/b0pexR0TIQchr0FZF6gMiA/o.jpg", "lat": 37.374678, "lng": -122.057094},
     "seed-coupa-cafe-research-park": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/bEQ6lif6pXFvGqt4x-ukRg/o.jpg", "lat": 37.4092, "lng": -122.14797},
-    "seed-lotus-thai-bistro": {"image_url": "https://lh3.googleusercontent.com/sitesv/AA5AbUAQkg2u5qhPD8LbYf0yNjaV8dTiiirSx6OmzXVuNTHxohIBi3iYqLT8BxwEahQk-op81iSs9JwdnXzpAqOUxM8L1f-p6bKouDhQ6Lq1C2eIt1ABtopj7J2pOBvb4vqky7S8Pv6C-QfaBc5ibcZT3xXYJ0nnz0nOigVYdxReyMQSWH7VImtBTB0BlLYuOU7enh8qU69OTP7F-BsrmphCaXWk_8re9YT_KGpqWAcHB50=w1280", "lat": 37.42802, "lng": -122.14248},
+    "seed-lotus-thai-bistro": {"image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/IipmGBQycp9Ut6pPhvHdDg/o.jpg", "lat": 37.42802, "lng": -122.14248},
 }
 
 
