@@ -223,10 +223,14 @@ with menu_col:
                 # widgets don't apply until submit — that breaks the format ↔ count
                 # link, so this must stay form-free.)
                 rid = winner_row["winner_place_id"]
-                fmt = st.selectbox(
-                    "Format", [f["name"] for f in b["formats"]],
-                    key=f"build_fmt_{rid}",
-                )
+                fmt_names = [f["name"] for f in b["formats"]]
+                # Hide the Format picker when there's only one format (e.g. Asian
+                # Box's single "Box") — it's just noise; multi-format menus
+                # (Panda/Chipotle) still show it.
+                if len(fmt_names) > 1:
+                    fmt = st.selectbox("Format", fmt_names, key=f"build_fmt_{rid}")
+                else:
+                    fmt = fmt_names[0]
                 selected_fmt_obj = next((f for f in b["formats"] if f["name"] == fmt), {})
                 n = selected_fmt_obj.get("num_entrees", b.get("num_proteins", 1))
                 prot_names = [p["name"] for p in b["proteins"]]
@@ -283,6 +287,45 @@ with menu_col:
                         opt_pick[label] = st.multiselect(label, choices, placeholder="Optional…", key=okey)
                     else:
                         opt_pick[label] = [st.selectbox(label, choices, key=okey)]
+
+                # Rich option groups (e.g. Asian Box): single/multi select with
+                # per-choice upcharges and min/max, priced into the total. Choices
+                # may be plain strings or {name, price}. Back-compat: menus without
+                # `option_groups` (Panda/Chipotle) skip this entirely.
+                group_pick = {}
+                group_up = 0.0
+                group_ok = True
+                for g in (b.get("option_groups") or []):
+                    raw = g.get("choices") or []
+                    if not raw:
+                        continue
+                    norm = [(c["name"], c.get("price", 0.0)) if isinstance(c, dict)
+                            else (c, 0.0) for c in raw]
+                    label_of = lambda nm, pr: (f"{nm}  +${pr:.2f}" if pr else nm)
+                    labels = [label_of(nm, pr) for nm, pr in norm]
+                    gkey = f"build_grp_{rid}_{g['name']}"
+                    gmax = g.get("max")
+                    req = bool(g.get("required"))
+                    if gmax == 1:
+                        opts = labels if req else ["—"] + labels
+                        sel = st.selectbox(g["name"] + ("" if req else " (optional)"), opts, key=gkey)
+                        picked_labels = [] if sel == "—" else [sel]
+                    else:
+                        hint = f" (up to {gmax})" if gmax else ""
+                        picked_labels = st.multiselect(
+                            g["name"] + hint, labels, max_selections=gmax,
+                            placeholder=None if req else "Optional…", key=gkey,
+                        )
+                    picked = []
+                    for lab in picked_labels:
+                        for nm, pr in norm:
+                            if lab == label_of(nm, pr):
+                                picked.append(nm); group_up += pr; break
+                    if req and len(picked) < (g.get("min") or 1):
+                        st.caption(f"⚠️ {g['name']} — pick at least {g.get('min') or 1}.")
+                        group_ok = False
+                    group_pick[g["name"]] = picked
+
                 bq1, bq2 = st.columns([1, 3])
                 with bq1:
                     bqty = st.number_input("Qty", min_value=1, max_value=10, value=1, key=f"build_qty_{rid}")
@@ -291,19 +334,21 @@ with menu_col:
                     next((p.get("upcharge", 0.0) for p in b["proteins"] if p["name"] == pn), 0.0)
                     for pn in chosen
                 )
-                bprice = round(fmt_base + up, 2)
+                bprice = round(fmt_base + up + group_up, 2)
                 with bq2:
                     st.markdown(
                         f"<div style='padding-top:26px;font-weight:800;color:#141413;font-size:18px;'>"
                         f"Price: ${bprice:.2f}</div>",
                         unsafe_allow_html=True,
                     )
-                valid_build = bool(chosen) and len(chosen) <= n
+                valid_build = bool(chosen) and len(chosen) <= n and group_ok
                 if st.button("Add to my order", use_container_width=True, type="primary",
                              key=f"build_add_{rid}", disabled=not valid_build):
                     item_name = f"{fmt} — {', '.join(chosen)}"
                     note_parts = []
                     for _label, vals in opt_pick.items():
+                        note_parts += [v for v in vals if v]
+                    for _g, vals in group_pick.items():
                         note_parts += [v for v in vals if v]
                     notes = ", ".join(note_parts)
                     current = {o["person"]: o for o in db.get_todays_orders()}
@@ -316,6 +361,7 @@ with menu_col:
                         if (k.startswith(f"build_prot_{rid}_")
                                 or k == f"build_ent_{rid}"
                                 or k.startswith(f"build_opt_{rid}_")
+                                or k.startswith(f"build_grp_{rid}_")
                                 or k == f"build_qty_{rid}"):
                             del st.session_state[k]
                     st.rerun()

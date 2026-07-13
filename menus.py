@@ -74,6 +74,23 @@ def display_categories(menu_data: dict) -> list:
         opt_stems.add(label.lower().rstrip("s"))
         synth.append({"name": label, "items": [{"name": c} for c in choices]})
 
+    # Rich option groups (choices may be plain strings or {name, price}).
+    for g in (b.get("option_groups") or []):
+        choices = g.get("choices") or []
+        if not choices:
+            continue
+        opt_stems.add(g.get("name", "").lower().rstrip("s"))
+        items = []
+        for c in choices:
+            if isinstance(c, dict):
+                it = {"name": c.get("name", "")}
+                if c.get("price"):
+                    it["price"] = c["price"]
+                items.append(it)
+            else:
+                items.append({"name": c})
+        synth.append({"name": g.get("name", "Options"), "items": items})
+
     # Keep real categories not already covered by an option group (e.g. Drinks);
     # drop ones duplicated by options (e.g. a bare "Sides" == the "Side" option).
     for c in cats:
