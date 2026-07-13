@@ -4445,6 +4445,1728 @@
         ]
       },
       {
+        "name": "Create Your Own Boxes",
+        "items": [
+          {
+            "name": "Create Your Own Chicken Box",
+            "price": 15.99,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528162/menu/prod/5db0489983a9f6df84088b7d/scnux2taivehhf0mrvzgiumdie_1752528157685.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Create Your Own Pork Box",
+            "price": 15.99,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1744246774/menu/prod/5db0489983a9f6df84088b7d/3kyzr3bukzcrnaupwegdetecz2_1744246737018.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Create Your Own Salmon Box",
+            "price": 17.99,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1744246701/menu/prod/5db0489983a9f6df84088b7d/5sj32gpsmjen3oot5hgtsokmfu_1744246660532.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Create Your Own Shrimp Box",
+            "price": 17.49,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528472/menu/prod/5db0489983a9f6df84088b7d/bn4z2ggy2rhcpfqdptieo4ckni_1752528469535.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Create Your Own Steak Box",
+            "price": 18.49,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528596/menu/prod/5db0489983a9f6df84088b7d/pxzzh5soy3axrpkvdrrffi22x2_1752528593120.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Create Your Own Double Steam Veg Box",
+            "price": 9.99,
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ],
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry."
+          },
+          {
+            "name": "Create Your Own Double Broccoli Box",
+            "price": 9.99,
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ],
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry."
+          },
+          {
+            "name": "Create Your Own Tofu Box",
+            "price": 16.99,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528786/menu/prod/5db0489983a9f6df84088b7d/mrdkr3vuvfc3hkj1jh53gts2mq_1752528782013.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Create Your Own Double Wok Veg Box",
+            "price": 9.99,
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ],
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry."
+          },
+          {
+            "name": "Create Your Own Kids Box",
+            "price": 8.49,
+            "description": "Customizable \u2014 tap Add to choose base, sauces & extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1744246637/menu/prod/5db0489983a9f6df84088b7d/xz2akfvv3raadmef4gd22lvarq_1744246421769.jpg",
+            "option_groups": [
+              {
+                "name": "Base Choice",
+                "required": true,
+                "min": 1,
+                "max": 2,
+                "choices": [
+                  "Jasmine",
+                  "Brown",
+                  "Noodles",
+                  "Asian Salad",
+                  "Broccoli",
+                  "Steamed Veg Base",
+                  "Wok Veg Base"
+                ]
+              },
+              {
+                "name": "Remove Toppers",
+                "required": false,
+                "min": 0,
+                "max": null,
+                "choices": [
+                  "No Herbs",
+                  "No Jalapenos",
+                  "No Lime",
+                  "No Oil",
+                  "No Chopped Peanuts",
+                  "No Crispy Shallots",
+                  "No Fresh Bean Sprouts",
+                  "No Pickled Veg/Sub Broccoli",
+                  "No Pickled Vegetables"
+                ]
+              },
+              {
+                "name": "Add Extras",
+                "required": false,
+                "min": 0,
+                "max": 3,
+                "choices": [
+                  {
+                    "name": "Add Chicken",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Dbl Veg",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Pork",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Salmon",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Shrimp",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Steak",
+                    "price": 6.99
+                  },
+                  {
+                    "name": "Add Tofu",
+                    "price": 4.99
+                  },
+                  {
+                    "name": "Add Caramel Egg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Broccoli",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Steamed Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Veg",
+                    "price": 0.99
+                  },
+                  {
+                    "name": "Add Wok Toss Veg",
+                    "price": 0.99
+                  }
+                ]
+              },
+              {
+                "name": "Sauce Choice",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  "Curry Sauce",
+                  "Fish Sauce",
+                  "Ginger Soy Vinaigrette",
+                  "Green Coconut Curry",
+                  "Hot Box It",
+                  "No Curry",
+                  "Peanut Sauce",
+                  "Red Curry",
+                  "Soy Vinaigrette",
+                  "Sriracha",
+                  "Asian Street Dust",
+                  "Tamarind"
+                ]
+              },
+              {
+                "name": "Side Sauces",
+                "required": false,
+                "min": 0,
+                "max": 2,
+                "choices": [
+                  {
+                    "name": "Side Tamarind Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Peanut Sauce",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Miss Jones' Sriracha",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Hot Box It",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Fish",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Street Dust",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Green Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Red Curry",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Caramel",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Soy Vinaigrette",
+                    "price": 0.5
+                  },
+                  {
+                    "name": "Side Ginger Soy Vinaigrette",
+                    "price": 0.5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "House Made Drinks and Spring Rolls",
         "items": [
           {
@@ -4775,221 +6497,7 @@
           }
         ]
       }
-    ],
-    "menu_type": "build",
-    "builder": {
-      "instructions": "Pick your box, then choose your base, sauces, and any extras. Six Spice Blend. All boxes include all toppings unless removed above; all include pickled vegetables. Sauce is on the side except Street Dust, Red/Green Curry, and Yellow Coconut Curry.",
-      "entree_label": "Your box",
-      "formats": [
-        {
-          "name": "Box",
-          "base": 0.0,
-          "num_entrees": 1
-        }
-      ],
-      "proteins": [
-        {
-          "name": "Chicken",
-          "upcharge": 15.99
-        },
-        {
-          "name": "Pork",
-          "upcharge": 15.99
-        },
-        {
-          "name": "Tofu",
-          "upcharge": 16.99
-        },
-        {
-          "name": "Shrimp",
-          "upcharge": 17.49
-        },
-        {
-          "name": "Salmon",
-          "upcharge": 17.99
-        },
-        {
-          "name": "Steak",
-          "upcharge": 18.49
-        },
-        {
-          "name": "Double Veg",
-          "upcharge": 9.99
-        },
-        {
-          "name": "Kids",
-          "upcharge": 8.49
-        }
-      ],
-      "num_proteins": 1,
-      "options": {},
-      "option_groups": [
-        {
-          "name": "Base Choice",
-          "required": true,
-          "min": 1,
-          "max": 2,
-          "choices": [
-            "Jasmine",
-            "Brown",
-            "Noodles",
-            "Asian Salad",
-            "Broccoli",
-            "Steamed Veg Base",
-            "Wok Veg Base"
-          ]
-        },
-        {
-          "name": "Remove Toppers",
-          "required": false,
-          "min": 0,
-          "max": null,
-          "choices": [
-            "No Herbs",
-            "No Jalapenos",
-            "No Lime",
-            "No Oil",
-            "No Chopped Peanuts",
-            "No Crispy Shallots",
-            "No Fresh Bean Sprouts",
-            "No Pickled Veg/Sub Broccoli",
-            "No Pickled Vegetables"
-          ]
-        },
-        {
-          "name": "Add Extras",
-          "required": false,
-          "min": 0,
-          "max": 3,
-          "choices": [
-            {
-              "name": "Add Chicken",
-              "price": 4.99
-            },
-            {
-              "name": "Add Dbl Veg",
-              "price": 4.99
-            },
-            {
-              "name": "Add Pork",
-              "price": 4.99
-            },
-            {
-              "name": "Add Salmon",
-              "price": 6.99
-            },
-            {
-              "name": "Add Shrimp",
-              "price": 4.99
-            },
-            {
-              "name": "Add Steak",
-              "price": 6.99
-            },
-            {
-              "name": "Add Tofu",
-              "price": 4.99
-            },
-            {
-              "name": "Add Caramel Egg",
-              "price": 0.99
-            },
-            {
-              "name": "Add Steamed Broccoli",
-              "price": 0.99
-            },
-            {
-              "name": "Add Steamed Veg",
-              "price": 0.99
-            },
-            {
-              "name": "Add Wok Veg",
-              "price": 0.99
-            },
-            {
-              "name": "Add Wok Toss Veg",
-              "price": 0.99
-            }
-          ]
-        },
-        {
-          "name": "Sauce Choice",
-          "required": false,
-          "min": 0,
-          "max": 2,
-          "choices": [
-            "Curry Sauce",
-            "Fish Sauce",
-            "Ginger Soy Vinaigrette",
-            "Green Coconut Curry",
-            "Hot Box It",
-            "No Curry",
-            "Peanut Sauce",
-            "Red Curry",
-            "Soy Vinaigrette",
-            "Sriracha",
-            "Asian Street Dust",
-            "Tamarind"
-          ]
-        },
-        {
-          "name": "Side Sauces",
-          "required": false,
-          "min": 0,
-          "max": 2,
-          "choices": [
-            {
-              "name": "Side Tamarind Vinaigrette",
-              "price": 0.5
-            },
-            {
-              "name": "Side Peanut Sauce",
-              "price": 0.5
-            },
-            {
-              "name": "Side Miss Jones' Sriracha",
-              "price": 0.5
-            },
-            {
-              "name": "Side Hot Box It",
-              "price": 0.5
-            },
-            {
-              "name": "Side Fish",
-              "price": 0.5
-            },
-            {
-              "name": "Side Street Dust",
-              "price": 0.5
-            },
-            {
-              "name": "Side Curry",
-              "price": 0.5
-            },
-            {
-              "name": "Side Green Curry",
-              "price": 0.5
-            },
-            {
-              "name": "Side Red Curry",
-              "price": 0.5
-            },
-            {
-              "name": "Side Caramel",
-              "price": 0.5
-            },
-            {
-              "name": "Side Soy Vinaigrette",
-              "price": 0.5
-            },
-            {
-              "name": "Side Ginger Soy Vinaigrette",
-              "price": 0.5
-            }
-          ]
-        }
-      ]
-    }
+    ]
   },
   {
     "id": "seed-zareen-s",
