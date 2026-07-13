@@ -314,3 +314,44 @@ def orders_count_for_date(hist_date: str) -> int:
             "SELECT COUNT(*) as cnt FROM orders WHERE date = ?", (hist_date,)
         ).fetchone()
     return row["cnt"] if row else 0
+
+
+# Company covers this much per person per day; anything above it accumulates as
+# a personal tab. Mirrors BUDGET in the Orders / Order Station pages.
+DAILY_BUDGET = 20.00
+
+
+def get_ledger(budget: float = DAILY_BUDGET) -> dict:
+    """Running tab of what each person owes, accumulated across every day.
+
+    For each day's order we take only the amount OVER the per-person daily
+    budget (the company covers the first `budget`). Under-budget days contribute
+    $0 — never a credit — so a person's balance only ever grows until it's
+    settled. Derived live from the orders table, so it can't drift out of sync.
+
+    Returns {person: {"owed": float, "days": [{date, total, overage}, ...]}},
+    listing only the days that actually went over budget.
+    """
+    import json
+    with _conn() as conn:
+        rows = conn.execute(
+            "SELECT date, person, order_text FROM orders ORDER BY date"
+        ).fetchall()
+    people: dict = {}
+    for r in rows:
+        try:
+            items = json.loads(r["order_text"])
+        except (json.JSONDecodeError, TypeError):
+            continue
+        if not isinstance(items, list):
+            continue
+        total = sum((it.get("price") or 0.0) * (it.get("qty") or 1)
+                    for it in items if isinstance(it, dict))
+        overage = round(max(0.0, total - budget), 2)
+        p = people.setdefault(r["person"], {"owed": 0.0, "days": []})
+        if overage > 0:
+            p["owed"] = round(p["owed"] + overage, 2)
+            p["days"].append(
+                {"date": r["date"], "total": round(total, 2), "overage": overage}
+            )
+    return people
