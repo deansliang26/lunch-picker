@@ -4291,78 +4291,45 @@
     "success": true,
     "menu_url": "https://order.spoton.com/asian-box-962/palo-alto-ca/65b13a4621728ea769f7f0b2/welcome",
     "prices_verified": true,
-    "scraped_at": "2026-06-22T18:42:07.712421+00:00",
+    "scraped_at": "2026-07-13",
     "categories": [
-      {
-        "name": "Menu",
-        "items": [
-          {
-            "name": "The Workout*",
-            "price": 15.49,
-            "description": "Six-Spice Chicken, Brown Rice, Extra Pickled Veggies, Bean Sprouts, Steamed Broccoli, Fresh Herbs, Tamarind Sauce*",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609455/menu/prod/5db0489983a9f6df84088b7d/jkpoz3ukn3hgxonwn3kpebdeua_1752609449780.jpg"
-          },
-          {
-            "name": "Create Your Own Chicken Box",
-            "price": 15.99,
-            "description": "Six Spice Blend. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752528162/menu/prod/5db0489983a9f6df84088b7d/scnux2taivehhf0mrvzgiumdie_1752528157685.jpg"
-          },
-          {
-            "name": "Chicken Curry",
-            "price": 16.99,
-            "description": "Six-Spice Chicken, Yellow Coconut Curry Sauce, Potatoes, Carrots, Jasmine Rice, Fresh Herbs, Crispy Shallots, Scallion Oil, Chopped Peanuts, side of Miss Jones\u2122 Sriracha",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752611384/menu/prod/5db0489983a9f6df84088b7d/opwfvp1qtnh0vl4vzwjdbyvvja_1752611354912.jpg"
-          },
-          {
-            "name": "Garden Box",
-            "price": 16.69,
-            "description": "Extra Organic Tofu, Extra Yellow Coconut Curry and Pickled Veggies, Steamed Broccoli, Brown Rice, All Toppers {No Jalape\u00f1os} and Asian Street Dust\u2122",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752529090/menu/prod/5db0489983a9f6df84088b7d/vvlxiwm4xrfpbathezlzjv0z1e_1752529087211.jpg"
-          },
-          {
-            "name": "Create Your Own Steak Box",
-            "price": 18.49,
-            "description": "Garlic & Soy glazed. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752528596/menu/prod/5db0489983a9f6df84088b7d/pxzzh5soy3axrpkvdrrffi22x2_1752528593120.jpg"
-          },
-          {
-            "name": "Create Your Own Tofu Box",
-            "price": 16.99,
-            "description": "Vegan. Coconut Curry. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752528786/menu/prod/5db0489983a9f6df84088b7d/mrdkr3vuvfc3hkj1jh53gts2mq_1752528782013.jpg"
-          }
-        ]
-      },
       {
         "name": "Limited Time",
         "items": [
           {
+            "name": "Curry Chicken Crunch Salad",
+            "price": 14.99,
+            "description": "Shredded Chicken, Asian Salad, Pickled Red Onions,  Peanuts, Shallots, Lime, Green Onions, Bean Sprouts with our New Curry Dressing",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1782571633/menu/prod/5db0489983a9f6df84088b7d/eyv4lgpaxbhh1ehhtwrksqo00a_1782571621172.jpg"
+          },
+          {
             "name": "Chicken Lettuce Cups",
             "price": 10.99,
             "description": "Chicken in a sweet and tangy sauce. Served with Chilled Rice Noodles, pickled veggies, crispy shallots and chopped peanuts.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752611345/menu/prod/5db0489983a9f6df84088b7d/vdsipjaj43fflcvzp24zaodx4u_1752611342498.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752611345/menu/prod/5db0489983a9f6df84088b7d/vdsipjaj43fflcvzp24zaodx4u_1752611342498.jpg"
           },
           {
             "name": "Mango Sticky Rice Pudding Boba",
             "price": 6.49,
             "description": "Vegan, made with oat milk, mango puree and coconut rice pudding. No caffeine",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1759545747/menu/prod/5db0489983a9f6df84088b7d/ol5qszwspfdfji15efekar1ae2_1759545742598.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1759545747/menu/prod/5db0489983a9f6df84088b7d/ol5qszwspfdfji15efekar1ae2_1759545742598.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Spring Rolls",
+        "items": [
+          {
+            "name": "Individual Shrimp Spring Roll",
+            "price": 6.99,
+            "description": "A freshly made roll with red leaf lettuce, rice noodles, shrimp, mint & scallion oil served with peanut sauce",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745008150/menu/prod/5db0489983a9f6df84088b7d/ppychg0nczfpxp0auacoo2zatq_1745008144759.jpg"
           },
           {
-            "name": "Sweet and Sour Chicken w/Chile Pepper Box",
-            "price": 16.99,
-            "description": "",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1746233585/menu/prod/5db0489983a9f6df84088b7d/djb2swd0fvhhbgfenqlwb4liti_1746233570817.jpg"
+            "name": "Individual Tofu Spring Roll",
+            "price": 6.49,
+            "description": "A freshly made roll with red leaf lettuce, rice noodles, tofu, asian salad and soy vinaigrette.  Served with Tamarind Vinaigrette",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745008233/menu/prod/5db0489983a9f6df84088b7d/bnjlhykh3ffn1msxofzipnrade_1745008231481.jpg"
           }
         ]
       },
@@ -4370,102 +4337,110 @@
         "name": "Chef's Signature Boxes",
         "items": [
           {
-            "name": "*Sweet and Sour Chicken Box",
+            "name": "The Workout*",
+            "price": 15.49,
+            "description": "Six-Spice Chicken, Brown Rice, Extra Pickled Veggies, Bean Sprouts, Steamed Broccoli, Fresh Herbs, Tamarind Sauce*",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609455/menu/prod/5db0489983a9f6df84088b7d/jkpoz3ukn3hgxonwn3kpebdeua_1752609449780.jpg"
+          },
+          {
+            "name": "Chicken Curry",
             "price": 16.99,
-            "description": "6-spice Chicken tossed with Peanuts, Onions, Bell Peppers and Scallions in a House-made Sweet and Spicy Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1746233585/menu/prod/5db0489983a9f6df84088b7d/djb2swd0fvhhbgfenqlwb4liti_1746233570817.jpg"
+            "description": "Six-Spice Chicken, Yellow Coconut Curry Sauce, Potatoes, Carrots, Jasmine Rice, Fresh Herbs, Crispy Shallots, Scallion Oil, Chopped Peanuts, side of Miss Jones\u2122 Sriracha",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752611384/menu/prod/5db0489983a9f6df84088b7d/opwfvp1qtnh0vl4vzwjdbyvvja_1752611354912.jpg"
           },
           {
             "name": "The Miss Jones",
             "price": 16.69,
             "description": "Lemongrass Pork, Chilled Noodles, Pickled Veggies, Caramel Egg, All Toppers {No Jalape\u00f1os}, Extra FishSauce*",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752529289/menu/prod/5db0489983a9f6df84088b7d/550soa5kvrd4vegjw4kxjdhiai_1752529285270.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529289/menu/prod/5db0489983a9f6df84088b7d/550soa5kvrd4vegjw4kxjdhiai_1752529285270.jpg"
           },
           {
             "name": "The Chef's Salad",
             "price": 16.49,
             "description": "Asian Salad, Rice Noodles, Crispy Shallots, Peanuts, Fresh Herbs, Scallion Oil, Soy Vinaigrette.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752610015/menu/prod/5db0489983a9f6df84088b7d/n1nlbkin1jgzdejxvgdntjwbwe_1752610012313.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752610015/menu/prod/5db0489983a9f6df84088b7d/n1nlbkin1jgzdejxvgdntjwbwe_1752610012313.jpg"
+          },
+          {
+            "name": "Garden Box",
+            "price": 16.69,
+            "description": "Extra Organic Tofu, Extra Yellow Coconut Curry and Pickled Veggies, Steamed Broccoli, Brown Rice, All Toppers {No Jalape\u00f1os} and Asian Street Dust\u2122",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529090/menu/prod/5db0489983a9f6df84088b7d/vvlxiwm4xrfpbathezlzjv0z1e_1752529087211.jpg"
           },
           {
             "name": "The Ox Box",
             "price": 24.99,
             "description": "Double Steak, Rice, Sauce Tossed Pickled Veggies, All Toppers, Caramel Egg, Sriracha*, Asian Street Dust\u2122",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609723/menu/prod/5db0489983a9f6df84088b7d/b4xq52ugt3ea3gixqyrfju1pue_1752609698621.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609723/menu/prod/5db0489983a9f6df84088b7d/b4xq52ugt3ea3gixqyrfju1pue_1752609698621.jpg"
           },
           {
             "name": "Salmon Salad",
             "price": 18.49,
             "description": "Roasted Lemongrass Salmon, Baby Greens, Asian Salad, Pickled Veggies, Sprouts, Fresh Herbs, Crispy Shallots, Ginger-Citrus Soy Vinaigrette",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609799/menu/prod/5db0489983a9f6df84088b7d/mlgn0mu22jdyvmzybvylk0ow52_1752609787078.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609799/menu/prod/5db0489983a9f6df84088b7d/mlgn0mu22jdyvmzybvylk0ow52_1752609787078.jpg"
           },
           {
             "name": "Porridge",
             "price": 9.99,
-            "description": "Six-Spice Shredded Chicken, Jasmine Rice, Chicken Broth, Crispy Shallots, Fresh Herbs. Served with a side of housemade Sriracha",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609759/menu/prod/5db0489983a9f6df84088b7d/s04sz2xux3dvtafmk1d11qgyxe_1752609753063.jpg"
+            "description": "Six-Spice Shredded Chicken, Jasmine Rice, Chicken Broth, Crispy Shallots, Fresh Herbs.  Served with a side of housemade Sriracha",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609759/menu/prod/5db0489983a9f6df84088b7d/s04sz2xux3dvtafmk1d11qgyxe_1752609753063.jpg"
           },
           {
             "name": "Steak & Curry",
             "price": 18.49,
             "description": "Garlic-Soy Steak, Spicy Red Coconut Curry, Potatoes, Carrots, Fresh Herbs, Peanuts, Lime & Fried Shallots",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752527443/menu/prod/5db0489983a9f6df84088b7d/mgzohdj10fbpflqoyog1ubt43u_1752527432460.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752527443/menu/prod/5db0489983a9f6df84088b7d/mgzohdj10fbpflqoyog1ubt43u_1752527432460.jpg"
           },
           {
             "name": "Fiery Red Curry",
             "price": 16.99,
             "description": "Spicy Red Coconut Curry, Shrimp, Organic Tofu, Fresh Herbs, Lime & Fried Shallots, Steamed Broccoli, Jasmine rice, Peanuts",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752530669/menu/prod/5db0489983a9f6df84088b7d/0jcifptxkvfidiwnhifjbtgs2a_1752530666472.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752530669/menu/prod/5db0489983a9f6df84088b7d/0jcifptxkvfidiwnhifjbtgs2a_1752530666472.jpg"
           },
           {
             "name": "Chicken Green Curry",
             "price": 15.79,
             "description": "Six-Spice Chicken, Green Curry Sauce, Potatoes, Broccoli, Bean Sprouts, Jasmine Rice, Fresh Herbs, Lime, Crispy Shallots, side of Chopped Peanuts",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752526684/menu/prod/5db0489983a9f6df84088b7d/4gt4mfh3ljf53gksk0wntsfrse_1752526679905.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752526684/menu/prod/5db0489983a9f6df84088b7d/4gt4mfh3ljf53gksk0wntsfrse_1752526679905.jpg"
           },
           {
             "name": "Tofu Green Curry",
             "price": 15.79,
-            "description": "",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1677639140/menu/prod/5db0489983a9f6df84088b7d/dl3szwrcm3hplo33pilwawybgq_1677639131820.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1677639140/menu/prod/5db0489983a9f6df84088b7d/dl3szwrcm3hplo33pilwawybgq_1677639131820.jpg"
           },
           {
             "name": "Veggie Green Curry",
             "price": 11.49,
             "description": "Green Curry, Potatoes, Broccoli, Bean Sprouts, Fresh Herbs, Peanuts, Lime & Fried Shallots",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609595/menu/prod/5db0489983a9f6df84088b7d/st2oq2nh4vfytdyprkahmtuuvi_1752609585294.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609595/menu/prod/5db0489983a9f6df84088b7d/st2oq2nh4vfytdyprkahmtuuvi_1752609585294.jpg"
           },
           {
             "name": "Vietnamese Hot Chicken",
             "price": 16.49,
             "description": "Our Spiciest Box!! Six-Spice Chicken Tossed in a Blend of Our Signature HotBoxIt\u2122 and Tamarind Sauces, Local Honey, Jasmine Rice, Pickled Veggies, Lime, Crispy Shallots, Peanuts",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609882/menu/prod/5db0489983a9f6df84088b7d/hnehf0melvcsvfscxkesjwf2ey_1752609865355.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609882/menu/prod/5db0489983a9f6df84088b7d/hnehf0melvcsvfscxkesjwf2ey_1752609865355.jpg"
           },
           {
             "name": "Surf Vietnam",
             "price": 20.99,
-            "description": "",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752611832/menu/prod/5db0489983a9f6df84088b7d/nzsycmvx53fabli4waefvwqe5u_1752611826332.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752611832/menu/prod/5db0489983a9f6df84088b7d/nzsycmvx53fabli4waefvwqe5u_1752611826332.jpg"
+          },
+          {
+            "name": "Chicken Lettuce Cups",
+            "price": 10.99,
+            "description": "Chicken in a sweet and tangy sauce. Served with Chilled Rice Noodles, pickled veggies, crispy shallots and chopped peanuts.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752611345/menu/prod/5db0489983a9f6df84088b7d/vdsipjaj43fflcvzp24zaodx4u_1752611342498.jpg"
           },
           {
             "name": "Banh Mi",
             "price": 14.99,
             "description": "100% Gluten Free Lemongrass Pork, a fresh baked Gracie Jones Roll with Crispy Shallot Mayo, Pickled Veggies, Cilantro, Jalape\u00f1os & Seasoned Soy Sauce",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752609357/menu/prod/5db0489983a9f6df84088b7d/dvz10jtpbrbhdbim3lbcbame1y_1752609342469.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752609357/menu/prod/5db0489983a9f6df84088b7d/dvz10jtpbrbhdbim3lbcbame1y_1752609342469.jpg"
+          },
+          {
+            "name": "Curry Chicken Crunch Salad",
+            "price": 14.99,
+            "description": "Shredded Chicken, Asian Salad, Pickled Red Onions,  Peanuts, Shallots, Lime, Green Onions, Bean Sprouts with our New Curry Dressing",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1782571633/menu/prod/5db0489983a9f6df84088b7d/eyv4lgpaxbhh1ehhtwrksqo00a_1782571621172.jpg"
           }
         ]
       },
@@ -4473,50 +4448,58 @@
         "name": "Create Your Own Boxes",
         "items": [
           {
+            "name": "Create Your Own Chicken Box",
+            "price": 15.99,
+            "description": "Six Spice Blend. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables.  Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528162/menu/prod/5db0489983a9f6df84088b7d/scnux2taivehhf0mrvzgiumdie_1752528157685.jpg"
+          },
+          {
             "name": "Create Your Own Pork Box",
             "price": 15.99,
-            "description": "Lemongrass Marinade. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1744246774/menu/prod/5db0489983a9f6df84088b7d/3kyzr3bukzcrnaupwegdetecz2_1744246737018.jpg"
+            "description": "Lemongrass Marinade. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables.  Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1744246774/menu/prod/5db0489983a9f6df84088b7d/3kyzr3bukzcrnaupwegdetecz2_1744246737018.jpg"
           },
           {
             "name": "Create Your Own Salmon Box",
             "price": 17.99,
-            "description": "Roasted Lemongrass Salmon. All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1744246701/menu/prod/5db0489983a9f6df84088b7d/5sj32gpsmjen3oot5hgtsokmfu_1744246660532.jpg"
+            "description": "Roasted Lemongrass  Salmon.  All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1744246701/menu/prod/5db0489983a9f6df84088b7d/5sj32gpsmjen3oot5hgtsokmfu_1744246660532.jpg"
           },
           {
             "name": "Create Your Own Shrimp Box",
             "price": 17.49,
             "description": "All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752528472/menu/prod/5db0489983a9f6df84088b7d/bn4z2ggy2rhcpfqdptieo4ckni_1752528469535.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528472/menu/prod/5db0489983a9f6df84088b7d/bn4z2ggy2rhcpfqdptieo4ckni_1752528469535.jpg"
+          },
+          {
+            "name": "Create Your Own Steak Box",
+            "price": 18.49,
+            "description": "Garlic &  Soy glazed.  All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528596/menu/prod/5db0489983a9f6df84088b7d/pxzzh5soy3axrpkvdrrffi22x2_1752528593120.jpg"
           },
           {
             "name": "Create Your Own Double Steam Veg Box",
-            "price": 9.99,
-            "description": "",
-            "popular": false
+            "price": 9.99
           },
           {
             "name": "Create Your Own Double Broccoli Box",
-            "price": 9.99,
-            "description": "",
-            "popular": false
+            "price": 9.99
+          },
+          {
+            "name": "Create Your Own Tofu Box",
+            "price": 16.99,
+            "description": "Vegan.  Coconut Curry.  All boxes include all toppings unless marked otherwise below. All boxes include pickled vegetables. Sauce choice will be on the side, with the exception of Street Dust, Red Curry Sauce, Green Curry Sauce, and Yellow Coconut Curry Sauce.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528786/menu/prod/5db0489983a9f6df84088b7d/mrdkr3vuvfc3hkj1jh53gts2mq_1752528782013.jpg"
           },
           {
             "name": "Create Your Own Double Wok Veg Box",
-            "price": 9.99,
-            "description": "",
-            "popular": false
+            "price": 9.99
           },
           {
             "name": "Create Your Own Kids Box",
             "price": 8.49,
-            "description": "(10 and under only, please.) Select a base and chicken, pork or tofu. Served with steamed Broccoli and caramel sauce and a cookie and drink",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1744246637/menu/prod/5db0489983a9f6df84088b7d/xz2akfvv3raadmef4gd22lvarq_1744246421769.jpg"
+            "description": "(10 and under only, please.)  Select a base and chicken, pork or tofu.  Served with steamed Broccoli and caramel sauce and a cookie and drink",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1744246637/menu/prod/5db0489983a9f6df84088b7d/xz2akfvv3raadmef4gd22lvarq_1744246421769.jpg"
           }
         ]
       },
@@ -4525,41 +4508,117 @@
         "items": [
           {
             "name": "Mint + Green Iced Tea",
-            "price": 2.99,
-            "description": "",
-            "popular": false
+            "price": 2.99
           },
           {
             "name": "Lemonade with lime marmalade",
-            "price": 3.99,
-            "description": "",
-            "popular": false
+            "price": 3.99
           },
           {
             "name": "Box Cooler",
-            "price": 3.99,
-            "description": "",
-            "popular": false
+            "price": 3.99
           },
           {
             "name": "Vietnamese Iced Coffee",
-            "price": 6.99,
-            "description": "",
-            "popular": false
+            "price": 6.99
+          },
+          {
+            "name": "Strawberry Lemonade*",
+            "price": 3.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1746050262/menu/prod/5db0489983a9f6df84088b7d/ofpacxy2afgehkteubjev3jd12_1746050242520.jpg"
           },
           {
             "name": "Individual Tofu Spring Roll",
             "price": 6.49,
-            "description": "A freshly made roll with red leaf lettuce, rice noodles, tofu, asian salad and soy vinaigrette. Served with Tamarind Vinaigrette",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745008233/menu/prod/5db0489983a9f6df84088b7d/bnjlhykh3ffn1msxofzipnrade_1745008231481.jpg"
+            "description": "A freshly made roll with red leaf lettuce, rice noodles, tofu, asian salad and soy vinaigrette.  Served with Tamarind Vinaigrette",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745008233/menu/prod/5db0489983a9f6df84088b7d/bnjlhykh3ffn1msxofzipnrade_1745008231481.jpg"
           },
           {
             "name": "Individual Shrimp Spring Roll",
             "price": 6.99,
             "description": "A freshly made roll with red leaf lettuce, rice noodles, shrimp, mint & scallion oil served with peanut sauce",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745008150/menu/prod/5db0489983a9f6df84088b7d/ppychg0nczfpxp0auacoo2zatq_1745008144759.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745008150/menu/prod/5db0489983a9f6df84088b7d/ppychg0nczfpxp0auacoo2zatq_1745008144759.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Bottled Drinks*",
+        "items": [
+          {
+            "name": "Bundaberg Ginger Beer",
+            "price": 5.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752783731/menu/prod/5db0489983a9f6df84088b7d/se5vctqw2bfnzi52efla2lhkiu_1752783727966.jpg"
+          },
+          {
+            "name": "Coconut Water",
+            "price": 9.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752783824/menu/prod/5db0489983a9f6df84088b7d/312a5esij3gfpls5ydqzsbenma_1752783821035.jpg"
+          },
+          {
+            "name": "Coke",
+            "price": 4.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752783629/menu/prod/5db0489983a9f6df84088b7d/ivazjf4wevfrbngkgul5xsw2e2_1752783624178.jpg"
+          },
+          {
+            "name": "Coke Zero",
+            "price": 4.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1750447009/menu/prod/5db0489983a9f6df84088b7d/uybm30krrzf35phxkn2ayhbaty_1750447025013.jpg"
+          },
+          {
+            "name": "Diet Coke",
+            "price": 4.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752783647/menu/prod/5db0489983a9f6df84088b7d/gepin0d1dzh5jdzpzsi5ag1ssq_1752783643427.jpg"
+          },
+          {
+            "name": "Enlightened Organic Kombucha Gingerade",
+            "price": 6.99
+          },
+          {
+            "name": "Kevita Kombucha Pineapple Peach",
+            "price": 6.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1638818093/menu/prod/5db0489983a9f6df84088b7d/vb3za1xnkng1ri4v5m01mq3iba_1638817784179.jpg"
+          },
+          {
+            "name": "Sprite",
+            "price": 4.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1707845363/menu/prod/5db0489983a9f6df84088b7d/ad0nzjoxd3bjljebzlhfra300a_1707844750581.jpg"
+          },
+          {
+            "name": "Pellegrino",
+            "price": 3.99
+          },
+          {
+            "name": "Kombucha",
+            "price": 6.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1753298822/menu/prod/5db0489983a9f6df84088b7d/3hhneuvo4bbx3pkq5gpiafmcyi_1753298783569.jpg"
+          },
+          {
+            "name": "Apple Juice",
+            "price": 1.99
+          },
+          {
+            "name": "Pure Leaf Green Tea",
+            "price": 4.79
+          },
+          {
+            "name": "Milk",
+            "price": 1.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752788626/menu/prod/5db0489983a9f6df84088b7d/n0b50eekkfhz1kijtovi2yijzq_1752788623968.jpg"
+          },
+          {
+            "name": "Dasani Bottled Water 20oz",
+            "price": 4.49,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752792570/menu/prod/5db0489983a9f6df84088b7d/cinl0al5lzeltjetzkgedvjofi_1752792554614.jpg"
+          },
+          {
+            "name": "Spindrift Grapefruit Sparkling Water",
+            "price": 3.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1775758147/menu/prod/5db0489983a9f6df84088b7d/eoldndn41fbi1lg4v5qyro1wmi_1775758135346.jpg"
+          },
+          {
+            "name": "Spindrift Raspberry Lime Sparkling Water",
+            "price": 3.99,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1775758186/menu/prod/5db0489983a9f6df84088b7d/zz5fl50rhzg0jota2kqfkqi4ha_1775758172825.jpg"
           }
         ]
       },
@@ -4569,16 +4628,17 @@
           {
             "name": "Chocolate Chip Cookies",
             "price": 3.99,
-            "description": "",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1648233099/menu/prod/5db0489983a9f6df84088b7d/u3kc1cpicndxzngjctjgi5qp42_1648233106316.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1648233099/menu/prod/5db0489983a9f6df84088b7d/u3kc1cpicndxzngjctjgi5qp42_1648233106316.jpg"
+          },
+          {
+            "name": "Strawberry Lemonade",
+            "price": 3.99
           },
           {
             "name": "Coconut Mango Rice Pudding",
             "price": 4.99,
             "description": "Vegan Coconut rice pudding with mango puree, coconut cream, toasted coconut & chopped peanuts.",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1598329135/menu/prod/5db0489983a9f6df84088b7d/c5hv3v0o2bghllrb5sfeiukqty_1598329109679.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1598329135/menu/prod/5db0489983a9f6df84088b7d/c5hv3v0o2bghllrb5sfeiukqty_1598329109679.jpg"
           }
         ]
       },
@@ -4587,76 +4647,53 @@
         "items": [
           {
             "name": "Side Chicken**",
-            "price": 5,
-            "description": "",
-            "popular": false
+            "price": 5.0
           },
           {
             "name": "Side Steak**",
-            "price": 6.99,
-            "description": "",
-            "popular": false
+            "price": 6.99
           },
           {
             "name": "Side Salmon**",
-            "price": 6.99,
-            "description": "",
-            "popular": false
+            "price": 6.99
           },
           {
             "name": "Side Tofu**",
-            "price": 5,
-            "description": "",
-            "popular": false
+            "price": 5.0
           },
           {
             "name": "Side Pork**",
-            "price": 5,
-            "description": "",
-            "popular": false
+            "price": 5.0
           },
           {
             "name": "Side Shrimp",
-            "price": 5.99,
-            "description": "",
-            "popular": false
+            "price": 5.99
           },
           {
             "name": "Side Brown Rice",
-            "price": 2.99,
-            "description": "",
-            "popular": false
+            "price": 2.99
           },
           {
             "name": "Side Jasmine",
-            "price": 2.99,
-            "description": "",
-            "popular": false
+            "price": 2.99
           },
           {
             "name": "Side Noodles",
-            "price": 2.99,
-            "description": "",
-            "popular": false
+            "price": 2.99
           },
           {
             "name": "Side Asian Salad",
-            "price": 2.99,
-            "description": "",
-            "popular": false
+            "price": 2.99
           },
           {
             "name": "Bahn Mi Roll*",
-            "price": 3.49,
-            "description": "",
-            "popular": false
+            "price": 3.49
           },
           {
             "name": "Side Caramel Egg",
             "price": 0.99,
             "description": "A hardboiled egg simmered in Caramel sauce",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752526227/menu/prod/5db0489983a9f6df84088b7d/1eubh1eww3efrjwv2ickbwdjaq_1752526221281.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752526227/menu/prod/5db0489983a9f6df84088b7d/1eubh1eww3efrjwv2ickbwdjaq_1752526221281.jpg"
           }
         ]
       },
@@ -4667,55 +4704,48 @@
             "name": "Brown Sugar Boba",
             "price": 6.49,
             "description": "Black Tea, Brown sugar and nondairy creamer",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745007368/menu/prod/5db0489983a9f6df84088b7d/amgk5x0s1zaezidoi4xocxbgdq_1745007351726.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745007368/menu/prod/5db0489983a9f6df84088b7d/amgk5x0s1zaezidoi4xocxbgdq_1745007351726.jpg"
           },
           {
             "name": "Strawberry Milk Boba",
             "price": 5.99,
-            "description": "Whole Milk, Strawberry, no caffeine",
-            "popular": false
+            "description": "Whole Milk, Strawberry, no caffeine"
           },
           {
             "name": "Chai Boba",
             "price": 6.49,
             "description": "Chai Vanilla tea, nondairy creamer",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745007391/menu/prod/5db0489983a9f6df84088b7d/v3c1a5qotjcarlimeqcme43nyy_1745007387846.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745007391/menu/prod/5db0489983a9f6df84088b7d/v3c1a5qotjcarlimeqcme43nyy_1745007387846.jpg"
           },
           {
             "name": "Jasmine Boba",
             "price": 6.49,
             "description": "Jasmine Green tea, nondairy creamer",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745007410/menu/prod/5db0489983a9f6df84088b7d/fet3ijluavcrhiodnnxockqsna_1745007407449.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745007410/menu/prod/5db0489983a9f6df84088b7d/fet3ijluavcrhiodnnxockqsna_1745007407449.jpg"
           },
           {
             "name": "Matcha Boba",
             "price": 6.49,
             "description": "Whole Milk, Matcha",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745007428/menu/prod/5db0489983a9f6df84088b7d/ezecqc0bbvafdiujvgrm102h1i_1745007423748.jpg"
-          },
-          {
-            "name": "Passion Fruit Boba *",
-            "price": 5.99,
-            "description": "Jasmine Green Tea, Passion Fruit",
-            "popular": false
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745007428/menu/prod/5db0489983a9f6df84088b7d/ezecqc0bbvafdiujvgrm102h1i_1745007423748.jpg"
           },
           {
             "name": "Taro Boba",
             "price": 5.99,
             "description": "Nondairy, No Caffeine",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745007477/menu/prod/5db0489983a9f6df84088b7d/dqylvqeqarggjbxrfogfjdwpi2_1745007474511.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745007477/menu/prod/5db0489983a9f6df84088b7d/dqylvqeqarggjbxrfogfjdwpi2_1745007474511.jpg"
           },
           {
             "name": "Thai Iced Tea Boba",
             "price": 5.99,
             "description": "Thai Tea, Half & Half",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1745007496/menu/prod/5db0489983a9f6df84088b7d/voroaudl4vd1vjkjdiprbxwp4q_1745007494810.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1745007496/menu/prod/5db0489983a9f6df84088b7d/voroaudl4vd1vjkjdiprbxwp4q_1745007494810.jpg"
+          },
+          {
+            "name": "Mango Sticky Rice Pudding Boba",
+            "price": 6.49,
+            "description": "Vegan, made with oat milk, mango puree and coconut rice pudding. No caffeine",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1759545747/menu/prod/5db0489983a9f6df84088b7d/ol5qszwspfdfji15efekar1ae2_1759545742598.jpg"
           }
         ]
       },
@@ -4726,22 +4756,81 @@
             "name": "2 Box Family w/cookies",
             "price": 39.99,
             "description": "2 Signature boxes with 2 kid boxes and 4 Cookies",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1752528949/menu/prod/5db0489983a9f6df84088b7d/y5umcqwk03g4hmqoyq1nktnhtu_1752528946525.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752528949/menu/prod/5db0489983a9f6df84088b7d/y5umcqwk03g4hmqoyq1nktnhtu_1752528946525.jpg"
           },
           {
             "name": "4 Box Family w/cookies",
             "price": 59.99,
             "description": "4 Signature boxes with 2 Spring Rolls and 4 Cookies",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1668715908/menu/prod/5db0489983a9f6df84088b7d/z41x1wn2ercvvjd10tci5mt5c2_1668715899125.jpg"
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1668715908/menu/prod/5db0489983a9f6df84088b7d/z41x1wn2ercvvjd10tci5mt5c2_1668715899125.jpg"
           },
           {
             "name": "Big Box Family w/cookies",
             "price": 69.99,
-            "description": "Serves 5. Choose base and protein, comes with wok tossed veggies, pickled veggies, fresh bean sprouts, herbs, lime and crispy shallots Served with Tamarind and Sriracha, 2 spring rolls and 6 cookies",
-            "popular": false,
-            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1590085756/menu/prod/5db0489983a9f6df84088b7d/0srxrxy0rzgr5crjrdzsayoip2_1590085603701.jpg"
+            "description": "Serves 5.  Choose base and protein, comes with wok tossed veggies, pickled veggies, fresh bean sprouts, herbs, lime and crispy shallots  Served with Tamarind and Sriracha, 2 spring rolls and 6 cookies",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1590085756/menu/prod/5db0489983a9f6df84088b7d/0srxrxy0rzgr5crjrdzsayoip2_1590085603701.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Sauces for your Home",
+        "items": [
+          {
+            "name": "Asian Street Dust",
+            "price": 8.0,
+            "description": "A Dry Blend of Sweet, Salt, and Spices.   vegan",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529484/menu/prod/5db0489983a9f6df84088b7d/1enxptss3nh5fhu5bwizbx3nay_1752529479883.jpg"
+          },
+          {
+            "name": "Yellow Coconut Curry",
+            "price": 8.0,
+            "description": "vegan",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529946/menu/prod/5db0489983a9f6df84088b7d/5m21s51v1vahzbp3yl1wxgf00e_1752529942857.jpg"
+          },
+          {
+            "name": "No Oil Fish Sauce",
+            "price": 8.0,
+            "description": "Classic Umami Flavor for Your Box.",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529847/menu/prod/5db0489983a9f6df84088b7d/yusbsez0orf1pg5qimdk1rn5oa_1752529843495.jpg"
+          },
+          {
+            "name": "Green Coconut Curry",
+            "price": 8.0,
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752530225/menu/prod/5db0489983a9f6df84088b7d/memgoj4zv3d3hnav3p4sqikfnu_1752530222561.jpg"
+          },
+          {
+            "name": "Hot Box It",
+            "price": 8.0,
+            "description": "The Final Word in Fire and Flavor.  vegan",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529747/menu/prod/5db0489983a9f6df84088b7d/y2i4pxiytjemxhn4w500y3re1y_1752529742548.jpg"
+          },
+          {
+            "name": "Peanut Sauce",
+            "price": 8.0,
+            "description": "Creamy Blend with Lime and Coconut.  vegan",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752869895/menu/prod/5db0489983a9f6df84088b7d/hxolwjqvdbfdbhzt5vs5jius1i_1752869888689.jpg"
+          },
+          {
+            "name": "Fiery Red Curry.",
+            "price": 8.0,
+            "description": "Spicy Red Coconut Curry.  vegan",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752530400/menu/prod/5db0489983a9f6df84088b7d/kp0cwznecjdzpni1g0u0ewfxe2_1752530398074.jpg"
+          },
+          {
+            "name": "Tamarind Vinaigrette",
+            "price": 8.0,
+            "description": "Tangy, Sweet, Delicious.  vegan",
+            "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529559/menu/prod/5db0489983a9f6df84088b7d/jlzdydd4yrhixijcoogrgze4fq_1752529556122.jpg"
+          }
+        ]
+      },
+      {
+        "name": "Catering Drink Boxes",
+        "items": [
+          {
+            "name": "DB- Box Cooler",
+            "price": 19.99,
+            "description": "Half Mint /Green Tea, Half Lemonade"
           }
         ]
       }
