@@ -172,6 +172,33 @@ div[data-testid="stMetric"] {
     padding: 12px 16px;
     border: 1px solid #DED9C7;
 }
+
+/* ── "Place your order" CTA (Today's winner banner) — styled as a real
+   button, matching the clay-colored Yelp pill button ── */
+.st-key-cta_place_order {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 6px;
+}
+.st-key-cta_place_order a[data-testid="stPageLink-NavLink"] {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #D97757;
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-decoration: none !important;
+}
+.st-key-cta_place_order a[data-testid="stPageLink-NavLink"]:hover {
+    background: #BD5D3A;
+}
+.st-key-cta_place_order a[data-testid="stPageLink-NavLink"] p {
+    color: #fff !important;
+    font-weight: 700 !important;
+    margin: 0;
+}
 </style>
 """
 

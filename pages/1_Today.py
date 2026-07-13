@@ -104,37 +104,35 @@ winner_row = db.get_todays_winner()
 winner = db.get_restaurant(winner_row["winner_place_id"]) if winner_row else None
 if winner:
     meta = " · ".join(filter(None, [winner.get('cuisine'), winner.get('price'), f"★ {winner.get('rating')}" if winner.get('rating') else None]))
-    st.markdown(
-        f"""
-        <div style="
-            background: linear-gradient(135deg, #D9775715, #D9775708);
-            border: 1.5px solid #D9775755;
-            border-radius: 14px;
-            padding: 16px 20px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        ">
-          <div style="font-size:28px;">🏆</div>
-          <div style="flex:1;">
-            <div style="font-weight:800; font-size:18px; color:#141413;">Today's pick: {winner['name']}</div>
-            <div style="font-size:13px; color:#76726A; margin-top:2px;">{meta}</div>
-          </div>
-          <div style="display:flex; gap:8px;">
-            <a href="{winner.get('yelp_url','#')}" target="_blank"
-               style="background:#D97757; color:white; padding:8px 14px; border-radius:8px;
-                      text-decoration:none; font-weight:600; font-size:13px;">Yelp ↗</a>
-          </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    # Order CTA: use Streamlit's native page nav (a raw <a href="2_Orders"> hit the
-    # wrong page slug and silently did nothing, esp. under a hosted base path).
-    _, cta_col, _ = st.columns([1, 2, 1])
-    with cta_col:
-        st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
+    col_info, col_cta = st.columns([3, 1])
+    with col_info:
+        st.markdown(
+            f"""
+            <div style="
+                background: linear-gradient(135deg, #D9775715, #D9775708);
+                border: 1.5px solid #D9775755;
+                border-radius: 14px;
+                padding: 16px 20px;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            ">
+              <div style="font-size:28px;">🏆</div>
+              <div style="flex:1;">
+                <div style="font-weight:800; font-size:18px; color:#141413;">Today's pick: {winner['name']}</div>
+                <div style="font-size:13px; color:#76726A; margin-top:2px;">{meta}</div>
+              </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    with col_cta:
+        # Order CTA: use Streamlit's native page nav (a raw <a href="2_Orders"> hit the
+        # wrong page slug and silently did nothing, esp. under a hosted base path). It's
+        # wrapped in a keyed container so sidebar.py's CSS can style the NavLink as a real
+        # clay-colored button, taking the top-right slot the Yelp button used to sit in.
+        with st.container(key="cta_place_order"):
+            st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
 
 # --- Load today's suggestions ---
 with st.spinner("Loading restaurants..."):
