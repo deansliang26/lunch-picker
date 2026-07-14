@@ -69,6 +69,7 @@ def init_db():
         """)
     _migrate()
     _seed_if_empty()
+    _seed_ledger()
 
 
 def _seed_if_empty():
@@ -105,6 +106,35 @@ def _seed_if_empty():
                    WHERE id = ?""",
                 (e.get("image_url", ""), e.get("lat"), e.get("lng"), sid),
             )
+
+
+def _seed_ledger():
+    """Seed the baked historical orders + daily winners so the History page's
+    running-tab ledger reflects the full past — not just orders placed since the
+    last container reset.
+
+    Needed because the deployed SQLite DB is ephemeral (gitignored, not
+    committed): restaurants were reseeded on startup but the order/history
+    ledger was not, so every redeploy wiped all past overages and the running
+    tab collapsed to a single day. Uses INSERT OR IGNORE keyed on the tables'
+    UNIQUE constraints (orders: date+person, history: date) so it fills only
+    missing rows and never clobbers anything entered live."""
+    try:
+        import seed_history
+    except Exception:
+        return
+    with _conn() as conn:
+        conn.executemany(
+            """INSERT OR IGNORE INTO orders (date, person, order_text, updated_at)
+               VALUES (?, ?, ?, ?)""",
+            seed_history.ORDERS,
+        )
+        conn.executemany(
+            """INSERT OR IGNORE INTO history
+               (date, winner_place_id, vote_count, total_voters, decided_at)
+               VALUES (?, ?, ?, ?, ?)""",
+            seed_history.HISTORY,
+        )
 
 
 def _migrate():
