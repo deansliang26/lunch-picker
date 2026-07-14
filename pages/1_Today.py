@@ -134,6 +134,27 @@ if winner:
         with st.container(key="cta_place_order"):
             st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
 
+# --- Start over (clears today's votes + the recorded pick, then re-vote) ---
+# Only offered once a winner is locked in; gated behind a confirm so a decided
+# pick can't be wiped by a stray click.
+if winner_row:
+    if st.session_state.get("_confirm_reset"):
+        st.warning("Reset today's vote? This clears everyone's votes and the current pick so the team can vote again. Orders are kept.")
+        rc1, rc2, _ = st.columns([1, 1, 3])
+        with rc1:
+            if st.button("Yes, reset", type="primary", use_container_width=True, key="reset_confirm"):
+                db.reset_today()
+                st.session_state.pop("_confirm_reset", None)
+                st.rerun()
+        with rc2:
+            if st.button("Cancel", use_container_width=True, key="reset_cancel"):
+                st.session_state.pop("_confirm_reset", None)
+                st.rerun()
+    else:
+        if st.button("🔄  Start over", key="reset_start"):
+            st.session_state["_confirm_reset"] = True
+            st.rerun()
+
 # --- Load today's suggestions ---
 with st.spinner("Loading restaurants..."):
     suggestions = yelp.get_suggestions(cuisine_filter=cuisine_alias)

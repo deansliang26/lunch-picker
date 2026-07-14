@@ -248,6 +248,16 @@ def withdraw_vote(voter: str):
         )
 
 
+def reset_today():
+    """Wipe today's vote so the team can start over: clears every vote AND the
+    recorded winner for today. Leaves placed orders and the daily suggestions
+    untouched. Idempotent — safe to call when nothing has been decided yet."""
+    d = today()
+    with _conn() as conn:
+        conn.execute("DELETE FROM daily_votes WHERE date = ?", (d,))
+        conn.execute("DELETE FROM history WHERE date = ?", (d,))
+
+
 def tally_votes() -> dict[str, int]:
     votes = get_todays_votes()
     tally: dict[str, int] = {}
