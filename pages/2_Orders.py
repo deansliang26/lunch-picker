@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 import json
 import streamlit as st
 from datetime import date
@@ -295,13 +296,12 @@ with menu_col:
                 # "Guacamole (+$2)" or "Avocado (+$2.25)". Parse and add those — the
                 # builder previously priced proteins only, so paid toppings/mix-ins
                 # (guac, avocado, extra masago) were silently free.
-                import re as _re
                 opt_up = 0.0
-                for _vals in opt_pick.values():
-                    for _v in _vals:
-                        _m = _re.search(r"\(\+\$([0-9]+(?:\.[0-9]{1,2})?)\)", _v or "")
-                        if _m:
-                            opt_up += float(_m.group(1))
+                for vals in opt_pick.values():
+                    for v in vals:
+                        m = re.search(r"\(\+\$([0-9]+(?:\.[0-9]{1,2})?)\)", v or "")
+                        if m:
+                            opt_up += float(m.group(1))
                 bprice = round(fmt_base + up + opt_up, 2)
                 with bq2:
                     st.markdown(

@@ -174,7 +174,7 @@ div[data-testid="stMetric"] {
 }
 
 /* ── "Place your order" CTA (Today's winner banner) — styled as a real
-   button, matching the clay-colored Yelp pill button ── */
+   button, matching the clay-colored Yelp/Order-Online pill buttons ── */
 .st-key-cta_place_order {
     display: flex;
     align-items: center;

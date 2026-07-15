@@ -108,6 +108,9 @@ def _seed_if_empty():
             )
 
 
+_ledger_seeded = False
+
+
 def _seed_ledger():
     """Seed the baked historical orders + daily winners so the History page's
     running-tab ledger reflects the full past — not just orders placed since the
@@ -118,7 +121,15 @@ def _seed_ledger():
     ledger was not, so every redeploy wiped all past overages and the running
     tab collapsed to a single day. Uses INSERT OR IGNORE keyed on the tables'
     UNIQUE constraints (orders: date+person, history: date) so it fills only
-    missing rows and never clobbers anything entered live."""
+    missing rows and never clobbers anything entered live.
+
+    init_db() runs on every Streamlit rerun, so guard the (idempotent) seed
+    behind a process flag: it runs once per process — i.e. once per fresh /
+    redeployed container, exactly when the ephemeral DB needs backfilling —
+    instead of re-sweeping both tables on every page interaction."""
+    global _ledger_seeded
+    if _ledger_seeded:
+        return
     try:
         import seed_history
     except Exception:
@@ -135,6 +146,7 @@ def _seed_ledger():
                VALUES (?, ?, ?, ?, ?)""",
             seed_history.HISTORY,
         )
+    _ledger_seeded = True
 
 
 def _migrate():
@@ -296,6 +308,25 @@ def record_winner(place_id: str, vote_count: int, total_voters: int):
                VALUES (?, ?, ?, ?, ?)""",
             (today(), place_id, vote_count, total_voters, now()),
         )
+
+
+def decide_winner_if_majority(majority: int, total_voters: int) -> str | None:
+    """Deterministically lock in the winner the moment any restaurant reaches the
+    majority threshold. Idempotent and safe to call on every page load/refresh —
+    so a majority is ALWAYS recorded regardless of which session cast the
+    deciding vote (previously only the caster's session recorded it, letting a
+    majority sit unrecorded and be overridden by the weighted 'decide' pick).
+    Returns the winning place_id if it (already) has a majority, else None."""
+    if get_todays_winner():
+        return None
+    tally = tally_votes()
+    if not tally:
+        return None
+    pid, cnt = max(tally.items(), key=lambda kv: kv[1])
+    if cnt >= majority:
+        record_winner(pid, cnt, total_voters)
+        return pid
+    return None
 
 
 def get_history(limit: int = 30) -> list[dict]:

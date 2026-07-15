@@ -100,6 +100,11 @@ with col_date:
     )
 
 # --- Check if winner already decided ---
+# Lock in a majority winner on every load so a restaurant that reaches MAJORITY
+# (3 votes for the 5-person team) is ALWAYS chosen — even if the deciding vote
+# came from another session that didn't record it.
+if not db.get_todays_winner():
+    db.decide_winner_if_majority(MAJORITY, len(TEAM))
 winner_row = db.get_todays_winner()
 winner = db.get_restaurant(winner_row["winner_place_id"]) if winner_row else None
 if winner:
@@ -127,10 +132,10 @@ if winner:
             unsafe_allow_html=True,
         )
     with col_cta:
-        # Order CTA: use Streamlit's native page nav (a raw <a href="2_Orders"> hit the
-        # wrong page slug and silently did nothing, esp. under a hosted base path). It's
-        # wrapped in a keyed container so sidebar.py's CSS can style the NavLink as a real
-        # clay-colored button, taking the top-right slot the Yelp button used to sit in.
+        # Native page nav — a raw <a href="2_Orders"> hits the wrong slug under a
+        # hosted base path and silently does nothing, so use st.page_link. It's
+        # wrapped in a keyed container so sidebar.py's CSS can style the NavLink
+        # as a real clay-colored button instead of a bare text link.
         with st.container(key="cta_place_order"):
             st.page_link("pages/2_Orders.py", label="🧾  Place your order →", use_container_width=True)
 
