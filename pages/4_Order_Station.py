@@ -144,10 +144,16 @@ if winner.get("address"):
 if meta_parts:
     st.caption(" · ".join(meta_parts))
 
-if menu_data and not menu_data.get("prices_verified"):
+_vstatus = menus.verification_status(menu_data) if menu_data else {"state": "unverified"}
+if _vstatus["state"] == "unverified":
     st.warning(
         "⚠️ **Prices for this spot aren't verified** against the live site — the group "
-        "total below may be inaccurate. (Every restaurant we could check had wrong seed prices.)"
+        "total below may be inaccurate. Verify them on the **Menus** page."
+    )
+elif _vstatus["state"] == "stale":
+    st.warning(
+        f"🟡 **Prices last verified {_vstatus['date']}** ({_vstatus['age_days']} days ago) — "
+        "the group total may be off. Re-verify on the **Menus** page."
     )
 
 status.render_team_status()

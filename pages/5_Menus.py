@@ -1,6 +1,8 @@
 import sys
 import os
+import math
 import streamlit as st
+import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import db
@@ -11,6 +13,8 @@ db.init_db()
 
 st.set_page_config(page_title="Menus · PA Lunch", page_icon="📋", layout="wide")
 sidebar.render()
+
+user = st.session_state.get("user")
 
 st.markdown("## 📋  Menus")
 
@@ -35,6 +39,83 @@ def _render_category(cat):
             f"{desc_str}</div>",
             unsafe_allow_html=True,
         )
+
+
+def _render_read_only(menu_data):
+    """Browse view: synthesized categories (build menus render their builder)."""
+    categories = menus.display_categories(menu_data)
+    if len(categories) <= 8:
+        tabs = st.tabs([c["name"] for c in categories])
+        for tab, cat in zip(tabs, categories):
+            with tab:
+                _render_category(cat)
+    else:
+        for cat in categories:
+            with st.expander(cat["name"], expanded=False):
+                _render_category(cat)
+
+
+def _render_verify_mode(restaurant, menu_data, verify_key):
+    """Editable price review against the live menu. Edits the RAW stored
+    categories (not the synthesized preview) so row indices map straight to the
+    file. Build-menu builder prices aren't editable here yet — a follow-on."""
+    menu_url = menu_data.get("menu_url", "")
+    st.markdown(
+        "##### 🔎 Verify prices\n"
+        "Open the live menu, fix any price that's off, then **Save & mark verified**."
+    )
+    if menu_url:
+        st.link_button("🌐 Open live menu ↗", menu_url)
+
+    raw_cats = menu_data.get("categories") or []
+    rows = [
+        {"_key": f"{ci}:{ii}", "Category": cat.get("name", ""),
+         "Item": it.get("name", ""), "Price ($)": it.get("price")}
+        for ci, cat in enumerate(raw_cats)
+        for ii, it in enumerate(cat.get("items") or [])
+    ]
+    if not rows:
+        st.info("No priced menu items to verify for this restaurant.")
+        if st.button("← Done", key=f"verify_done_{restaurant['id']}"):
+            st.session_state[verify_key] = False
+            st.rerun()
+        return
+
+    df = pd.DataFrame(rows)
+    edited = st.data_editor(
+        df,
+        key=f"price_editor_{restaurant['id']}",
+        use_container_width=True,
+        hide_index=True,
+        height=min(560, 90 + 35 * len(rows)),
+        disabled=["_key", "Category", "Item"],
+        column_config={
+            "_key": None,
+            "Category": st.column_config.TextColumn("Category"),
+            "Item": st.column_config.TextColumn("Item", width="large"),
+            "Price ($)": st.column_config.NumberColumn(
+                "Price ($)", min_value=0.0, step=0.25, format="$%.2f",
+                help="Leave blank for items with no set price."),
+        },
+    )
+
+    save_col, cancel_col, _ = st.columns([1, 1, 3])
+    with save_col:
+        if st.button("✅ Save & mark verified", type="primary",
+                     use_container_width=True, key=f"verify_save_{restaurant['id']}"):
+            updates = {}
+            for _, r in edited.iterrows():
+                v = r["Price ($)"]
+                updates[r["_key"]] = None if (v is None or (isinstance(v, float) and math.isnan(v))) else float(v)
+            res = menus.save_verified_prices(
+                restaurant["id"], updates, user or "someone", db.today())
+            st.session_state[verify_key] = False
+            st.session_state["_verify_toast"] = res["changed"]
+            st.rerun()
+    with cancel_col:
+        if st.button("Cancel", use_container_width=True, key=f"verify_cancel_{restaurant['id']}"):
+            st.session_state[verify_key] = False
+            st.rerun()
 
 
 # Build list of restaurants that have scraped menu data
@@ -104,17 +185,50 @@ if not menu_data or not menu_data.get("categories"):
     st.info("No menu data available for this restaurant.")
     st.stop()
 
-if not menu_data.get("prices_verified", False):
-    st.warning("⚠️  Prices for this restaurant haven't been verified — they may be outdated.")
+# One-shot confirmation after a save.
+if "_verify_toast" in st.session_state:
+    n = st.session_state.pop("_verify_toast")
+    st.toast(f"Prices verified — {n} price{'s' if n != 1 else ''} updated", icon="✅")
 
-categories = menus.display_categories(menu_data)
+# ── Price-verification status + flow ─────────────────────────────────────────
+vstatus = menus.verification_status(menu_data)
+verify_key = f"verify_prices_{restaurant['id']}"
+in_verify = st.session_state.get(verify_key, False)
 
-if len(categories) <= 8:
-    tabs = st.tabs([c["name"] for c in categories])
-    for tab, cat in zip(tabs, categories):
-        with tab:
-            _render_category(cat)
+status_col, action_col = st.columns([4, 1])
+with status_col:
+    if vstatus["state"] == "fresh":
+        by_txt = f" by {vstatus['by']}" if vstatus["by"] else ""
+        age = vstatus["age_days"]
+        st.markdown(
+            f"<div style='background:#DFEDE4;border:1px solid #3F7355;border-radius:8px;"
+            f"padding:8px 14px;font-size:13px;color:#3F7355;'>"
+            f"✅ Prices verified {vstatus['date']}{by_txt} · "
+            f"{age} day{'s' if age != 1 else ''} ago</div>",
+            unsafe_allow_html=True,
+        )
+    elif vstatus["state"] == "stale":
+        st.warning(
+            f"🟡 Prices last verified {vstatus['date']} ({vstatus['age_days']} days ago) — "
+            "may be stale. Re-verify against the live menu."
+        )
+    elif vstatus["state"] == "unknown":
+        st.info(
+            "ℹ️ Prices were marked verified previously but aren't date-stamped — "
+            "run **Verify prices** to record who checked them and when."
+        )
+    else:  # unverified
+        st.warning("⚠️  Prices for this restaurant haven't been verified — they may be outdated.")
+with action_col:
+    if not in_verify:
+        if st.button("🔎 Verify prices", use_container_width=True,
+                     key=f"verify_btn_{restaurant['id']}"):
+            st.session_state[verify_key] = True
+            st.rerun()
+
+st.divider()
+
+if in_verify:
+    _render_verify_mode(restaurant, menu_data, verify_key)
 else:
-    for cat in categories:
-        with st.expander(cat["name"], expanded=False):
-            _render_category(cat)
+    _render_read_only(menu_data)

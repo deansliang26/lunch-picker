@@ -1,9 +1,15 @@
 # menus.py — Real menu data scraped from restaurant websites (June 2026).
 import json as _json
 import os as _os
+import math as _math
+import datetime as _dt
 
 _HERE = _os.path.dirname(_os.path.abspath(__file__))
 _DATA_PATH = _os.path.join(_HERE, "menus_data.json")
+
+# A dated price verification older than this reads as "may be stale" and is
+# worth re-checking against the live menu.
+PRICE_STALE_DAYS = 45
 
 
 def _load() -> dict:
@@ -25,6 +31,78 @@ def get_menu(restaurant_id: str) -> dict | None:
         MENUS = _load()
         _mtime = current
     return MENUS.get(restaurant_id)
+
+
+def verification_status(menu_data: dict | None) -> dict:
+    """Freshness of a menu's price verification, for badges/warnings.
+
+    Returns {state, date, by, age_days} where state is one of:
+      - 'unverified': the prices_verified flag is off — trust nothing.
+      - 'unknown':    verified, but with no date stamp (the legacy bare flag) —
+                      previously checked, freshness unknown; worth re-verifying.
+      - 'fresh':      verified within PRICE_STALE_DAYS.
+      - 'stale':      verified, but longer ago than PRICE_STALE_DAYS.
+    """
+    if not menu_data or not menu_data.get("prices_verified"):
+        return {"state": "unverified", "date": None, "by": None, "age_days": None}
+    when = menu_data.get("prices_verified_at")
+    by = menu_data.get("prices_verified_by")
+    if not when:
+        return {"state": "unknown", "date": None, "by": by, "age_days": None}
+    try:
+        age = (_dt.date.today() - _dt.date.fromisoformat(when)).days
+    except (ValueError, TypeError):
+        return {"state": "unknown", "date": when, "by": by, "age_days": None}
+    return {"state": "stale" if age > PRICE_STALE_DAYS else "fresh",
+            "date": when, "by": by, "age_days": age}
+
+
+def save_verified_prices(restaurant_id: str, price_updates: dict,
+                         verified_by: str, today: str) -> dict:
+    """Apply human-reviewed prices to a restaurant's stored menu and stamp it
+    verified (date + who).
+
+    `price_updates` maps "<cat_idx>:<item_idx>" -> price. A value that is blank,
+    None or NaN clears that item's price. Only listed keys are touched. Writes
+    menus_data.json back in its exact on-disk format (indent=2, ensure_ascii,
+    no trailing newline) via an atomic replace so the git diff stays minimal;
+    get_menu's mtime check reloads it on the next read. Returns {'changed': n}.
+    """
+    with open(_DATA_PATH) as f:
+        data = _json.load(f)
+
+    changed = 0
+    for m in data:
+        if m.get("id") != restaurant_id:
+            continue
+        cats = m.get("categories") or []
+        for key, raw in price_updates.items():
+            try:
+                ci, ii = (int(x) for x in str(key).split(":"))
+                item = cats[ci]["items"][ii]
+            except (ValueError, IndexError, KeyError, TypeError):
+                continue
+            norm = None
+            if raw not in ("", None):
+                try:
+                    f_val = float(raw)
+                    if not _math.isnan(f_val):
+                        norm = round(f_val, 2)
+                except (TypeError, ValueError):
+                    norm = None
+            if norm != item.get("price"):
+                item["price"] = norm
+                changed += 1
+        m["prices_verified"] = True
+        m["prices_verified_at"] = today
+        m["prices_verified_by"] = verified_by
+        break
+
+    tmp = _DATA_PATH + ".tmp"
+    with open(tmp, "w") as f:
+        f.write(_json.dumps(data, indent=2, ensure_ascii=True))
+    _os.replace(tmp, _DATA_PATH)
+    return {"changed": changed}
 
 
 def display_categories(menu_data: dict) -> list:
