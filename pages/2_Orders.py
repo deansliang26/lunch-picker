@@ -393,7 +393,8 @@ with menu_col:
                     badge = "🔥 " if item.get("popular") else ""
                     st.markdown(f"**{badge}{item['name']}**")
                     if item.get("description"):
-                        st.caption(item["description"])
+                        # Escape $ so "$25.50" price hints don't render as LaTeX math.
+                        st.caption(item["description"].replace("$", "\\$"))
 
                 with price_col:
                     if item.get("price"):
