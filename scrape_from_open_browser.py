@@ -17,8 +17,10 @@ USAGE:
   python scrape_from_open_browser.py <place_id>            # PREVIEW (no write)
   python scrape_from_open_browser.py <place_id> --merge    # write into menus_data.json
   python scrape_from_open_browser.py <place_id> --url chipotle   # pick tab by URL substring
+  python scrape_from_open_browser.py <place_id> --merge --by Dean  # attribute the verification
 """
 import asyncio
+import datetime
 import json
 import os
 import re
@@ -70,7 +72,46 @@ EXTRACT_JS = r"""
 """
 
 
-async def main(place_id, do_merge, url_hint):
+# Card-aware extractor for SPA ordering platforms (thanx, some chains) where the
+# generic heading-based extractor above misses items. Finds each price *leaf*
+# (a node whose own text is just "$X.XX"), ascends to the enclosing item card,
+# and reads the first non-price, non-allergen line as the name.
+CARD_EXTRACT_JS = r"""
+() => {
+  // Leading price, optionally trailed by " · 550 cals" etc. Length-capped so a
+  // description paragraph that happens to contain a price isn't treated as one.
+  const priceRe = /^\$\s?(\d{1,3}(?:\.\d{2})?)\b/;
+  const anyPrice = /\$\s?\d/;
+  const items = []; const seen = new Set();
+  for (const el of document.querySelectorAll('span,div,p,b,strong')) {
+    let own=''; for (const nd of el.childNodes) if (nd.nodeType===3) own+=nd.textContent;
+    own = own.trim();
+    const pm = own.match(priceRe); if (!pm || own.length > 20) continue;
+    const price = parseFloat(pm[1]);
+    let card = el;
+    for (let i=0;i<6 && card;i++){
+      const lines = (card.innerText||'').split('\n').map(s=>s.trim()).filter(Boolean);
+      const nameLine = lines.find(l => !anyPrice.test(l) && l.length>=2 && l.length<=60
+          && !/^contains/i.test(l)
+          && !/^(egg|milk|soy|wheat|fish|tree|peanut|sesame|shellfish|eggs|soybeans)/i.test(l)
+          && !/^(skip to|enable access|open the access|main content)/i.test(l));
+      if (nameLine){
+        const key=nameLine.toLowerCase();
+        if(!seen.has(key)){ seen.add(key);
+          const desc=lines.find(l=>l!==nameLine && !anyPrice.test(l) && !/^contains/i.test(l) && l.length>15);
+          items.push({name:nameLine, price, description:desc||'', image_url:''});
+        }
+        break;
+      }
+      card=card.parentElement;
+    }
+  }
+  return items;
+}
+"""
+
+
+async def main(place_id, do_merge, url_hint, verified_by="live scrape", extract_js=EXTRACT_JS):
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
         try:
@@ -98,7 +139,7 @@ async def main(place_id, do_merge, url_hint):
             frames = pg.frames  # includes the main frame
             for fr in frames:
                 try:
-                    rows = await fr.evaluate(EXTRACT_JS)
+                    rows = await fr.evaluate(extract_js)
                 except Exception:
                     rows = []
                 sc = score(rows)
@@ -151,9 +192,14 @@ async def main(place_id, do_merge, url_hint):
                     if sc.get("image_url") and not it.get("image_url"):
                         it["image_url"] = sc["image_url"]; im_n += 1
             rec["prices_verified"] = True  # confirmed against the live (human) session
+            rec["prices_verified_at"] = datetime.date.today().isoformat()
+            rec["prices_verified_by"] = verified_by
+        # indent=2 + default ensure_ascii=True + no trailing newline keeps the
+        # on-disk format byte-identical (minimal diff) — see menus.py.
         json.dump(data, open(MENUS, "w"), indent=2)
         print(f"\nMerged into {place_id}: matched {matched} items — "
-              f"+{pr_n} prices, +{de_n} descriptions, +{im_n} images. prices_verified=True.")
+              f"+{pr_n} prices, +{de_n} descriptions, +{im_n} images. "
+              f"prices_verified=True, at={datetime.date.today().isoformat()} by={verified_by}.")
 
 
 if __name__ == "__main__":
@@ -166,4 +212,10 @@ if __name__ == "__main__":
         i = sys.argv.index("--url")
         if i + 1 < len(sys.argv):
             hint = sys.argv[i + 1]
-    asyncio.run(main(pid, merge, hint))
+    who = "live scrape"
+    if "--by" in sys.argv:
+        i = sys.argv.index("--by")
+        if i + 1 < len(sys.argv):
+            who = sys.argv[i + 1]
+    extractor = CARD_EXTRACT_JS if "--cards" in sys.argv else EXTRACT_JS
+    asyncio.run(main(pid, merge, hint, who, extractor))

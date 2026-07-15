@@ -214,7 +214,8 @@ with menu_col:
             b = menu_data["builder"]
             st.markdown("#### 🧑‍🍳 Build your meal")
             if b.get("instructions"):
-                st.caption(b["instructions"])
+                # Escape $ so price hints ("+$2.25") aren't parsed as LaTeX math.
+                st.caption(b["instructions"].replace("$", "\\$"))
             if not user:
                 st.info("Pick your name in the sidebar to build an order.")
             else:
@@ -234,46 +235,77 @@ with menu_col:
                 entree_label = b.get("entree_label", "Protein")
                 has_protein_images = any(p.get("image_url") for p in b["proteins"])
 
-                if has_protein_images:
+                # Protein / entrée selection.
+                #   n == 1 → pick exactly one (image grid or dropdown).
+                #   n  > 1 → per-protein SCOOP STEPPERS: quantities that sum to n,
+                #            repeats allowed — matches real poke bowls / Panda plates
+                #            (e.g. 2 scoops salmon + 1 tuna + 1 albacore, or 4 salmon).
+                scoops: dict = {}   # protein name -> qty (n>1 path only)
+                if n == 1:
+                    if has_protein_images:
+                        st.markdown(
+                            f"<div style='font-size:14px;font-weight:600;margin-bottom:8px;'>"
+                            f"{entree_label} — pick 1</div>",
+                            unsafe_allow_html=True,
+                        )
+                        chosen = []
+                        COLS = 4
+                        for row_start in range(0, len(b["proteins"]), COLS):
+                            row_prots = b["proteins"][row_start : row_start + COLS]
+                            img_cols = st.columns(COLS)
+                            for ci, prot in enumerate(row_prots):
+                                with img_cols[ci]:
+                                    if prot.get("image_url"):
+                                        st.markdown(
+                                            f'<img src="{prot["image_url"]}" onerror="this.style.display=\'none\'" '
+                                            f'style="width:100%;border-radius:8px;aspect-ratio:1/1;'
+                                            f'object-fit:cover;margin-bottom:4px;">',
+                                            unsafe_allow_html=True,
+                                        )
+                                    upcharge = f" +${prot['upcharge']:.2f}" if prot.get("upcharge") else ""
+                                    if st.checkbox(f"{prot['name']}{upcharge}",
+                                                   key=f"build_prot_{rid}_{row_start + ci}"):
+                                        chosen.append(prot["name"])
+                        if len(chosen) > 1:
+                            st.warning(f"⚠️ {fmt} comes with 1 — please uncheck {len(chosen) - 1}.")
+                    else:
+                        chosen = [st.selectbox(entree_label, prot_names, key=f"build_ent_{rid}")]
+                else:
                     st.markdown(
                         f"<div style='font-size:14px;font-weight:600;margin-bottom:8px;'>"
-                        f"{entree_label} — pick {'1' if n == 1 else f'up to {n}'}</div>",
+                        f"{entree_label} — choose {n} (scoops can repeat)</div>",
                         unsafe_allow_html=True,
                     )
-                    chosen = []
-                    COLS = 4
+                    COLS = 4 if has_protein_images else 2
                     for row_start in range(0, len(b["proteins"]), COLS):
                         row_prots = b["proteins"][row_start : row_start + COLS]
-                        img_cols = st.columns(COLS)
+                        pcols = st.columns(COLS)
                         for ci, prot in enumerate(row_prots):
-                            with img_cols[ci]:
-                                if prot.get("image_url"):
+                            with pcols[ci]:
+                                if has_protein_images and prot.get("image_url"):
                                     st.markdown(
                                         f'<img src="{prot["image_url"]}" onerror="this.style.display=\'none\'" '
-                                        f'style="width:100%;'
-                                        f'border-radius:8px;aspect-ratio:1/1;object-fit:cover;'
-                                        f'margin-bottom:4px;">',
+                                        f'style="width:100%;border-radius:8px;aspect-ratio:1/1;'
+                                        f'object-fit:cover;margin-bottom:4px;">',
                                         unsafe_allow_html=True,
                                     )
-                                upcharge = f" +${prot['upcharge']:.2f}" if prot.get("upcharge") else ""
-                                if st.checkbox(
-                                    f"{prot['name']}{upcharge}",
-                                    key=f"build_prot_{rid}_{row_start + ci}",
-                                ):
-                                    chosen.append(prot["name"])
-                    if len(chosen) > n:
-                        st.warning(
-                            f"⚠️ {fmt} comes with {n} entrée{'s' if n > 1 else ''} — "
-                            f"please uncheck {len(chosen) - n}."
-                        )
-                else:
-                    if n == 1:
-                        chosen = [st.selectbox(entree_label, prot_names, key=f"build_ent_{rid}")]
+                                up_lbl = f" +${prot['upcharge']:.2f}" if prot.get("upcharge") else ""
+                                q = st.number_input(
+                                    f"{prot['name']}{up_lbl}", min_value=0, max_value=n,
+                                    value=0, step=1, key=f"build_scoop_{rid}_{row_start + ci}",
+                                )
+                                if q:
+                                    scoops[prot["name"]] = int(q)
+                    chosen = []
+                    for pn, q in scoops.items():
+                        chosen += [pn] * q
+                    total = sum(scoops.values())
+                    if total < n:
+                        st.caption(f"🥢 {total}/{n} scoops — add {n - total} more")
+                    elif total == n:
+                        st.caption(f"✅ {n}/{n} scoops")
                     else:
-                        chosen = st.multiselect(
-                            f"{entree_label} (pick up to {n})", prot_names,
-                            max_selections=n, key=f"build_ent_{rid}",
-                        )
+                        st.warning(f"⚠️ {total}/{n} scoops — remove {total - n}.")
 
                 opt_pick = {}
                 for label, choices in (b.get("options") or {}).items():
@@ -309,10 +341,16 @@ with menu_col:
                         f"Price: ${bprice:.2f}</div>",
                         unsafe_allow_html=True,
                     )
-                valid_build = bool(chosen) and len(chosen) <= n
+                # A build needs exactly n entrées/scoops filled.
+                valid_build = len(chosen) == n
                 if st.button("Add to my order", use_container_width=True, type="primary",
                              key=f"build_add_{rid}", disabled=not valid_build):
-                    item_name = f"{fmt} — {', '.join(chosen)}"
+                    if scoops:
+                        prot_str = ", ".join(f"{q}× {pn}" if q > 1 else pn
+                                             for pn, q in scoops.items())
+                    else:
+                        prot_str = ", ".join(chosen)
+                    item_name = f"{fmt} — {prot_str}"
                     note_parts = []
                     for _label, vals in opt_pick.items():
                         note_parts += [v for v in vals if v]

@@ -2191,7 +2191,7 @@
             "name": "91.5 Ike's Reuben",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3918dac2item_900000015730009772_1766510507.jpg",
-            "description": "Pastrami, Mack Sauce, Purple Slaw, Gouda. [1380 cal]",
+            "description": "Pastrami, Mack Sauce, Purple Slaw, Gouda. [1380 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -2333,7 +2333,7 @@
             "name": "240 Madison Bumgarner",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db391c346ditem_900000015730490409_1758572079.jpg",
-            "description": "Steak, Yellow BBQ Sauce, (Light) Habanero, Pepper Jack, American. [1400 cal]",
+            "description": "Steak, Yellow BBQ Sauce, (Light) Habanero, Pepper Jack, American. [1400 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -2476,7 +2476,7 @@
             "name": "957 The Damon Bruce",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db391e45efitem_900000015730847039_1758573392.jpg",
-            "description": "Steak, Steak Sauce, Beer-Battered Onion Rings, Provolone. [1430 cal]",
+            "description": "Steak, Steak Sauce, Beer-Battered Onion Rings, Provolone. [1430 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -2618,7 +2618,7 @@
             "name": "98 Jaymee Sirewich",
             "price": 13.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39216d0eitem_900000015730009786_1758570994.jpg",
-            "description": "Fried Chicken, Yellow BBQ Sauce, Ranch, Pepper Jack. [1660 cal]",
+            "description": "Fried Chicken, Yellow BBQ Sauce, Ranch, Pepper Jack. [1660 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -3045,7 +3045,7 @@
             "name": "111 Menage A Trois",
             "price": 14.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39280726item_900000015730009808_1758571161.jpg",
-            "description": "Chicken (Halal), Honey Mustard, BBQ Sauce, Real Honey, Pepper Jack, Swiss, Cheddar. [1610 cal]",
+            "description": "Chicken (Halal), Honey Mustard, BBQ Sauce, Real Honey, Pepper Jack, Swiss, Cheddar. [1610 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -3898,7 +3898,7 @@
             "name": "201 Adam Richman",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3937118bitem_900000015730453311_1758571881.jpg",
-            "description": "Fried Chicken, Ham, Pesto, Real Honey, Avocado, Swiss. [1790 cal]",
+            "description": "Fried Chicken, Ham, Pesto, Real Honey, Avocado, Swiss. [1790 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -4042,7 +4042,7 @@
             "name": "99 We're Just Friends",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3938d213item_900000015730009788_1758571026.jpg",
-            "description": "Chicken (Halal), Avocado, Zesty Orange Glaze, Pepper Jack. [1390 cal]",
+            "description": "Chicken (Halal), Avocado, Zesty Orange Glaze, Pepper Jack. [1390 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -4184,7 +4184,7 @@
             "name": "422 Beast Mode",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db393b7626item_900000015730584459_1758573146.jpg",
-            "description": "Fried Chicken, Bacon, Spicy Beast Mode BBQ Sauce, Cheddar. [1530 cal]",
+            "description": "Fried Chicken, Bacon, Spicy Beast Mode BBQ Sauce, Cheddar. [1530 cal]\n\nContains: Milk, Eggs, Wheat Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -4781,7 +4781,7 @@
             "name": "150 Dirty Reuben",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3957ebc5item_900000015730451049_1758573455.jpg",
-            "description": "Roast Beef, Dirty Dressing, Purple Slaw, American. [1320 cal]",
+            "description": "Roast Beef, Dirty Dressing, Purple Slaw, American. [1320 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5110,7 +5110,7 @@
             "name": "5577 Jeff Garcia",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db398a9f49item_900000015731064179_1758562734.jpg",
-            "description": "Turkey, Bacon, Avocado, Ranch, Honey Mustard, Cheddar. [1570 cal]\n\nWhat a career, a legend, and now what a game-changing sandwich! Jeff Garcia, NFL star and now sandwich artist, has created a mouthwatering masterpiece that will surely score with your tastebuds.",
+            "description": "Turkey, Bacon, Avocado, Ranch, Honey Mustard, Cheddar. [1570 cal]\n\nContains: Milk, Eggs, Wheat, Soy.\n\nWhat a career, a legend, and now what a game-changing sand",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5254,7 +5254,7 @@
             "name": "2242 Cam Brink",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db398cfdd7item_900000015731064171_1758562370.jpg",
-            "description": "Pastrami, Purple Slaw, Buffalo Wing Sauce, Zesty Orange Glaze, Wasabi Mayo, Avocado, American, Pepper Jack, Extra Dirty Sauce. [1680 cal]\n\nIke and WNBA star Cameron Brink come together to bring you a sandwich worthy of eating courtside! Stacked up and saucy, this sandwich is sure to be a slam dunk.",
+            "description": "Pastrami, Purple Slaw, Buffalo Wing Sauce, Zesty Orange Glaze, Wasabi Mayo, Avocado, American, Pepper Jack, Extra Dirty Sauce. [1680 cal]\n\nContains: Milk, Eggs,",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5401,7 +5401,7 @@
             "name": "405 Erin Coscarelli",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3990ace0item_900000015730584439_1758573651.jpg",
-            "description": "Chicken (Halal), Dirty Dressing, Purple Slaw, Avocado, Pepper Jack. [1470 cal]\n\nWant a sandwich that\u2019ll give you something to talk about? Grab this tasty creation brought to you in partnership with broadcaster Erin Coscarelli!",
+            "description": "Chicken (Halal), Dirty Dressing, Purple Slaw, Avocado, Pepper Jack. [1470 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Sesame.\n\nWant a sandwich that\u2019ll give you some",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5544,7 +5544,7 @@
             "name": "929 Halsey",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3992a42bitem_900000015730847019_1758573362.jpg",
-            "description": "Chicken (Halal), Italian Dressing, Avocado, Provolone. [1470 cal]\n\nBad at love? Good at love and sandwiches! This hurricane of flavor, brought to you by Ike and popstar Halsey, will be music to your ears (and taste buds).",
+            "description": "Chicken (Halal), Italian Dressing, Avocado, Provolone. [1470 cal]\n\nContains: Milk, Eggs, Wheat, Soy.\n\nBad at love? Good at love and sandwiches! This hurricane o",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5690,7 +5690,7 @@
             "name": "526 Howie Eat It",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39975722item_900000015730630801_1758573620.jpg",
-            "description": "Tuna, Godfather Sauce, Pepper Jack. [1400 cal]\n\nCo-created with Iconic comedian and host Howie Mandel, one bite of this sandwich will have you choosing DEAL!",
+            "description": "Tuna, Godfather Sauce, Pepper Jack. [1400 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Fish.\n\nCo-created with Iconic comedian and host Howie Mandel, one bite of this",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5835,7 +5835,7 @@
             "name": "1337 Michael Clifford's Sidequest Sandwich",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db399d4e9bitem_900000018076779964_1758561783.jpg",
-            "description": "Fried Chicken, Yellow BBQ Sauce, BBQ Sauce, Zesty Orange Glaze, Real Honey, Voodoo Chips, Pepper Jack. [1780 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Sesame.\n\nOne bite into this delicious sandwich co-created by pop star Michael Clifford and your taste buds will sing! With a mix of crunchy, savory, and sweet, it's sure to hit the right note!",
+            "description": "Fried Chicken, Yellow BBQ Sauce, BBQ Sauce, Zesty Orange Glaze, Real Honey, Voodoo Chips, Pepper Jack. [1780 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Sesame.\n\nOn",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -5984,7 +5984,7 @@
             "name": "2797 Rockin' Roenick",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39a12a71item_900000015731064173_1758562335.jpg",
-            "description": "Turkey, Chicken (Halal), Bacon, Red Pesto, Honey Mustard, Sriracha, Real Honey, Gouda. [1600 cal]\n\nSkate on into this delicious sandwich brought to you in partnership with Hockey Legend Jeremy Roenick! This loaded flavor combination lights the lamp!",
+            "description": "Turkey, Chicken (Halal), Bacon, Red Pesto, Honey Mustard, Sriracha, Real Honey, Gouda. [1600 cal]\n\nContains: Milk, Eggs, Wheat, Soy.\n\nSkate on into this delicio",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -6276,7 +6276,7 @@
             "name": "301 Handsome Owl",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39a52decitem_900000015731032649_1758637775.jpg",
-            "description": "Vegan Chicken, Teriyaki, Wasabi Mayo, Swiss. [1560 cal]",
+            "description": "Vegan Chicken, Teriyaki, Wasabi Mayo, Swiss. [1560 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -6560,7 +6560,7 @@
             "name": "219 Fall'ing For Ike's",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39a8fdb3item_900000015731032561_1758637671.jpg",
-            "description": "Vegan Turkey, Cranberry, Sriracha, Cheddar. [1230 cal]",
+            "description": "Vegan Turkey, Cranberry, Sriracha, Cheddar. [1230 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -6702,7 +6702,7 @@
             "name": "291 Pee Wee",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39aaa5e7item_900000015731032633_1758637571.jpg",
-            "description": "Vegan Turkey, Purple Slaw, French Dressing, Swiss. [1250 cal]",
+            "description": "Vegan Turkey, Purple Slaw, French Dressing, Swiss. [1250 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -6844,7 +6844,7 @@
             "name": "299 Mel-Lo Kitty",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39ae3964item_900000015731032645_1773432783.jpg",
-            "description": "Vegan Chicken, Zesty Orange Glaze, Avocado, Pepper Jack. [1480 cal]",
+            "description": "Vegan Chicken, Zesty Orange Glaze, Avocado, Pepper Jack. [1480 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -6986,7 +6986,7 @@
             "name": "36 Your Favorite Sesame St Character",
             "price": 13.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39b78c30item_900000023345577887_1774377884.jpg",
-            "description": "Cucumbers, Avocado, Pesto, Cream Cheese. [1450 cal]",
+            "description": "Cucumbers, Avocado, Pesto, Cream Cheese. [1450 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -7128,7 +7128,7 @@
             "name": "202 Gramps",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39b0fe69item_900000015731032533_1766515047.jpg",
-            "description": "Vegan Turkey, Mushrooms, Provolone. [1140 cal]",
+            "description": "Vegan Turkey, Mushrooms, Provolone. [1140 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -7273,7 +7273,7 @@
             "name": "250 Prissy Presley",
             "price": 11.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39b986c0item_900000015731032593_1766515845.jpg",
-            "description": "Veggie Bacon, Lettuce, Tomatoes, Dirty Dressing, Pepper Jack. [1340 cal]",
+            "description": "Veggie Bacon, Lettuce, Tomatoes, Dirty Dressing, Pepper Jack. [1340 cal]\n\nContains: Milk, Eggs, Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -7401,7 +7401,7 @@
             "name": "632 Helen Keller",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39bd0b63item_900000015731032779_1766517301.jpg",
-            "description": "Vegan Steak, Beer-Battered Onion Rings, BBQ Sauce, American. [1440 cal]",
+            "description": "Vegan Steak, Beer-Battered Onion Rings, BBQ Sauce, American. [1440 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -7543,7 +7543,7 @@
             "name": "315 Bonnie-Jill",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39c22a61item_900000015731032657_1766517362.jpg",
-            "description": "Vegan Fried Chicken, Marinated Artichoke Hearts, Marinara, Sriracha. [1180 cal]",
+            "description": "Vegan Fried Chicken, Marinated Artichoke Hearts, Marinara, Sriracha. [1180 cal]\n\nContains: Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -7685,7 +7685,7 @@
             "name": "239 Sneaky Kitty",
             "price": 11.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39c45994item_900000015731032579_1758729067.jpg",
-            "description": "Veggie Bacon, Lettuce, Tomato, American. [1140 cal]",
+            "description": "Veggie Bacon, Lettuce, Tomato, American. [1140 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -7812,7 +7812,7 @@
             "name": "750 Hades",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39c64c6citem_900000015731032845_1758638057.jpg",
-            "description": "Vegan Steak, Yellow BBQ Sauce, Habanero, Gouda. [1250 cal]",
+            "description": "Vegan Steak, Yellow BBQ Sauce, Habanero, Gouda. [1250 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -7954,7 +7954,7 @@
             "name": "895 Clueless",
             "price": 13.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39c82b6fitem_900000015731032907_1758638019.jpg",
-            "description": "Mushrooms, Avocado, Red Pesto, Cheddar. [1510 cal]",
+            "description": "Mushrooms, Avocado, Red Pesto, Cheddar. [1510 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -8096,7 +8096,7 @@
             "name": "171 Jeremy Stoppelman",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39d63fccitem_900000015731032523_1770754171.jpg",
-            "description": "Breaded Eggplant, Pesto, Habanero, Grilled Tomatoes, Provolone. [1230 cal]",
+            "description": "Breaded Eggplant, Pesto, Habanero, Grilled Tomatoes, Provolone. [1230 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -8230,7 +8230,7 @@
             "name": "298 Jaymeetless",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39cf37dcitem_900000015731032643_1767996727.jpg",
-            "description": "Vegan Fried Chicken, Yellow BBQ Sauce, Ranch, Pepper Jack. [1460 cal]",
+            "description": "Vegan Fried Chicken, Yellow BBQ Sauce, Ranch, Pepper Jack. [1460 cal]\n\nContains: Milk, Eggs, Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -8612,7 +8612,7 @@
             "name": "170 Vegan Not So Sloppy Ike",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39e2b81ditem_900000016349471025_1758638323.jpg",
-            "description": "Vegan Meatballs, BBQ Sauce, Vegan Cheese. [1320 cal]",
+            "description": "Vegan Meatballs, BBQ Sauce, Vegan Cheese. [1320 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -8727,7 +8727,7 @@
             "name": "172 Vegan Toad",
             "price": 13.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39e46e44item_900000016349471027_1758638760.jpg",
-            "description": "Mushrooms, Marinara, Avocado, Vegan Cheese. [1250 cal]",
+            "description": "Mushrooms, Marinara, Avocado, Vegan Cheese. [1250 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -8835,7 +8835,7 @@
             "name": "202 Vegan Gramps",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39e6cf2aitem_900000016349471029_1758638448.jpg",
-            "description": "Vegan Turkey, Mushrooms, Vegan Cheese. [1140 cal]",
+            "description": "Vegan Turkey, Mushrooms, Vegan Cheese. [1140 cal]\n\nContains: Wheat and Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -8950,7 +8950,7 @@
             "name": "204 Vegan Sabrina's Smile",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39e828beitem_900000016349471032_1758638968.jpg",
-            "description": "Vegan Chicken, Italian Dressing, Vegan Cheese. [1330 cal]",
+            "description": "Vegan Chicken, Italian Dressing, Vegan Cheese. [1330 cal]\n\nContains: Wheat and Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9065,7 +9065,7 @@
             "name": "205 Vegan Pumpkin",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39eab599item_900000016349471034_1758639618.jpg",
-            "description": "Vegan Chicken, Pesto, Mushrooms, Avocado, Pepper Jack, Vegan Cheese. [1530 cal]",
+            "description": "Vegan Chicken, Pesto, Mushrooms, Avocado, Pepper Jack, Vegan Cheese. [1530 cal]\n\nContains: Wheat and Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9182,7 +9182,7 @@
             "name": "210 Vegan Terminators",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39ecbb94item_900000016349471040_1758639089.jpg",
-            "description": "Vegan Chicken, Marinara, Vegan Cheese. [1170 cal]",
+            "description": "Vegan Chicken, Marinara, Vegan Cheese. [1170 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9301,7 +9301,7 @@
             "name": "219 Vegan Fall'ing For Ike's",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39f3cc6fitem_900000016349471200_1758638292.jpg",
-            "description": "Vegan Turkey, Cranberry, Sriracha, Vegan Cheese. [1230 cal]",
+            "description": "Vegan Turkey, Cranberry, Sriracha, Vegan Cheese. [1230 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9417,7 +9417,7 @@
             "name": "233 Vegan Bud Bundy",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39f64c1bitem_900000016349471202_1758638676.jpg",
-            "description": "Vegan Turkey, French, Avocado, Vegan Cheese. [1410 cal]",
+            "description": "Vegan Turkey, French, Avocado, Vegan Cheese. [1410 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9533,7 +9533,7 @@
             "name": "254B Vegan Mack Daddy",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39f8060citem_900000016349472566_1758638245.jpg",
-            "description": "Vegan Meatloaf, Vegan Mack Slaw, Vegan Cheese. [1210 cal]",
+            "description": "Vegan Meatloaf, Vegan Mack Slaw, Vegan Cheese. [1210 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9648,7 +9648,7 @@
             "name": "275 Vegan Kirk Rueter",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39fa322bitem_900000016349471210_1758638889.jpg",
-            "description": "Vegan Turkey, Avocado, Vegan Cheese. [1340 cal]",
+            "description": "Vegan Turkey, Avocado, Vegan Cheese. [1340 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9763,7 +9763,7 @@
             "name": "291 Vegan Pee Wee",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39fbb8a2item_900000016349471213_1758638352.jpg",
-            "description": "Vegan Turkey, Purple Slaw, French Dressing, Vegan Cheese. [1250 cal]",
+            "description": "Vegan Turkey, Purple Slaw, French Dressing, Vegan Cheese. [1250 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9879,7 +9879,7 @@
             "name": "299 Vegan Mel-Lo Kitty",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39fd63e7item_900000016349471217_1758638628.jpg",
-            "description": "Vegan Chicken, Zesty Orange Glaze, Avocado, Vegan Cheese. [1480 cal]",
+            "description": "Vegan Chicken, Zesty Orange Glaze, Avocado, Vegan Cheese. [1480 cal]\n\nContains: Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -9995,7 +9995,7 @@
             "name": "301 Vegan Handsome Owl",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db39feda31item_900000016349471221_1758638379.jpg",
-            "description": "Vegan Chicken, Teriyaki, Wasabi Mayo, Vegan Cheese. [1560 cal]",
+            "description": "Vegan Chicken, Teriyaki, Wasabi Mayo, Vegan Cheese. [1560 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10111,7 +10111,7 @@
             "name": "302 Vegan Strawberry Girl",
             "price": 11.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a026164item_900000016349471224_1770766655.jpg",
-            "description": "Cucumbers, Asian Sesame Dressing, Vegan Cheese. [1190 cal]",
+            "description": "Cucumbers, Asian Sesame Dressing, Vegan Cheese. [1190 cal]\n\nContains: Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10226,7 +10226,7 @@
             "name": "315 Vegan Bonnie-Jill",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a0438abitem_900000016349471226_1758639009.jpg",
-            "description": "Vegan Fried Chicken, Marinated Artichoke Hearts, Sriracha, Marinara. [1180 cal]",
+            "description": "Vegan Fried Chicken, Marinated Artichoke Hearts, Sriracha, Marinara. [1180 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10342,7 +10342,7 @@
             "name": "414 Vegan Litacanrana",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a071132item_900000016349471245_1758638183.jpg",
-            "description": "Vegan Chicken, Teriyaki, Wasabi Mayo, Mushrooms, Vegan Cheese. [1480 cal]",
+            "description": "Vegan Chicken, Teriyaki, Wasabi Mayo, Mushrooms, Vegan Cheese. [1480 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10459,7 +10459,7 @@
             "name": "600 Vegan Persephone",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a0f17a4item_900000016349471826_1758639309.jpg",
-            "description": "Vegan Steak, Yellow BBQ Sauce, Mushrooms, Vegan Cheese. [1380 cal]",
+            "description": "Vegan Steak, Yellow BBQ Sauce, Mushrooms, Vegan Cheese. [1380 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10575,7 +10575,7 @@
             "name": "750 Vegan Hades",
             "price": 15.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a1314e2item_900000016349472113_1758639402.jpg",
-            "description": "Vegan Steak, Yellow BBQ Sauce, Habanero, Vegan Cheese. [1250 cal]",
+            "description": "Vegan Steak, Yellow BBQ Sauce, Habanero, Vegan Cheese. [1250 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10691,7 +10691,7 @@
             "name": "892 Vegan Pirates Or Pilates?",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a1786dfitem_900000016349472133_1758638513.jpg",
-            "description": "Vegan Chicken, Mushrooms, Zesty Orange Glaze, Vegan Cheese. [1290 cal]",
+            "description": "Vegan Chicken, Mushrooms, Zesty Orange Glaze, Vegan Cheese. [1290 cal]\n\nContains: Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10807,7 +10807,7 @@
             "name": "982 Vegan Purple Goblin",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a19f68eitem_900000016349472550_1758639469.jpg",
-            "description": "Vegan Turkey, BBQ Sauce, Mushrooms, Vegan Cheese. [1460 cal]",
+            "description": "Vegan Turkey, BBQ Sauce, Mushrooms, Vegan Cheese. [1460 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -10923,7 +10923,7 @@
             "name": "1122 Vegan Tailor's Booty",
             "price": 14.5,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a1c0058item_900000016349472558_1758639500.jpg",
-            "description": "Vegan Fried Chicken, Zesty Orange Glaze, Yellow BBQ Sauce, Vegan Cheese. [1470 cal]",
+            "description": "Vegan Fried Chicken, Zesty Orange Glaze, Yellow BBQ Sauce, Vegan Cheese. [1470 cal]\n\nContains: Wheat, Soy, Sesame.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -11039,7 +11039,7 @@
             "name": "2802 Vegan Mitch The Rock Richmond",
             "price": 16.95,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a1db091item_900000016349472562_1758639540.jpg",
-            "description": "Vegan Meatballs, Mushrooms, Marinara, BBQ Sauce, Avocado. [1300 cal]",
+            "description": "Vegan Meatballs, Mushrooms, Marinara, BBQ Sauce, Avocado. [1300 cal]\n\nContains: Wheat, Soy.",
             "option_groups": [
               {
                 "name": "Double Meat?",
@@ -11161,7 +11161,7 @@
             "name": "304 Chester The Cheetah",
             "price": 6,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a214b8fitem_900000015731066195_1753212681.jpg",
-            "description": "Grilled Cheese (Choose up to 4 kinds of cheese!) [530 cal]\n\nIt\u2019s so cheesy, it\u2019s dangerous!",
+            "description": "Grilled Cheese (Choose up to 4 kinds of cheese!) [530 cal]\n\nContains: Milk, Wheat, Soy.\n\nIt\u2019s so cheesy, it\u2019s dangerous!",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -11292,7 +11292,7 @@
             "name": "601 Ninja Turtle",
             "price": 6,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a23ebbbitem_900000015731066197_1753212482.jpg",
-            "description": "The best pizza (sandwich) you'll ever try: Salami (Beef), Marinara, Dirty Sauce and Provolone. [560 cal]\n\nOozing with sauce and cheese! Enough said",
+            "description": "The best pizza (sandwich) you'll ever try: Salami (Beef), Marinara, Dirty Sauce and Provolone. [560 cal]\n\nContains: Milk, Wheat.\n\nOozing with sauce and cheese! ",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -11419,7 +11419,7 @@
             "name": "668 Turkey, Turkey!",
             "price": 6,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a271be5item_900000015731066199_1753212353.jpg",
-            "description": "Your choice of ham or turkey and American cheese. [430 cal]\n\nThe gateway sandwich - Start \u2018em early with this classic.",
+            "description": "Your choice of ham or turkey and American cheese. [430 cal]\n\nContains: Milk, Wheat, Soy.\n\nThe gateway sandwich - Start \u2018em early with this classic.",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -11545,7 +11545,7 @@
             "name": "670 Meatwad",
             "price": 6,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a2a97eaitem_900000015731066901_1753211825.jpg",
-            "description": "Vegan Meatballs, Marinara, Provolone. [600 cal]\n\nToday\u2019s forecast: A chance of meatballs! No umbrella needed, but napkins? Yeah, you\u2019re gonna to need a few.",
+            "description": "Vegan Meatballs, Marinara, Provolone. [600 cal]\n\nContains: Milk, Wheat, Soy.\n\nToday\u2019s forecast: A chance of meatballs! No umbrella needed, but napkins? Yeah, yo",
             "option_groups": [
               {
                 "name": "Bread Choice",
@@ -11970,7 +11970,7 @@
           },
           {
             "name": "Large Zapp's Chips (5.25 Oz)",
-            "price": 4,
+            "price": 5.25,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a364c4bitem_900000018411575625_1764103722.png",
             "description": "5.25 oz bag. [140 cal/serving]",
             "option_groups": [
@@ -12031,7 +12031,7 @@
             "name": "Melting Forest",
             "price": 4.29,
             "image_url": "https://d1ouk4tp1vcuss.cloudfront.net/s3.amazonaws.com/ODNUploads/6a1db3a451dd9item_900000018230363534_1776274648.png",
-            "description": "NEW! Ike continues to expand his apothecary with Melting Forest\u2019s functional mushroom drinks\u2014crafted for both energy and relaxation, without the gimmicks. Now featuring four refreshing flavors: Strawberry Lavender and Watermelon Elderflower from the D-Stress line, designed to help you unwind and find your balance, alongside Orange Cream and Strawberry Lemonade from the Energy line, delivering clean, focused energy with natural caffeine. From calming floral blends to bright, citrus-forward refreshment, each sip brings functional ingredients and bold flavor together\u2014no hocus pocus, just drinks that keep you feeling your best.",
+            "description": "NEW! Ike continues to expand his apothecary with Melting Forest\u2019s functional mushroom drinks\u2014crafted for both energy and relaxation, without the gimmicks. Now f",
             "option_groups": [
               {
                 "name": "Melting Forest Flavors",
@@ -12378,7 +12378,9 @@
         "Double Meat (+$3.59)"
       ]
     },
-    "prices_verified": true
+    "prices_verified": true,
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   },
   {
     "id": "seed-starbird",
@@ -15956,7 +15958,7 @@
           {
             "name": "Lemongrass Chicken & Rice",
             "price": 16.95,
-            "description": "GF. Slow roasted chicken thighs marinated in lemongrass and coconut milk served over rice with a side of pickled carrots and daikon, cucumbers, and a choice of sauce on the side.",
+            "description": "GF. Slow roasted chicken thighs marinated in lemongrass and coconut milk served over rice with a side of pickled carrots and daikon, cucumbers, and a choice of ",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/aXhlAr1fOFh3vCUCBcUHueHNaXtdqbL9da4-dNp6dWc/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/5/item-600000013011222175_1688227669.jpg",
             "option_groups": [
@@ -16043,7 +16045,7 @@
           {
             "name": "Roasted Cauliflower & Rice",
             "price": 16.95,
-            "description": "GF, Vegan. Roasted cauliflower tossed in our paprika house blend of spices served over rice with a side of pickled carrots and daikon, cucumbers, and a choice of sauce on the side.",
+            "description": "GF, Vegan. Roasted cauliflower tossed in our paprika house blend of spices served over rice with a side of pickled carrots and daikon, cucumbers, and a choice o",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/jDAFovou2GyKHB7YybaJ7u_eY557-HZaD_Iz87HvNRc/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/5/item-600000013011360775_1681617707.jpg",
             "option_groups": [
@@ -16130,7 +16132,7 @@
           {
             "name": "Fried Tofu & Rice",
             "price": 16.95,
-            "description": "GF. Vegan. Fried tofu tossed in our house made lemongrass chili sauce served over rice with a side of pickled carrots and daikon, cucumbers, and a choice of sauce on the side.",
+            "description": "GF. Vegan. Fried tofu tossed in our house made lemongrass chili sauce served over rice with a side of pickled carrots and daikon, cucumbers, and a choice of sau",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/XeW6iUjQ-x4dGmzWy8paz-DTZYS_v43DDkL9J-l80TE/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/3/item-600000013011360773_1681617508.jpg",
             "option_groups": [
@@ -16222,7 +16224,7 @@
           {
             "name": "Gai Yang BBQ Chicken & Salad",
             "price": 16.95,
-            "description": "Thai style BBQ boneless chicken thighs marinated for 24 hours in soy, garlic, chilies, and spices served over spring mix blend with a side of cucumbers, cherry tomatoes, pickled carrots and daikon, and a choice of dressing on the side.",
+            "description": "Thai style BBQ boneless chicken thighs marinated for 24 hours in soy, garlic, chilies, and spices served over spring mix blend with a side of cucumbers, cherry ",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/XZIK-ECPEtzUk5qGF3eb1bmTS6nwh__Res3MtGXCzr8/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/5/item-600000012952523265_1688227793.jpg",
             "option_groups": [
@@ -16309,7 +16311,7 @@
           {
             "name": "Lemongrass Chicken & Salad",
             "price": 16.95,
-            "description": "GF. Slow roasted chicken thighs marinated in lemongrass and coconut milk served over spring mix blend with a side of pickled carrots and daikon, cucumbers, cherry tomatoes, and a choice of dressing on the side.",
+            "description": "GF. Slow roasted chicken thighs marinated in lemongrass and coconut milk served over spring mix blend with a side of pickled carrots and daikon, cucumbers, cher",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/E1WObJhgEjcCg6PRspFoDeWRmEvYKUlxZZii2665A0Y/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/7/item-600000012952523267_1681619350.jpg",
             "option_groups": [
@@ -16483,7 +16485,7 @@
           {
             "name": "Roasted Cauliflower & Salad",
             "price": 16.95,
-            "description": "GF. Vegan. Roasted cauliflower tossed in our paprika house blend of spices served over spring mix blend with a side of pickled carrots and daikon, cucumbers, cherry tomatoes, and a choice of dressing on the side.",
+            "description": "GF. Vegan. Roasted cauliflower tossed in our paprika house blend of spices served over spring mix blend with a side of pickled carrots and daikon, cucumbers, ch",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/_HKn2qySYtxD0GayVhMF-lFh22pIyEuMqvaatomy80E/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/9/item-600000012952523269_1687157837.jpg",
             "option_groups": [
@@ -16570,7 +16572,7 @@
           {
             "name": "Fried Tofu & Salad",
             "price": 16.95,
-            "description": "GF. Vegan. Fried tofu tossed in our house made lemongrass chili sauce served over spring mix blend with a side of pickled carrots and daikon, cucumbers, cherry tomatoes, and a choice of dressing on the side.",
+            "description": "GF. Vegan. Fried tofu tossed in our house made lemongrass chili sauce served over spring mix blend with a side of pickled carrots and daikon, cucumbers, cherry ",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/XQVjU5P1HNsmhvXJFpJY6IpBPFY3Dc2ebAzq2UH9w_Y/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/8/item-600000012952523268_1681619463.jpg",
             "option_groups": [
@@ -16749,7 +16751,7 @@
           {
             "name": "2 pc Hat Yai Chicken & Side Papaya Salad and Roti",
             "price": 18.95,
-            "description": "2 pc crispy bone-in Hat Yai fried chicken served with a side of papaya salad, 1 pc roti, pickled carrots and daikon, cucumbers, and a choice of sauce on the side.",
+            "description": "2 pc crispy bone-in Hat Yai fried chicken served with a side of papaya salad, 1 pc roti, pickled carrots and daikon, cucumbers, and a choice of sauce on the sid",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/mWHjFS_tvyqcCtv37AJLX9KzOK1U35kBhGUGyhF75nU/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/8/item-600000014846255738_1686353078.jpg",
             "option_groups": [
@@ -16836,7 +16838,7 @@
           {
             "name": "2 pc Hat Yai Chicken & Rice with Roti and Massaman Curry",
             "price": 18.95,
-            "description": "2 pc crispy bone-in Hat Yai fried chicken served over rice with a side of 1 pc roti, massaman curry, pickled carrots and daikon, cucumbers, and a choice of sauce on the side.",
+            "description": "2 pc crispy bone-in Hat Yai fried chicken served over rice with a side of 1 pc roti, massaman curry, pickled carrots and daikon, cucumbers, and a choice of sauc",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/EauzB23FBGwqJUL6UCLkVmR1I7rmrnmL6TQ1t8dhlTg/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/0/item-600000014846255740_1688227026.jpg",
             "option_groups": [
@@ -17751,7 +17753,7 @@
           {
             "name": "Papaya Salad (full)",
             "price": 14,
-            "description": "GF. Shredded green papaya, carrots, tomatoes, and garlic, and all tossed in our house made palm sugar vinaigrette, and topped with chili flakes, peanuts, and cilantro. *spicy",
+            "description": "GF. Shredded green papaya, carrots, tomatoes, and garlic, and all tossed in our house made palm sugar vinaigrette, and topped with chili flakes, peanuts, and ci",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/K4KR5BfA2onqaJib8d3xjf-deyq6cJ9pL6RIC5bUsgs/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/6/item-600000015003968056_1687546393.jpg",
             "option_groups": [
@@ -17820,7 +17822,7 @@
           {
             "name": "Papaya Salad (side)",
             "price": 7,
-            "description": "GF. Shredded green papaya, carrots, tomatoes, and garlic, and all tossed in our house made palm sugar vinaigrette, and topped with chili flakes, peanuts, and cilantro. Small serving. *spicy",
+            "description": "GF. Shredded green papaya, carrots, tomatoes, and garlic, and all tossed in our house made palm sugar vinaigrette, and topped with chili flakes, peanuts, and ci",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/acFmA92r_gcWg3HpFD0iZkCjue7VR_wCDMFzQzFFA1s/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-89109000000000000/menu/items/3/item-600000000159536583_1688225853.jpg",
             "option_groups": [
@@ -17927,7 +17929,9 @@
           }
         ]
       }
-    ]
+    ],
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   },
   {
     "id": "seed-asian-box",
@@ -18035,7 +18039,7 @@
           },
           {
             "name": "Fiery Red Curry",
-            "price": 16.99,
+            "price": 8,
             "description": "Spicy Red Coconut Curry, Shrimp, Organic Tofu, Fresh Herbs, Lime & Fried Shallots, Steamed Broccoli, Jasmine rice, Peanuts",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752530669/menu/prod/5db0489983a9f6df84088b7d/0jcifptxkvfidiwnhifjbtgs2a_1752530666472.jpg"
           },
@@ -19953,7 +19957,7 @@
         "items": [
           {
             "name": "Side Chicken**",
-            "price": 5.0
+            "price": 5
           },
           {
             "name": "Side Steak**",
@@ -19965,11 +19969,11 @@
           },
           {
             "name": "Side Tofu**",
-            "price": 5.0
+            "price": 5
           },
           {
             "name": "Side Pork**",
-            "price": 5.0
+            "price": 5
           },
           {
             "name": "Side Shrimp",
@@ -20083,48 +20087,48 @@
         "items": [
           {
             "name": "Asian Street Dust",
-            "price": 8.0,
+            "price": 8,
             "description": "A Dry Blend of Sweet, Salt, and Spices.   vegan",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529484/menu/prod/5db0489983a9f6df84088b7d/1enxptss3nh5fhu5bwizbx3nay_1752529479883.jpg"
           },
           {
             "name": "Yellow Coconut Curry",
-            "price": 8.0,
+            "price": 8,
             "description": "vegan",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529946/menu/prod/5db0489983a9f6df84088b7d/5m21s51v1vahzbp3yl1wxgf00e_1752529942857.jpg"
           },
           {
             "name": "No Oil Fish Sauce",
-            "price": 8.0,
+            "price": 8,
             "description": "Classic Umami Flavor for Your Box.",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529847/menu/prod/5db0489983a9f6df84088b7d/yusbsez0orf1pg5qimdk1rn5oa_1752529843495.jpg"
           },
           {
             "name": "Green Coconut Curry",
-            "price": 8.0,
+            "price": 8,
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752530225/menu/prod/5db0489983a9f6df84088b7d/memgoj4zv3d3hnav3p4sqikfnu_1752530222561.jpg"
           },
           {
             "name": "Hot Box It",
-            "price": 8.0,
+            "price": 8,
             "description": "The Final Word in Fire and Flavor.  vegan",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529747/menu/prod/5db0489983a9f6df84088b7d/y2i4pxiytjemxhn4w500y3re1y_1752529742548.jpg"
           },
           {
             "name": "Peanut Sauce",
-            "price": 8.0,
+            "price": 8,
             "description": "Creamy Blend with Lime and Coconut.  vegan",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752869895/menu/prod/5db0489983a9f6df84088b7d/hxolwjqvdbfdbhzt5vs5jius1i_1752869888689.jpg"
           },
           {
             "name": "Fiery Red Curry.",
-            "price": 8.0,
+            "price": 8,
             "description": "Spicy Red Coconut Curry.  vegan",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752530400/menu/prod/5db0489983a9f6df84088b7d/kp0cwznecjdzpni1g0u0ewfxe2_1752530398074.jpg"
           },
           {
             "name": "Tamarind Vinaigrette",
-            "price": 8.0,
+            "price": 8,
             "description": "Tangy, Sweet, Delicious.  vegan",
             "image_url": "https://res.cloudinary.com/emaginepos/image/upload/v1752529559/menu/prod/5db0489983a9f6df84088b7d/jlzdydd4yrhixijcoogrgze4fq_1752529556122.jpg"
           }
@@ -20140,7 +20144,9 @@
           }
         ]
       }
-    ]
+    ],
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   },
   {
     "id": "seed-zareen-s",
@@ -24365,7 +24371,9 @@
         ]
       }
     ],
-    "prices_verified": true
+    "prices_verified": true,
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   },
   {
     "id": "seed-mediterranean-wraps",
@@ -24873,7 +24881,9 @@
         ]
       }
     ],
-    "prices_verified": true
+    "prices_verified": true,
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   },
   {
     "id": "seed-state-of-mind-slice-house",
@@ -27283,84 +27293,84 @@
           {
             "name": "BBQ Boneless Baby Back Rib Sandwich",
             "price": 14.99,
-            "description": "LIMITED TIME",
+            "description": "Boneless 100% baby back pork ribs topped with our classic smoky BBQ sauce, fresh coleslaw and pickles on a toasted potato bun (Contains: Milk, Egg, Wheat, Soy)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_bbq_boneless_baby_back_rib_sandwich_lg.jpeg?1780485257000",
             "popular": false
           },
           {
             "name": "ShackBurger\u00ae",
             "price": 10.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, lettuce, tomato, and ShackSauce on a toasted potato bun. (Contains: Milk, Egg, Wheat, Soy, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shackburger_lg.jpeg?1780484963000",
             "popular": false
           },
           {
             "name": "Avocado Bacon Burger",
             "price": 13.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, topped with hand-sliced avocado, applewood-smoked bacon, and ShackSauce on a toasted potato bun (Contains: Milk, Egg, Wheat, Soy, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_avocado_bacon_burger_lg.jpeg?1780485008000",
             "popular": false
           },
           {
             "name": "SmokeShack\u00ae",
             "price": 12.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, applewood-smoked bacon, chopped cherry peppers, and ShackSauce on a toasted potato bun (Contains: Milk, Egg, Wheat, Soy, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_smokeshack_lg.jpeg?1780484965000",
             "popular": false
           },
           {
             "name": "Bacon Cheeseburger",
             "price": 12.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef topped with American cheese, applewood-smoked bacon on a toasted potato bun. (Contains: Milk, Wheat, Soy, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_bacon_cheeseburger_lg.jpeg?1780485014000",
             "popular": false
           },
           {
             "name": "Veggie Shack\u2122",
             "price": 13.49,
-            "description": "VEGETARIAN",
+            "description": "Our veggie burger packed with mushrooms, sweet potatoes, carrots, farro, and quinoa, and topped with American cheese, crispy onions, pickles and ShackSauce (Contains: Milk, Egg, Wheat, Soy, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_veggie_shack_lg.jpeg?1780485023000",
             "popular": false
           },
           {
             "name": "'Shroom Burger",
             "price": 10.49,
-            "description": "VEGETARIAN",
+            "description": "*Vegetarian* Crisp-fried portobello mushroom filled with melted muenster and cheddar cheeses, topped with lettuce, tomato, and ShackSauce on a toasted potato bun (Contains: Milk, Egg, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shroom_burger_lg.jpeg?1780484967000",
             "popular": false
           },
           {
             "name": "Shack Stack\u00ae",
             "price": 13.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, topped with a 'Shroom Burger with lettuce, tomato, and ShackSauce on a toasted potato bun (Contains: Milk, Egg, Wheat, Soy, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_shack_stack_lg.jpeg?1780484968000",
             "popular": false
           },
           {
             "name": "Hamburger",
             "price": 10.49,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef and your choice of toppings on a toasted potato bun (Contains: Milk, Wheat, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_hamburger_lg.jpeg?1780484968000",
             "popular": false
           },
           {
             "name": "Cheeseburger",
             "price": 10.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, and your choice of toppings on a toasted potato bun (Contains: Milk, Wheat, Soy, Sesame) *Approximate weight per patty is 4oz before cooking",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_cheeseburger_lg.jpeg?1780484970000",
             "popular": false
           },
           {
             "name": "BLT",
             "price": 6.99,
-            "description": "",
+            "description": "All-natural Applewood Smoked bacon, lettuce, tomato, ShackSauce. (Contains: Milk, Egg, Wheat, Soy, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_blt_lg.jpeg?1780484998000",
             "popular": false
           },
           {
             "name": "Grilled Cheese",
             "price": 5.99,
-            "description": "",
+            "description": "American cheese melted in a grilled potato bun (Contains: Milk, Wheat, Soy, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/burgers_more_prd_grilled_cheese_lg.jpeg?1780484984000",
             "popular": false
           }
@@ -27379,21 +27389,21 @@
           {
             "name": "Avocado Bacon Chicken",
             "price": 11.99,
-            "description": "",
+            "description": "Antibiotic-free, hand-breaded, white-meat chicken breast with hand-sliced avocado, applewood-smoked bacon, shredded lettuce, pickles, and buttermilk herb mayo on a toasted potato bun (Contains: Milk, Egg, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_avocado_bacon_chicken_lg.jpeg?1780485007000",
             "popular": false
           },
           {
             "name": "Chicken Shack\u2122",
             "price": 9.49,
-            "description": "",
+            "description": "Antibiotic-free, hand-breaded, white-meat chicken breast over lettuce, pickles, and buttermilk herb mayo on a toasted potato bun (Contains: Milk, Egg, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_shack_lg.jpeg?1780485000000",
             "popular": false
           },
           {
             "name": "Chicken Bites\u2122",
             "price": 5.99,
-            "description": "",
+            "description": "Antibiotic-free whole white-meat bites serves with your choice of sauce. (Contains: Wheat)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/chicken_prd_chicken_bites_lg.jpeg?1780485159000",
             "popular": false,
             "option_groups": [
@@ -27417,42 +27427,42 @@
           {
             "name": "ShackBurger\u00ae Lettuce Wrap",
             "price": 8.49,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, tomato, and ShackSauce in a lettuce wrap. Gluten Free. (Contains Milk, Egg, Soy) *Approximate weight per patty is 4oz before cooking. Your meal is prepared with reasonable measures to prevent cross-contamination but may be exposed to allergens.",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_shackburger_lettuce_wrap_lg.jpeg?1780485216000",
             "popular": false
           },
           {
             "name": "Chicken Shack\u2122 Lettuce Wrap",
             "price": 9.49,
-            "description": "",
+            "description": "Antibiotic-free, hand-breaded, white-meat chicken breast over pickles, and buttermilk herb mayo in a lettuce wrap. (Contains Milk, Egg, Wheat)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_chicken_shack_lettuce_wrap_lg.jpeg?1780485219000",
             "popular": false
           },
           {
             "name": "Gluten-Free ShackBurger\u00ae",
             "price": 11.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, tomato, and ShackSauce on a gluten-free bun. (Contains Milk, Egg, Soy) *Approximate weight per patty is 4oz before cooking. Your meal is prepared with reasonable measures to prevent cross-contamination but may be exposed to allergens.",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_gluten_free_shackburger_lg.jpeg?1780485220000",
             "popular": false
           },
           {
             "name": "Veggie Shack\u2122 Lettuce Wrap",
             "price": 10.49,
-            "description": "",
+            "description": "Our veggie burger packed with mushrooms, sweet potatoes, carrots, farro, and quinoa, and topped with American cheese, crispy onions, pickles, and ShackSauce in a lettuce wrap. To make it vegan, remove the American cheese, crispy onions, and ShackSauce. Your meal is prepared with reasonable measures to prevent cross-contamination, but it may still occur. (Contains Milk, Egg, Wheat, Soy)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_veggie_shack_lettuce_wrap_lg.jpeg?1780485222000",
             "popular": false
           },
           {
             "name": "SmokeShack\u00ae Lettuce Wrap",
             "price": 12.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, applewood-smoked bacon, chopped cherry peppers, and ShackSauce in a lettuce wrap. Gluten Free. (Contains Milk, Egg, Soy) *Approximate weight per patty is 4oz before cooking. Your meal is prepared with reasonable measures to prevent cross-contamination but may be exposed to allergens.",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_smokeshack_lettuce_wrap_lg.jpeg?1780485224000",
             "popular": false
           },
           {
             "name": "Avocado Bacon Burger Lettuce Wrap",
             "price": 13.99,
-            "description": "",
+            "description": "A made-to-order quarter pound* per patty of 100% Angus beef with American cheese, topped with hand-sliced avocado, applewood-smoked bacon, and ShackSauce in a lettuce wrap. Gluten Free. (Contains Milk, Egg, Soy) *Approximate weight per patty is 4oz before cooking. Your meal is prepared with reasonable measures to prevent cross-contamination but may be exposed to allergens.",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/good_fit_prd_avocado_bacon_burger_lettuce_wrap_lg.jpeg?1780485227000",
             "popular": false
           }
@@ -27464,28 +27474,28 @@
           {
             "name": "Hot Dog",
             "price": 4.99,
-            "description": "",
+            "description": "100% beef from the pros at Vienna\u00ae Beef in Chicago (Contains: Milk, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_hot_dog_lg.jpeg?1780484973000",
             "popular": false
           },
           {
             "name": "Crispy Onion Cheese Dog",
             "price": 6.99,
-            "description": "",
+            "description": "100% Vienna\u00ae Beef hot dog topped with melted cheddar and American cheese and crispy onions on a toasted potato bun. (Contains: Milk, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_crispy_onion_cheese_dog_lg.jpeg?1780485199000",
             "popular": false
           },
           {
             "name": "Bacon Cheese Dog",
             "price": 7.99,
-            "description": "",
+            "description": "100% Vienna\u00ae Beef hot dog topped with melted cheddar and American cheese and chopped applewood-smoked bacon on a toasted potato bun. (Contains: Milk, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_bacon_cheese_dog_lg.jpeg?1780485200000",
             "popular": false
           },
           {
             "name": "Cheese Dog",
             "price": 5.99,
-            "description": "",
+            "description": "100% Vienna\u00ae Beef hot dog topped with melted cheddar and American cheese on a toasted potato bun. (Contains: Milk, Wheat, Sesame)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/flat_top_dogs_prd_cheese_dog_lg.jpeg?1780485199000",
             "popular": false
           }
@@ -27497,49 +27507,49 @@
           {
             "name": "Spicy Cheese Fries with Ranch",
             "price": 6.49,
-            "description": "LIMITED TIME",
+            "description": "Crispy crinkle cut fries topped with our cheese sauce and spiced with our own hot pepper blend of cayenne, garlic, and paprika served with a side of our Shack Ranch (Contains: Milk, Egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_spicy_cheese_fries_with_ranch_lg.jpeg?1780485261000",
             "popular": false
           },
           {
             "name": "Spicy Fries with Ranch",
             "price": 5.99,
-            "description": "LIMITED TIME",
+            "description": "Crispy crinkle cut fries spiced with our own hot pepper blend of cayenne, garlic, and paprika served with a side of our Shack Ranch (Contains: Milk, Egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_spicy_fries_with_ranch_lg.jpeg?1780485261000",
             "popular": false
           },
           {
             "name": "Mac & Cheese",
             "price": 6.49,
-            "description": "LIMITED TIME",
+            "description": "Cavatappi pasta mixed with a creamy cheddar and American cheese sauce, topped with toasted breadcrumbs (Contains: Milk, Egg, Wheat)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_mac_cheese_lg.jpeg?1780485262000",
             "popular": false
           },
           {
             "name": "Onion Rings",
             "price": 5.49,
-            "description": "",
+            "description": "Crispy beer-battered onion rings made from sliced sweet Spanish onions served with your choice of sauce. (Contains: Milk, Egg, Wheat)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_onion_rings_lg.jpeg?1780485204000",
             "popular": false
           },
           {
             "name": "Fries",
             "price": 4,
-            "description": "$4 FRIES!",
+            "description": "Crispy crinkle cut fries",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_fries_lg.jpeg?1780485206000",
             "popular": false
           },
           {
             "name": "Cheese Fries",
             "price": 5.99,
-            "description": "",
+            "description": "Crispy, crinkle cut fries topped with melted cheddar and American cheese (Contains: Milk)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_cheese_fries_lg.jpeg?1780484974000",
             "popular": false
           },
           {
             "name": "Bacon Cheese Fries",
             "price": 6.99,
-            "description": "",
+            "description": "Fries: Crispy, crinkle cut fries topped with melted cheddar and American cheese and applewood-smoked bacon (Contains: Milk)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/sides_prd_bacon_cheese_fries_lg.jpeg?1780484983000",
             "popular": false
           }
@@ -27551,77 +27561,77 @@
           {
             "name": "Dubai Chocolate Pistachio Shake",
             "price": 9.99,
-            "description": "LIMITED TIME",
+            "description": "Real pistachio frozen custard blended with toasted kataifi shredded phyllo, coated in a crackable dark chocolate shell, and topped with chopped pistachios and crunchy kataifi. Our limited-time Dubai Chocolate Pistachio Shake is made with real pistachios. While we have implemented protocols to minimize cross-contact, we cannot guarantee a completely tree nut-free environment. For guests with tree nut allergies, we strongly advise against ordering shakes and frozen custard at this time (Contains: Milk, Egg, Wheat, Soy, Treenut)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_dubai_chocolate_pistachio_shake_lg.jpeg?1780485289000",
             "popular": false
           },
           {
             "name": "Chocolate Toasted Marshmallow S'mores Shake",
             "price": 6.99,
-            "description": "LIMITED TIME",
+            "description": "Vanilla frozen custard hand-spun with toasted marshmallow dark chocolate ganache, topped with whipped cream and s'mores graham cracker crunch. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (Contains: Milk, Egg, Wheat, Soy)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_chocolate_toasted_marshmallow_s_mores_shake_lg.jpeg?1780485265000",
             "popular": false
           },
           {
             "name": "Tropical Mango Shake with Passionfruit Popping Boba",
             "price": 7.99,
-            "description": "LIMITED TIME",
+            "description": "Vanilla frozen custard hand-spun with tropical mango puree, mini passionfruit popping boba, topped with whipped cream and tropical mango puree drizzle. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (Contains: Milk, Egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_tropical_mango_shake_with_passionfruit_popping_boba_lg.jpeg?1780485266000",
             "popular": false
           },
           {
             "name": "Key Lime Pie Shake",
             "price": 6.99,
-            "description": "LIMITED TIME",
+            "description": "Vanilla frozen custard hand-spun with key lime pie curd and graham cracker crunch, topped with whipped cream and graham cracker crunch. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (Contains: Milk, Egg, Wheat, Soy)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_key_lime_pie_shake_lg.jpeg?1780485267000",
             "popular": false
           },
           {
             "name": "Vanilla Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "House-made vanilla frozen custard with real vanilla. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (contains milk and egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_vanilla_shake_lg.jpeg?1780485211000",
             "popular": false
           },
           {
             "name": "Chocolate Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "House-made chocolate frozen custard. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (contains milk and egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_chocolate_shake_lg.jpeg?1780485212000",
             "popular": false
           },
           {
             "name": "Strawberry Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "Real strawberry hand spun with our house-made vanilla frozen custard. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (contains milk and egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_strawberry_shake_lg.jpeg?1780485212000",
             "popular": false
           },
           {
             "name": "OREO\u00ae Cookies and Cream Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "OREO\u00ae cookie crumbles hand spun with our house-made vanilla frozen custard. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (contains milk, egg, wheat)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_oreo_cookies_and_cream_shake_lg.jpeg?1780485213000",
             "popular": false
           },
           {
             "name": "Coffee Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "Dark roast coffee hand-spun with our house-made vanilla frozen custard. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_coffee_shake_lg.jpeg?1780485214000",
             "popular": false
           },
           {
             "name": "Black & White Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "Chocolate fudge sauce hand spun with our house-made vanilla frozen custard. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (contains milk and egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_black_white_shake_lg.jpeg?1780485214000",
             "popular": false
           },
           {
             "name": "Vanilla & Chocolate Shake",
             "price": 6,
-            "description": "$6 SHAKE!",
+            "description": "Our house-made vanilla and chocolate frozen custards. TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake (contains milk and egg)",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_vanilla_chocolate_shake_lg.jpeg?1780485211000",
             "popular": false
           },
@@ -27635,7 +27645,7 @@
           {
             "name": "Frozen Custard",
             "price": 4.99,
-            "description": "",
+            "description": "Vanilla or Chocolate frozen custard made in house every day (contains milk and egg) TREE NUT ALLERGY UPDATE: We strongly advise against ordering shakes and frozen custard at this time as cross-contact may occur with our limited-time Dubai Chocolate Pistachio Shake",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/shakes_desserts_prd_frozen_custard_lg.jpeg?1780484990000",
             "popular": false
           }
@@ -27647,7 +27657,7 @@
           {
             "name": "Mini Passionfruit Popping Boba Lemonades",
             "price": 5.99,
-            "description": "LIMITED TIME",
+            "description": "Lemonade flavor of your choice with Mini Passionfruit Popping Boba",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_mini_passionfruit_popping_boba_lemonades_lg.jpeg?1780485268000",
             "popular": false
           },
@@ -27661,7 +27671,7 @@
           {
             "name": "Sparkling Cucumber Basil",
             "price": 4.99,
-            "description": "LIMITED TIME",
+            "description": "A refreshing blend of cucumber and basil puree topped with sparkling water",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_sparkling_cucumber_basil_lg.jpeg?1780485269000",
             "popular": false
           },
@@ -27675,7 +27685,7 @@
           {
             "name": "Shack-made Lemonade",
             "price": 4.49,
-            "description": "",
+            "description": "Mixed in-house with lemon juice and cane sugar. *Made from concentrate and with natural flavors. Does not contain high-fructose corn syrup, artificial sweeteners, or dyes.",
             "image_url": "https://product-image-shakeshack-prod.ssma24.com/signature_sips_prd_shack_made_lemonade_lg.jpeg?1780484977000",
             "popular": false
           },
@@ -27778,7 +27788,9 @@
         ]
       }
     ],
-    "prices_verified": true
+    "prices_verified": true,
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   },
   {
     "id": "seed-lotus-thai-bistro",
@@ -27791,50 +27803,50 @@
         "items": [
           {
             "name": "Fried Spring Rolls",
-            "price": 10.99,
-            "description": "5 pieces",
+            "price": 5.99,
+            "description": "3 pieces. vegetarian",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/nLXtZiFbhHo3z35BG-RLxOhnJUlsCoLQnPNxdvzTvNE/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/59c4be86-7d05-47c1-b610-8640be9abba0.jpg"
           },
           {
             "name": "Fresh Rolls",
-            "price": 10.99,
-            "description": "8 pieces",
+            "price": 5.99,
+            "description": "4 pieces. vegetarian",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/PnH0rhAcKkQylCQODwvQJdn5quTjJKXOOZ2zvzhAmuQ/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/21d3f042-2891-4619-9de4-416fcc220dd3.jpg"
           },
           {
             "name": "Roti with Curry Sauce",
-            "price": 10.99,
-            "description": "",
+            "price": 5.99,
+            "description": "vegetarian",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/93ZFuyvuyUDnPYA4OaZh462UrQ2FdFrOVcGUqB4UVxo/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/0e6a0474-40c4-4e18-9de9-b911adfb0e2a.jpg"
           },
           {
             "name": "Fried Tofu",
-            "price": 10.99,
-            "description": "",
+            "price": 5.99,
+            "description": "vegetarian",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/9_5O7s50Vn-eWreUHbZicW8p_sbA5b-As9fhEsOCMf0/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/bbd61480-c3c9-4f01-b80d-ec9896dd0620.jpg"
           },
           {
             "name": "Samosa",
-            "price": 10.99,
-            "description": "4 pieces",
+            "price": 5.99,
+            "description": "2 pieces. vegetarian",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/SAa2n7gUpOC8dFKpVgzgWQm-eHXNFPGLChY4K1AOf2A/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/339b761d-298c-419d-8c22-03e70610336b.jpg"
           },
           {
             "name": "Chicken Pot Stickers",
-            "price": 10.99,
-            "description": "6 pieces",
+            "price": 5.99,
+            "description": "3 pieces",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/UWJ5ezeh9LaqogqIFccuDG3_zRv8xzLEFcNT7ErKKkA/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/983b690a-60ca-49ec-9e54-f8bca8035573.jpg"
           },
           {
             "name": "Chicken Satay",
-            "price": 13.99,
-            "description": "5 pieces",
+            "price": 5.99,
+            "description": "2 pieces",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/vWkZDQdL9ecW3XFAFjJ1Kw015zT5Gq-8WsX1c4OYXQo/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/824d33b7-9ca5-467e-8bd8-a7cd026bf1e9.jpg"
           },
@@ -28164,7 +28176,7 @@
         "items": [
           {
             "name": "Ginger",
-            "price": 19.99,
+            "price": 16.99,
             "description": "ginger, mushroom, bell pepper, onion, garlic",
             "popular": false,
             "option_groups": [
@@ -28293,7 +28305,7 @@
           },
           {
             "name": "Sweet and Sour",
-            "price": 19.99,
+            "price": 16.99,
             "description": "pineapple onions, bell pepper, cucumber, tomato, carrot",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/w0VXLUGo4mmBgF1OuoqLNyAxfylN6ERmVS3Z82vJdN0/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/456c2173-0779-4e55-a809-9b22621cd2d9.jpg",
@@ -28423,7 +28435,7 @@
           },
           {
             "name": "Basil",
-            "price": 19.99,
+            "price": 16.99,
             "description": "sweet basil, bell pepper, Thai chili, garlic",
             "popular": false,
             "option_groups": [
@@ -28552,7 +28564,7 @@
           },
           {
             "name": "Eggplant",
-            "price": 19.99,
+            "price": 16.99,
             "description": "eggplant, bell pepper, sweet basil, Thai chili, garlic",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/bf_lWywWH4ZRLFZjOr836SnCtBt24swauGAJyaoCpKE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-258271000000000000/menu/items/5/item-1300000001085783925_1745950102.jpg",
@@ -28682,7 +28694,7 @@
           },
           {
             "name": "Green Bean",
-            "price": 19.99,
+            "price": 16.99,
             "description": "green bean, red curry paste, kaffir leaf",
             "popular": false,
             "option_groups": [
@@ -28811,7 +28823,7 @@
           },
           {
             "name": "Broccoli",
-            "price": 19.99,
+            "price": 16.99,
             "description": "broccoli, mushroom, carrot, oyster sauce",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/-vSDqc0QpPdKcFWDgsyrLOWxhlBxiiR9tSVR1lItPu4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/9d3b0d79-60e6-496e-89aa-32364b9b605f.jpg",
@@ -28941,7 +28953,7 @@
           },
           {
             "name": "Garlic",
-            "price": 19.99,
+            "price": 16.99,
             "description": "garlic and grounded pepper, lettuce",
             "popular": false,
             "option_groups": [
@@ -29075,7 +29087,7 @@
         "items": [
           {
             "name": "Green Curry",
-            "price": 19.99,
+            "price": 16.99,
             "description": "bamboo root, bell pepper, sweet basil, coconut milk",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/wh7plpUg-BaEY4EKuV1opGxXtmoU3YjHOU9aUQoWSKU/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/5b30e601-3d18-4fff-8899-97b0773de702.jpg",
@@ -29205,7 +29217,7 @@
           },
           {
             "name": "Red Curry",
-            "price": 19.99,
+            "price": 16.99,
             "description": "eggplant, bell pepper, sweet basil, coconut milk",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/4IeP7TOwSN2BRGJHoF1NtLyxalwa4az3VvgTRlyuwWY/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/1fb200e8-86ed-460e-bae1-64c492710fb6.jpg",
@@ -29335,7 +29347,7 @@
           },
           {
             "name": "Yellow Curry",
-            "price": 19.99,
+            "price": 16.99,
             "description": "steamed potato, carrot, onion, coconut milk",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/EK9SBHgqRNtQHl542TuXahcA5R3557LdK85wYGk4BGA/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/2b0b50fc-b15f-4b4c-9646-1126ef29a7f9.jpg",
@@ -29465,7 +29477,7 @@
           },
           {
             "name": "Panang Curry",
-            "price": 19.99,
+            "price": 16.99,
             "description": "kaffir leaf, bell pepper, coconut milk",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/onxL7bydVKxHmkDqUMr99nvF__rlTo-_NT1VSFWTgSo/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/8e79ad1f-9cbd-443a-9662-a1fcecaebfd9.jpg",
@@ -29595,8 +29607,8 @@
           },
           {
             "name": "Mus-Sa-Mun Curry",
-            "price": 19.99,
-            "description": "steamed potato, carrot, onion, peanut, coconut milk",
+            "price": 16.99,
+            "description": "potato, carrot, onion, coconut milk",
             "popular": false,
             "option_groups": [
               {
@@ -29724,7 +29736,7 @@
           },
           {
             "name": "Choo-Chee Curry",
-            "price": 19.99,
+            "price": 16.99,
             "description": "red curry sauce, bell pepper, mushroom, kaffir leaf, coconut milk",
             "popular": false,
             "option_groups": [
@@ -29885,8 +29897,8 @@
           },
           {
             "name": "Pumpkin Curry",
-            "price": 26.99,
-            "description": "served in a pumpkin bowl, red curry, bell pepper, basil, coconut milk",
+            "price": 16.99,
+            "description": "pumpkin, red curry sauce, bell pepper, sweet basil, coconut milk",
             "popular": false,
             "option_groups": [
               {
@@ -30010,8 +30022,8 @@
         "items": [
           {
             "name": "Thai BBQ",
-            "price": 19.99,
-            "description": "served with fresh mixed salad",
+            "price": 16.99,
+            "description": "Thai-style bbq",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/93sUTJbo3QqgYAGeLPIyDPR68jVFEiWHSjrh2YG279k/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-258271000000000000/menu/items/7/item-1300000001085784267_1743661332.jpg",
             "option_groups": [
@@ -30041,8 +30053,8 @@
           },
           {
             "name": "Baby Back Ribs",
-            "price": 23.99,
-            "description": "served with steamed mixed vegetables",
+            "price": 18.99,
+            "description": "served with steamed vegetables",
             "popular": false,
             "option_groups": [
               {
@@ -30061,8 +30073,8 @@
           },
           {
             "name": "Salmon Tamarind",
-            "price": 23.99,
-            "description": "tamarind sauce, steamed mixed vegetables",
+            "price": 18.99,
+            "description": "with tamarind sauce",
             "popular": false,
             "option_groups": [
               {
@@ -30081,8 +30093,8 @@
           },
           {
             "name": "Crispy Duck",
-            "price": 23.99,
-            "description": "basil sauce",
+            "price": 18.99,
+            "description": "with basil sauce",
             "popular": false,
             "option_groups": [
               {
@@ -30186,7 +30198,7 @@
         "items": [
           {
             "name": "Pad Thai",
-            "price": 19.99,
+            "price": 16.99,
             "description": "stir-fried thin rice noodle",
             "popular": true,
             "image_url": "https://d1w7312wesee68.cloudfront.net/6n-qID0mZ3-xxSLG3dmXc6q0GTeJJfr_vznqf6mEvRg/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/f7cb9d67-8758-4d89-8a09-7ccd1636b11e.jpg",
@@ -30304,8 +30316,8 @@
           },
           {
             "name": "Pad See-Ew",
-            "price": 19.99,
-            "description": "stir-fried flat rice noodle",
+            "price": 16.99,
+            "description": "stir-fried fat rice noodle",
             "popular": true,
             "image_url": "https://d1w7312wesee68.cloudfront.net/w_RkLhT7Mq4Lwvc0PdzQ2Cd72z-3UqTXQqFwR3WXnek/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/58e02dd9-16a2-421f-920c-28ec6158ef38.jpg",
             "option_groups": [
@@ -30422,7 +30434,7 @@
           },
           {
             "name": "Thai Chow-Mein",
-            "price": 19.99,
+            "price": 16.99,
             "description": "stir-fried egg noodle",
             "popular": false,
             "option_groups": [
@@ -30539,7 +30551,7 @@
           },
           {
             "name": "Lard Na",
-            "price": 19.99,
+            "price": 16.99,
             "description": "stir-fried noodle with Thai gravy sauce",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/zDgf2eIOpL_TTvN5D7c56qZ4MWP2hwAaLHZ5iraM7Lw/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/979fc6f9-ba50-455a-a926-03efdd7b520c.jpg",
@@ -30657,7 +30669,7 @@
           },
           {
             "name": "Spicy Noodle",
-            "price": 19.99,
+            "price": 16.99,
             "description": "with basil sauce",
             "popular": false,
             "option_groups": [
@@ -30774,7 +30786,7 @@
           },
           {
             "name": "Thai Fried Rice",
-            "price": 19.99,
+            "price": 16.99,
             "description": "Thai-style fried rice",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/2kN1KJW2TY6-PoXBRr2pmi_b1uHCQfmWDOsafJjWcRo/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/2733bdcf-6d62-4c1f-b432-afe44fdddaf5.png",
@@ -30904,8 +30916,8 @@
           },
           {
             "name": "Spicy Fried Rice",
-            "price": 19.99,
-            "description": "with basil sauce",
+            "price": 16.99,
+            "description": "basil sauce",
             "popular": false,
             "option_groups": [
               {
@@ -31177,7 +31189,7 @@
           },
           {
             "name": "Coconut Rice",
-            "price": 6.0,
+            "price": 6,
             "description": "",
             "popular": false,
             "image_url": "https://d1w7312wesee68.cloudfront.net/1JeNmNaWk-MORnZAUN2TwOt0TB4BXCndB86LC5cMCwQ/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/d4bfdb96-c5fd-4f24-9936-66d7b5ff58f8/MenuItem/86c6dd0c-44ef-4b57-a057-2169b637d138.jpg"
@@ -31272,6 +31284,8 @@
         ]
       }
     ],
-    "scraped_at": "2026-06-26"
+    "scraped_at": "2026-06-26",
+    "prices_verified_at": "2026-07-15",
+    "prices_verified_by": "Dean"
   }
 ]
