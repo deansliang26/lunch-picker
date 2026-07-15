@@ -291,7 +291,18 @@ with menu_col:
                     next((p.get("upcharge", 0.0) for p in b["proteins"] if p["name"] == pn), 0.0)
                     for pn in chosen
                 )
-                bprice = round(fmt_base + up, 2)
+                # Option choices can carry an inline upcharge in their label, e.g.
+                # "Guacamole (+$2)" or "Avocado (+$2.25)". Parse and add those — the
+                # builder previously priced proteins only, so paid toppings/mix-ins
+                # (guac, avocado, extra masago) were silently free.
+                import re as _re
+                opt_up = 0.0
+                for _vals in opt_pick.values():
+                    for _v in _vals:
+                        _m = _re.search(r"\(\+\$([0-9]+(?:\.[0-9]{1,2})?)\)", _v or "")
+                        if _m:
+                            opt_up += float(_m.group(1))
+                bprice = round(fmt_base + up + opt_up, 2)
                 with bq2:
                     st.markdown(
                         f"<div style='padding-top:26px;font-weight:800;color:#141413;font-size:18px;'>"
@@ -373,16 +384,21 @@ with menu_col:
                     if not user:
                         st.warning("Pick your name in the sidebar first.")
                     else:
+                        # Items with option_groups (e.g. Asian Box's Create-Your-Own
+                        # boxes, or Ike's items rebuilt from the live menu) get a
+                        # customizer right here in the panel; those selections are
+                        # priced in on submit. Keep the form from clearing on a failed
+                        # submit so picks aren't lost.
+                        og = item.get("option_groups")
+                        # The generic Ike's sandwich form is a fallback only — once an
+                        # item carries live option_groups, use those instead (avoids
+                        # rendering both customizers on the same item).
                         use_ikes_form = (
                             is_ikes
                             and bool(ikes_opts)
                             and cat["name"] in IKES_SANDWICH_CATS
+                            and not og
                         )
-                        # Items with option_groups (e.g. Asian Box's Create-Your-Own
-                        # boxes) get a customizer right here in the panel; those
-                        # selections are priced in on submit. Keep the form from
-                        # clearing on a failed submit so picks aren't lost.
-                        og = item.get("option_groups")
                         with st.form(key=f"form_{cat_idx}_{item_idx}", clear_on_submit=not bool(og)):
                             fc1, fc2 = st.columns([1, 3])
                             with fc1:
