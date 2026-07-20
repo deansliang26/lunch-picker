@@ -14,10 +14,11 @@ db.init_db()
 from roster import TEAM
 BUDGET = 20.00   # company covers this much per person per day; the rest is "the tab"
 
-# Manual baseline adjustments for orders that never got logged in the app. Added
-# on top of each person's computed over-budget total. Edit as needed.
+# Manual baseline adjustments: positive for orders that never got logged in the
+# app, negative for one-time payments/credits made outside the app. Added on
+# top of each person's computed over-budget total. Edit as needed.
 MANUAL_ADJUSTMENTS = {
-    "Parth": 1.75,
+    "Parth": 1.75 - 17.59,  # +1.75 unlogged order, then a $17.59 one-time payment received
     "Cooper": 3.50,
 }
 
@@ -89,12 +90,21 @@ st.markdown(
 
 for rank, person in enumerate(ranked, start=1):
     owed = totals[person]
-    over_color = "#A53F31" if owed > 0 else "#3F7355"
-    amount_txt = f"${owed:.2f}" if owed > 0 else "$0.00 ✓"
+    if owed > 0:
+        over_color = "#A53F31"
+        amount_txt = f"${owed:.2f}"
+    elif owed < 0:
+        over_color = "#3F7355"
+        amount_txt = f"-${abs(owed):.2f}"
+    else:
+        over_color = "#3F7355"
+        amount_txt = "$0.00 ✓"
     if days_over[person]:
         days_txt = f"over budget {days_over[person]} day{'s' if days_over[person] != 1 else ''}"
-    elif MANUAL_ADJUSTMENTS.get(person):
+    elif MANUAL_ADJUSTMENTS.get(person, 0) > 0:
         days_txt = "unlogged orders"
+    elif MANUAL_ADJUSTMENTS.get(person, 0) < 0:
+        days_txt = "credit on file"
     else:
         days_txt = "always under budget"
     with st.container(border=True):

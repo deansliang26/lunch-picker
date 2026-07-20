@@ -379,6 +379,12 @@ def get_todays_orders() -> list[dict]:
     return [dict(r) for r in rows]
 
 
+def get_all_orders() -> list[dict]:
+    with _conn() as conn:
+        rows = conn.execute("SELECT * FROM orders ORDER BY date").fetchall()
+    return [dict(r) for r in rows]
+
+
 def orders_count_for_date(hist_date: str) -> int:
     with _conn() as conn:
         row = conn.execute(
